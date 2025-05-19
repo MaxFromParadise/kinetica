@@ -1,0 +1,46 @@
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body,
+html {
+  min-width: 320px;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+ul {
+  list-style: none;
+}
+
+.lock {
+  overflow-y: hidden;
+}
+
+[class*=__container] {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header */
+
+h1 {
+  color: #b23d6a;
+}
+
+/* Footer */
