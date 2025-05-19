@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 @use './functions' as *;
 
+:root {
+	--primary-color: #00b2ff;
+	--primary-light-color: #def5ff;
+	--secondary-color: #caff3d;
+	--black: #000;
+	--white: #fff;
+	--black-main-color: #292b32;
+}
 *,
 ::after,
 ::before {
@@ -7,9 +16,8 @@
 	margin: 0;
 	padding: 0;
 }
-
 body {
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Montserrat', sans-serif;
 }
 
 body,
@@ -34,7 +42,21 @@ ul {
 
 [class*='__container'] {
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1660px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+.title {
+	color: var(--black-main-color);
+	font-size: rem(64);
+	font-weight: 700;
+	line-height: 118.75%;
+	span {
+		color: var(--primary-color);
+	}
+}
+.button {
+	border-radius: rem(12);
+	background: var(--primary-color);
+	font-weight: 700;
 }
