@@ -1,23 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 @use './functions' as *;
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap';
 
 :root {
 	--primary-color: #00b2ff;
+	--primary-hover-color: #00a1e6;
 	--primary-light-color: #def5ff;
 	--secondary-color: #caff3d;
 	--black: #000;
 	--white: #fff;
 	--black-main-color: #292b32;
 }
+
 *,
 ::after,
 ::before {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+
+	border: none;
+	outline: none;
 }
+
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: Montserrat, sans-serif;
 }
 
 body,
@@ -46,17 +52,34 @@ ul {
 	margin: 0 auto;
 	padding: 0 15px;
 }
+
 .title {
 	color: var(--black-main-color);
+
 	font-size: rem(64);
 	font-weight: 700;
 	line-height: 118.75%;
+
 	span {
 		color: var(--primary-color);
 	}
+
+	@media (width <= 767.98px) {
+		font-size: rem(48);
+	}
 }
+
 .button {
+	cursor: pointer;
+	transition: background 0.3s ease 0s;
+
+	color: var(--white);
 	border-radius: rem(12);
 	background: var(--primary-color);
+
 	font-weight: 700;
+
+	&:hover {
+		background: var(--primary-hover-color);
+	}
 }
