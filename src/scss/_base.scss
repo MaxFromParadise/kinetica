@@ -54,14 +54,14 @@ ul {
 }
 
 .title {
-	color: var(--black-main-color);
+	color: var(--primary-color);
 
 	font-size: rem(64);
 	font-weight: 700;
 	line-height: 118.75%;
 
 	span {
-		color: var(--primary-color);
+		color: var(--black-main-color);
 	}
 
 	@media (width <= 767.98px) {

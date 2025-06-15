@@ -52,14 +52,14 @@ ul {
 }
 
 .title {
-  color: var(--black-main-color);
+  color: var(--primary-color);
   font-size: 4rem;
   font-weight: 700;
   line-height: 118.75%;
 }
 
 .title span {
-  color: var(--primary-color);
+  color: var(--black-main-color);
 }
 
 .button {
@@ -199,7 +199,105 @@ ul {
   fill: var(--primary-color);
 }
 
+.cases__title {
+  margin-bottom: 5rem;
+}
+
+.cases__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 3.125rem;
+}
+
+.item-cases {
+  cursor: pointer;
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  max-height: 39rem;
+  padding: 1.875rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+  border-radius: 20px;
+  min-height: 18.75rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-61.83%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -61.83%, rgba(0, 0, 0, 0.5) 100%);
+  height: 100%;
+  aspect-ratio: 511/624;
+  justify-self: center;
+}
+
+.item-cases:hover .item-cases__img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.item-cases__title {
+  color: #ebecef;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 128.571%;
+}
+
+.item-cases__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.item-cases__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 /* Footer */
+
+@media (max-width: 1199.98px) {
+  .cases__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cases__list .item-cases:last-child {
+    grid-column: span 2;
+    aspect-ratio: unset;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cases__list {
+    grid-template-columns: 1fr;
+  }
+
+  .cases__list .item-cases:last-child {
+    grid-column: span 1;
+    aspect-ratio: 511/624;
+  }
+
+  .item-cases {
+    padding: 1.25rem;
+  }
+
+  .item-cases__title {
+    font-size: 1.375rem;
+  }
+}
 
 @media (width <= 767.98px) {
   .title {
