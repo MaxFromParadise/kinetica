@@ -1,0 +1,173 @@
+@use './functions' as *;
+
+.top-awards {
+	padding-top: rem(120);
+	padding-bottom: rem(120);
+
+	// .top-awards__container
+	&__container {
+	}
+
+	// .top-awards__title
+	&__title {
+		margin-bottom: rem(50);
+
+		@media (width <= 767.98px) {
+			margin-bottom: rem(26);
+		}
+	}
+
+	// .top-awards__slider
+	&__slider {
+		display: flex;
+		align-items: center;
+		gap: rem(44);
+	}
+
+	// .top-awards__item
+	&__item {
+	}
+
+	&__prev {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		justify-content: center;
+
+		width: rem(50);
+		height: rem(50);
+
+		cursor: pointer;
+
+		border-radius: 50%;
+		background: #def5ff;
+
+		&.swiper-button-disabled {
+			opacity: 0.5;
+		}
+
+		img {
+			rotate: 180deg;
+		}
+
+		@media (width <= 991.98px) {
+			display: none;
+		}
+	}
+
+	&__next {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		justify-content: center;
+
+		width: rem(50);
+		height: rem(50);
+
+		cursor: pointer;
+
+		border-radius: 50%;
+		background: #def5ff;
+
+		&.swiper-button-disabled {
+			opacity: 0.5;
+		}
+
+		@media (width <= 991.98px) {
+			display: none;
+		}
+	}
+
+	.swiper-wrapper {
+		padding-bottom: rem(40);
+	}
+
+	@media (width <= 767.98px) {
+		padding-top: rem(60);
+		padding-bottom: rem(60);
+	}
+}
+
+.item-top-awards {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: rem(246);
+	height: 10rem;
+
+	&:not(:last-child) {
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 130%;
+
+			width: rem(11);
+			height: rem(11);
+
+			content: '';
+			transform: translateY(-50%);
+
+			border-radius: 50%;
+			background: #beebff;
+
+			@media (width <= 991.98px) {
+				left: 110%;
+			}
+		}
+	}
+
+	&__top {
+		position: absolute;
+		top: 0;
+		left: 50%;
+
+		transform: translateX(-50%);
+		text-align: center;
+		text-wrap: nowrap;
+
+		color: var(--Color-7, #636878);
+
+		font-size: 0.75rem;
+	}
+
+	&__bottom {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+
+		transform: translateX(-50%);
+	}
+
+	&__description {
+		position: absolute;
+		top: 110%;
+		left: 50%;
+
+		transform: translateX(-50%);
+	}
+
+	&__wreaths {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transition: fill 0.3s ease 0s;
+		transform: translate(-50%, -50%);
+		fill: #00b2ff;
+	}
+
+	&__middle {
+		max-width: rem(180);
+
+		text-align: center;
+
+		color: var(--Color-6, #292b32);
+
+		font-size: rem(14);
+		font-weight: 700;
+		line-height: 142.857%;
+	}
+}

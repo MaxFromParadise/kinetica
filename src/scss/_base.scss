@@ -28,7 +28,7 @@ body {
 
 body,
 html {
-	min-width: 320px;
+	min-width: 370px;
 	height: 100%;
 }
 
@@ -65,7 +65,7 @@ ul {
 	}
 
 	@media (width <= 767.98px) {
-		font-size: rem(48);
+		font-size: rem(28);
 	}
 }
 
