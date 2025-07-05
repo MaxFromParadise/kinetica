@@ -3,6 +3,12 @@
 	"plugins": ["stylelint-scss", "stylelint-order"],
 	"rules": {
 		"indentation": ["tab"],
-		"color-hex-case": "upper"
+		"color-hex-case": "upper",
+		"media-feature-range-notation": [
+			"prefix",
+			{
+				"severity": "warning"
+			}
+		]
 	}
 }

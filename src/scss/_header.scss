@@ -19,13 +19,13 @@
 	// .header__logo
 	&__logo {
 		.logo__text {
-			@media (width <= 767.98px) {
+			@media (max-width: 767.98px) {
 				display: none;
 			}
 		}
 
 		.logo__icon {
-			@media (width <= 767.98px) {
+			@media (max-width: 767.98px) {
 				img {
 					min-width: rem(32);
 				}
@@ -46,7 +46,7 @@
 		font-size: clamp(0.875rem, 0.7636rem + 0.232vw, 1rem);
 		font-weight: 400;
 
-		@media (width <= 767.98px) {
+		@media (max-width: 767.98px) {
 			display: none;
 		}
 	}
@@ -75,7 +75,7 @@
 			width: 100%;
 			min-width: rem(120);
 
-			@media (width <= 991.98px) {
+			@media (max-width: 991.98px) {
 				min-width: rem(96);
 			}
 		}
@@ -87,7 +87,7 @@
 			width: 100%;
 			min-width: rem(25);
 
-			@media (width <= 991.98px) {
+			@media (max-width: 991.98px) {
 				min-width: rem(16);
 			}
 		}
@@ -127,7 +127,7 @@
 		}
 	}
 
-	@media (width <= 767.98px) {
+	@media (max-width: 767.98px) {
 		display: none;
 	}
 }

@@ -201,249 +201,6 @@ ul {
   fill: var(--primary-color);
 }
 
-.cases__title {
-  margin-bottom: 5rem;
-}
-
-.cases__list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 3.125rem;
-}
-
-.item-cases {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
-  height: 100%;
-  min-height: 18.75rem;
-  max-height: 39rem;
-  padding: 1.875rem 2.5rem;
-  cursor: pointer;
-  border-radius: 1.25rem;
-  border-radius: 20px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-61.83%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -61.83%, rgba(0, 0, 0, 0.5) 100%);
-  aspect-ratio: 511/624;
-  justify-self: center;
-}
-
-.item-cases:hover .item-cases__img {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.item-cases__title {
-  color: #ebecef;
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 128.571%;
-}
-
-.item-cases__img {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: -webkit-transform 0.3s ease 0s;
-  transition: -webkit-transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-}
-
-.item-cases__img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.faq {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
-  background: var(--Color-10, #f3f4f5);
-}
-
-.faq__title {
-  margin-bottom: 5rem;
-}
-
-.faq__bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  gap: 0.9375rem;
-}
-
-.faq__banner {
-  width: 100%;
-  max-width: 66.5rem;
-  padding: 2.125rem 2.5rem;
-  color: var(--black);
-  border-radius: 1.25rem;
-  background: var(--secondary-color);
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 155.556%;
-}
-
-.faq__button {
-  width: 100%;
-  max-width: 26.625rem;
-  padding: 1.4375rem 0;
-  cursor: pointer;
-  -webkit-transition: opacity 0.3s ease 0s;
-  transition: opacity 0.3s ease 0s;
-  color: var(--Color-5, #fff);
-  border-radius: 0.75rem;
-  background: var(--black-main-color);
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.faq__button:hover {
-  opacity: 0.9;
-}
-
-.faq__list {
-  margin-bottom: 4.6875rem;
-  padding: 3.125rem 3.75rem;
-  border-radius: 1.25rem;
-  background: var(--white);
-}
-
-.item-faq {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1.25rem;
-}
-
-.item-faq:not(:last-child) {
-  margin-bottom: 3.125rem;
-}
-
-.item-faq__question {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  color: var(--black, #000);
-  font-size: 1.75rem;
-  font-weight: 700;
-  gap: 0.625rem;
-}
-
-.item-faq__number {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 4rem;
-  letter-spacing: 0.25px;
-  color: var(--Color-9, #d1d3d9);
-  font-family: Inter;
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-.item-faq__indicator {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  -webkit-transition: background 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  transition: background 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  transition: background 0.3s ease 0s, transform 0.3s ease 0s;
-  transition: background 0.3s ease 0s, transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  border-radius: 50%;
-  background: var(--primary-color);
-}
-
-.item-faq__answer {
-  padding-right: 5rem;
-  color: var(--Color-7, #636878);
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 155.556%;
-}
-
-.item-faq__block {
-  position: relative;
-}
-
-.item-faq__toggle {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  opacity: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.item-faq__question {
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.item-faq__answer {
-  overflow: hidden;
-  max-height: 0;
-  padding: 0 5rem 0 0;
-  -webkit-transition: max-height 0.3s ease, padding 0.3s ease;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-/* Когда input:checked, показываем блок с ответом */
-
-.item-faq__toggle:checked ~ .item-faq__answer {
-  max-height: 1000px;
-  padding: 2rem 5rem 0 0;
-}
-
-.item-faq__toggle:checked ~ .item-faq__question .item-faq__indicator {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background: var(--secondary-color);
-}
-
-/* Footer */
-
 .top-awards {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
@@ -907,30 +664,218 @@ ul {
   margin-top: auto;
 }
 
-.prodvizhenie-saita {
-  font-family: Montserrat, sans-serif;
+.faq {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  background: var(--Color-10, #f3f4f5);
 }
 
-.prodvizhenie-saita .hero {
-  overflow: hidden;
-  padding: 5rem 0;
+.faq__title {
+  margin-bottom: 5rem;
 }
 
-.prodvizhenie-saita .hero__container {
+.faq__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.9375rem;
 }
 
-.prodvizhenie-saita .hero__title {
-  margin-bottom: 3.75rem;
+.faq__banner {
+  width: 100%;
+  max-width: 66.5rem;
+  padding: 2.125rem 2.5rem;
+  color: var(--black);
+  border-radius: 1.25rem;
+  background: var(--secondary-color);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+}
+
+.faq__button {
+  width: 100%;
+  max-width: 26.625rem;
+  padding: 1.4375rem 0;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  color: var(--Color-5, #fff);
+  border-radius: 0.75rem;
+  background: var(--black-main-color);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.faq__button:hover {
+  opacity: 0.9;
+}
+
+.faq__list {
+  margin-bottom: 4.6875rem;
+  padding: 3.125rem 3.75rem;
+  border-radius: 1.25rem;
+  background: var(--white);
+}
+
+.item-faq {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.item-faq:not(:last-child) {
+  margin-bottom: 3.125rem;
+}
+
+.item-faq__question {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: var(--black, #000);
+  font-size: 1.75rem;
+  font-weight: 700;
+  gap: 0.625rem;
+}
+
+.item-faq__number {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 4rem;
+  letter-spacing: 0.25px;
+  color: var(--Color-9, #d1d3d9);
+  font-family: Inter;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.item-faq__indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  -webkit-transition: background 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: background 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: background 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: background 0.3s ease 0s, transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.item-faq__answer {
+  padding-right: 5rem;
+  color: var(--Color-7, #636878);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+}
+
+.item-faq__block {
+  position: relative;
+}
+
+.item-faq__toggle {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.item-faq__question {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.item-faq__answer {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 5rem 0 0;
+  -webkit-transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Когда input:checked, показываем блок с ответом */
+
+.item-faq__toggle:checked ~ .item-faq__answer {
+  max-height: 1000px;
+  padding: 2rem 5rem 0 0;
+}
+
+.item-faq__toggle:checked ~ .item-faq__question .item-faq__indicator {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: var(--secondary-color);
+}
+
+.contextnaya-reklama {
+  font-family: Montserrat, sans-serif;
+}
+
+.contextnaya-reklama .hero {
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+.contextnaya-reklama .hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.contextnaya-reklama .hero__content {
+  min-width: 25rem;
+}
+
+.contextnaya-reklama .hero__title {
+  margin-bottom: 2.1875rem;
   font-size: clamp(1.625rem, 1rem + 2.5vw, 4rem);
 }
 
-.prodvizhenie-saita .hero__button {
+.contextnaya-reklama .hero__text {
+  color: var(--Color-7, #636878);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+  margin-bottom: 3.75rem;
+}
+
+.contextnaya-reklama .hero__button {
   width: 100%;
   max-width: 23.125rem;
   padding: 1.1875rem;
@@ -938,22 +883,23 @@ ul {
   font-weight: 700;
 }
 
-.prodvizhenie-saita .hero__img {
+.contextnaya-reklama .hero__img {
   position: relative;
+  max-width: 38.4375rem;
 }
 
-.prodvizhenie-saita .hero__img:hover .hero__img-decor svg {
+.contextnaya-reklama .hero__img:hover .hero__img-decor svg {
   rotate: -30deg;
   fill: #beebff;
   scale: 80%;
 }
 
-.prodvizhenie-saita .hero__img img {
+.contextnaya-reklama .hero__img img {
   width: 100%;
   height: 100%;
 }
 
-.prodvizhenie-saita .hero__img-decor {
+.contextnaya-reklama .hero__img-decor {
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -965,7 +911,7 @@ ul {
   transform: translate(-50%, -50%);
 }
 
-.prodvizhenie-saita .hero__img-decor svg {
+.contextnaya-reklama .hero__img-decor svg {
   width: 100%;
   height: 100%;
   -webkit-transition: rotate 0.3s ease 0s, fill 0.3s ease 0s, scale 0.3s ease 0s;
@@ -973,67 +919,102 @@ ul {
   fill: #caff3d;
 }
 
-.prodvizhenie-saita .advantages {
-  padding-top: 4.0625rem;
+.contextnaya-reklama .advantages {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
 }
 
-.prodvizhenie-saita .advantages__list {
+.contextnaya-reklama .advantages__list {
   display: grid;
-  gap: 3.125rem;
-  grid-template-columns: repeat(4, minmax(0, 23.125rem));
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.prodvizhenie-saita .item-advantages {
+.contextnaya-reklama .item-advantages {
   overflow: hidden;
 }
 
-.prodvizhenie-saita .item-advantages__img {
+.contextnaya-reklama .item-advantages:hover .item-advantages__img--decor {
+  rotate: -45deg;
+}
+
+.contextnaya-reklama .item-advantages:hover .item-advantages__img--decor svg {
+  scale: 0.8;
+  fill: var(--primary-color);
+}
+
+.contextnaya-reklama .item-advantages__img {
   position: relative;
   margin-bottom: 1.5625rem;
 }
 
-.prodvizhenie-saita .item-advantages__img::before {
+.contextnaya-reklama .item-advantages__img--decor {
   position: absolute;
-  z-index: -1;
-  top: 50%;
   left: 0;
-  display: block;
-  width: 120%;
-  height: 120%;
-  content: "";
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='145' height='115' viewBox='0 0 145 115' fill='none'><path d='M16.2189 0L67.1793 30.594L81.0836 8.35469L83.1789 37.1745L127.193 8.35469L98.0889 51.0751L144.614 83.8937L91.2037 70.0751L108.519 114.903L71.9319 67.443L55.9346 96.5723L56.9935 67.772L0.651208 80.2744L48.2525 48.854L16.2189 0Z' fill='%23CAFF3D'/></svg>");
-  background-repeat: no-repeat;
-  background-size: contain;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: rotate 0.3s ease 0s;
+  transition: rotate 0.3s ease 0s;
 }
 
-.prodvizhenie-saita .item-advantages__img img {
+.contextnaya-reklama .item-advantages__img--decor svg {
+  width: 120%;
+  height: 120%;
+  fill: var(--secondary-color);
+  -webkit-transition: fill 0.3s ease 0s, scale 0.3s ease 0s;
+  transition: fill 0.3s ease 0s, scale 0.3s ease 0s;
+}
+
+.contextnaya-reklama .item-advantages__img img {
   max-width: 12.125rem;
 }
 
-.prodvizhenie-saita .item-advantages__title {
-  margin-bottom: 1.5625rem;
-  font-size: 1.25rem;
+.contextnaya-reklama .item-advantages__title {
+  color: var(--Color-6, #292b32);
+  font-size: 2.25rem;
   font-weight: 700;
+  margin-bottom: 2.1875rem;
 }
 
-.prodvizhenie-saita .item-advantages__text {
+.contextnaya-reklama .item-advantages__title span {
+  color: var(--primary-color);
+}
+
+.contextnaya-reklama .item-advantages__list--item {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.contextnaya-reklama .item-advantages__list--item::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: 700;
+  top: 0;
+  font-size: 1.25rem;
+  line-height: 100%;
+}
+
+.contextnaya-reklama .item-advantages__list--item:not(:last-child) {
+  margin-bottom: 1.5625rem;
+}
+
+.contextnaya-reklama .item-advantages__text {
   color: var(--Color-7, #636878);
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 155.556%;
 }
 
-.prodvizhenie-saita .report-data-lens {
+.contextnaya-reklama .report-data-lens {
   padding-top: 7.5rem;
 }
 
-.prodvizhenie-saita .report-data-lens__container {
+.contextnaya-reklama .report-data-lens__container {
   display: grid;
   grid-template-columns: 1fr 1.05fr;
   grid-template-rows: -webkit-min-content 4.125rem;
@@ -1044,29 +1025,29 @@ ul {
   grid-template-areas: "img content" "img button";
 }
 
-.prodvizhenie-saita .report-data-lens__img {
+.contextnaya-reklama .report-data-lens__img {
   overflow: hidden;
   border-bottom: 1px solid var(--Color-9, #d1d3d9);
   border-radius: 0 1.25rem 1.25rem 0;
   grid-area: img;
 }
 
-.prodvizhenie-saita .report-data-lens__img img {
+.contextnaya-reklama .report-data-lens__img img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
 }
 
-.prodvizhenie-saita .report-data-lens__content {
+.contextnaya-reklama .report-data-lens__content {
   grid-area: content;
 }
 
-.prodvizhenie-saita .report-data-lens__title {
+.contextnaya-reklama .report-data-lens__title {
   margin-bottom: 2.5rem;
 }
 
-.prodvizhenie-saita .report-data-lens__text {
+.contextnaya-reklama .report-data-lens__text {
   margin-bottom: 1.5625rem;
   color: #000;
   font-size: 1.125rem;
@@ -1074,25 +1055,25 @@ ul {
   line-height: 155.556%;
 }
 
-.prodvizhenie-saita .report-data-lens__button {
+.contextnaya-reklama .report-data-lens__button {
   max-width: 23.125rem;
   padding: 0.9375rem;
   grid-area: button;
 }
 
-.prodvizhenie-saita .make-decisions {
+.contextnaya-reklama .make-decisions {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
 }
 
-.prodvizhenie-saita .make-decisions__top {
+.contextnaya-reklama .make-decisions__top {
   display: grid;
   grid-template-columns: 1fr minmax(23.75rem, 26.25rem);
   gap: 2.1875rem;
   margin-bottom: 5rem;
 }
 
-.prodvizhenie-saita .make-decisions__banner {
+.contextnaya-reklama .make-decisions__banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1112,60 +1093,60 @@ ul {
   line-height: 140%;
 }
 
-.prodvizhenie-saita .make-decisions__list {
+.contextnaya-reklama .make-decisions__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.1875rem;
 }
 
-.prodvizhenie-saita .item-make-decisions__img {
+.contextnaya-reklama .item-make-decisions__img {
   width: 6.875rem;
   height: 6.0625rem;
   margin-bottom: 2rem;
 }
 
-.prodvizhenie-saita .item-make-decisions__img img {
+.contextnaya-reklama .item-make-decisions__img img {
   width: 100%;
   height: 100%;
 }
 
-.prodvizhenie-saita .item-make-decisions__title {
+.contextnaya-reklama .item-make-decisions__title {
   margin-bottom: 1.5625rem;
   color: var(--black-main-color, #292b32);
   font-size: 1.25rem;
   font-weight: 700;
 }
 
-.prodvizhenie-saita .item-make-decisions__text {
+.contextnaya-reklama .item-make-decisions__text {
   color: var(--Color-7, #636878);
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 155.556%;
 }
 
-.prodvizhenie-saita .seo-calculator {
+.contextnaya-reklama .seo-calculator {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
 }
 
-.prodvizhenie-saita .seo-calculator__banner {
+.contextnaya-reklama .seo-calculator__banner {
   padding: 5.625rem;
   border: 1px solid var(--Neutral-Grey, #dddce0);
   border-radius: 1.25rem;
   background: var(--white, #fff);
 }
 
-.prodvizhenie-saita .seo-calculator__title {
+.contextnaya-reklama .seo-calculator__title {
   margin-bottom: 2.1875rem;
 }
 
-.prodvizhenie-saita .seo-calculator__subtitle {
+.contextnaya-reklama .seo-calculator__subtitle {
   margin-bottom: 2rem;
   color: #6c6c6c;
   font-size: 1.125rem;
 }
 
-.prodvizhenie-saita .seo-form {
+.contextnaya-reklama .seo-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 42.1875rem));
   -webkit-box-pack: justify;
@@ -1175,7 +1156,7 @@ ul {
   grid-template-areas: "region theme" "queries pages" "options options" "result button" "note note";
 }
 
-.prodvizhenie-saita .seo-form__group {
+.contextnaya-reklama .seo-form__group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1186,15 +1167,15 @@ ul {
   gap: 0.5rem;
 }
 
-.prodvizhenie-saita .seo-form__group--region {
+.contextnaya-reklama .seo-form__group--region {
   grid-area: region;
 }
 
-.prodvizhenie-saita .seo-form__group--theme {
+.contextnaya-reklama .seo-form__group--theme {
   grid-area: theme;
 }
 
-.prodvizhenie-saita .seo-form__group--queries {
+.contextnaya-reklama .seo-form__group--queries {
   display: grid;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1213,11 +1194,11 @@ ul {
   column-gap: 2.75rem;
 }
 
-.prodvizhenie-saita .seo-form__group--queries label {
+.contextnaya-reklama .seo-form__group--queries label {
   grid-column: span 2;
 }
 
-.prodvizhenie-saita .seo-form__group--pages {
+.contextnaya-reklama .seo-form__group--pages {
   display: grid;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1236,11 +1217,11 @@ ul {
   column-gap: 2.75rem;
 }
 
-.prodvizhenie-saita .seo-form__group--pages label {
+.contextnaya-reklama .seo-form__group--pages label {
   grid-column: span 2;
 }
 
-.prodvizhenie-saita .seo-form__group--options {
+.contextnaya-reklama .seo-form__group--options {
   grid-area: options;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1254,7 +1235,7 @@ ul {
   flex-direction: row;
 }
 
-.prodvizhenie-saita .seo-form__group--options label {
+.contextnaya-reklama .seo-form__group--options label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1264,7 +1245,7 @@ ul {
   gap: 1rem;
 }
 
-.prodvizhenie-saita .seo-form__checkbox {
+.contextnaya-reklama .seo-form__checkbox {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1281,13 +1262,13 @@ ul {
   gap: 0.5rem;
 }
 
-.prodvizhenie-saita .seo-form__checkbox input[type=checkbox] {
+.contextnaya-reklama .seo-form__checkbox input[type=checkbox] {
   position: absolute;
   pointer-events: none;
   opacity: 0;
 }
 
-.prodvizhenie-saita .seo-form__checkbox-box {
+.contextnaya-reklama .seo-form__checkbox-box {
   position: relative;
   width: 1.25rem;
   height: 1.25rem;
@@ -1298,12 +1279,12 @@ ul {
   background-color: #fff;
 }
 
-.prodvizhenie-saita .seo-form__checkbox input[type=checkbox]:checked + .seo-form__checkbox-box {
+.contextnaya-reklama .seo-form__checkbox input[type=checkbox]:checked + .seo-form__checkbox-box {
   border-color: var(--secondary-color);
   background-color: var(--secondary-color);
 }
 
-.prodvizhenie-saita .seo-form__checkbox input[type=checkbox]:checked + .seo-form__checkbox-box::after {
+.contextnaya-reklama .seo-form__checkbox input[type=checkbox]:checked + .seo-form__checkbox-box::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1317,25 +1298,25 @@ ul {
   border-width: 0 0.125rem 0.125rem 0;
 }
 
-.prodvizhenie-saita .seo-form__checkbox-label {
+.contextnaya-reklama .seo-form__checkbox-label {
   font-size: 1rem;
 }
 
-.prodvizhenie-saita .seo-form__label {
+.contextnaya-reklama .seo-form__label {
   margin-bottom: 0.75rem;
   color: var(--Color-8, #adb0bc);
   font-size: 0.875rem;
   font-weight: 400;
 }
 
-.prodvizhenie-saita .seo-form__select {
+.contextnaya-reklama .seo-form__select {
   color: var(--Color-6, #292b32);
   font-size: 1.125rem;
   font-weight: 400;
 }
 
-.prodvizhenie-saita .seo-form__select,
-.prodvizhenie-saita .seo-form__range {
+.contextnaya-reklama .seo-form__select,
+.contextnaya-reklama .seo-form__range {
   width: 100%;
   padding: 0.75rem 1rem;
   border-radius: 0.75rem;
@@ -1343,13 +1324,13 @@ ul {
   font-size: 1rem;
 }
 
-.prodvizhenie-saita .seo-form__select:focus,
-.prodvizhenie-saita .seo-form__range:focus {
+.contextnaya-reklama .seo-form__select:focus,
+.contextnaya-reklama .seo-form__range:focus {
   border-color: #007aff;
   outline: none;
 }
 
-.prodvizhenie-saita .seo-form__range {
+.contextnaya-reklama .seo-form__range {
   height: 0.5rem;
   padding: 0;
   border-radius: 1.5rem;
@@ -1361,7 +1342,7 @@ ul {
   appearance: none;
 }
 
-.prodvizhenie-saita .seo-form__range::-webkit-slider-thumb {
+.contextnaya-reklama .seo-form__range::-webkit-slider-thumb {
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
@@ -1375,7 +1356,7 @@ ul {
   filter: drop-shadow(0 4px 24px rgba(16, 24, 64, 0.16));
 }
 
-.prodvizhenie-saita .seo-form__range::-moz-range-thumb {
+.contextnaya-reklama .seo-form__range::-moz-range-thumb {
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
@@ -1388,7 +1369,7 @@ ul {
   filter: drop-shadow(0 4px 24px rgba(16, 24, 64, 0.16));
 }
 
-.prodvizhenie-saita .seo-form__output {
+.contextnaya-reklama .seo-form__output {
   padding: 0.75rem 1.375rem;
   color: var(--Color-6, #292b32);
   border: 1px solid var(--Color-9, #d1d3d9);
@@ -1398,7 +1379,7 @@ ul {
   font-weight: 700;
 }
 
-.prodvizhenie-saita .seo-form__checkbox-label {
+.contextnaya-reklama .seo-form__checkbox-label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1409,12 +1390,12 @@ ul {
   gap: 0.5rem;
 }
 
-.prodvizhenie-saita .seo-form__checkbox-label input[type=checkbox] {
+.contextnaya-reklama .seo-form__checkbox-label input[type=checkbox] {
   width: 1.125rem;
   height: 1.125rem;
 }
 
-.prodvizhenie-saita .seo-form__result {
+.contextnaya-reklama .seo-form__result {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1425,19 +1406,19 @@ ul {
   gap: 0.5rem;
 }
 
-.prodvizhenie-saita .seo-form__estimate-label {
+.contextnaya-reklama .seo-form__estimate-label {
   color: var(--Color-6, #292b32);
   font-size: 2.25rem;
   font-weight: 700;
 }
 
-.prodvizhenie-saita .seo-form__estimate-value {
+.contextnaya-reklama .seo-form__estimate-value {
   color: var(--primary-color);
   font-size: 2.25rem;
   font-weight: 700;
 }
 
-.prodvizhenie-saita .seo-form__submit {
+.contextnaya-reklama .seo-form__submit {
   width: 100%;
   max-width: 23.125rem;
   padding: 1.125rem 2rem;
@@ -1454,11 +1435,11 @@ ul {
   justify-self: end;
 }
 
-.prodvizhenie-saita .seo-form__submit:hover {
+.contextnaya-reklama .seo-form__submit:hover {
   background-color: #005bb5;
 }
 
-.prodvizhenie-saita .seo-form__note {
+.contextnaya-reklama .seo-form__note {
   color: var(--Color-8, #adb0bc);
   font-size: 0.875rem;
   font-weight: 400;
@@ -1466,7 +1447,87 @@ ul {
   grid-area: note;
 }
 
-@media (width <= 767.98px) {
+@media (max-width: 1199.98px) {
+  .contextnaya-reklama .seo-form__estimate-label {
+    font-size: 1.75rem;
+  }
+
+  .contextnaya-reklama .seo-form__estimate-value {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .logo__text img {
+    min-width: 6rem;
+  }
+
+  .logo__icon img {
+    min-width: 1rem;
+  }
+
+  .top-awards__prev {
+    display: none;
+  }
+
+  .top-awards__next {
+    display: none;
+  }
+
+  .item-top-awards:not(:last-child)::before {
+    left: 110%;
+  }
+
+  .federal-brands__prev {
+    display: none;
+  }
+
+  .federal-brands__next {
+    display: none;
+  }
+
+  .media-about-us__prev {
+    display: none;
+  }
+
+  .media-about-us__next {
+    display: none;
+  }
+
+  .item-price__price {
+    font-size: 1.875rem;
+  }
+
+  .contextnaya-reklama .advantages__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .contextnaya-reklama .report-data-lens__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "content" "img" "button";
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .contextnaya-reklama .report-data-lens__img {
+    margin-bottom: 1.875rem;
+  }
+
+  .contextnaya-reklama .report-data-lens__button {
+    max-width: 100%;
+  }
+
+  .contextnaya-reklama .make-decisions__top {
+    grid-template-columns: 1fr;
+  }
+
+  .contextnaya-reklama .seo-calculator__banner {
+    padding: 0;
+    border: none;
+  }
+}
+
+@media (max-width: 767.98px) {
   .title {
     font-size: 1.75rem;
   }
@@ -1485,75 +1546,6 @@ ul {
 
   .nav-header {
     display: none;
-  }
-
-  .cases__list {
-    grid-template-columns: 1fr;
-  }
-
-  .cases__list .item-cases:last-child {
-    grid-column: span 1;
-    aspect-ratio: 511/624;
-  }
-
-  .item-cases__title {
-    font-size: 1.375rem;
-  }
-
-  .item-cases {
-    padding: 1.25rem;
-  }
-
-  .faq__title {
-    margin-bottom: 2.8125rem;
-  }
-
-  .faq__bottom {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .faq {
-    padding-top: 3.75rem;
-    padding-bottom: 3.75rem;
-  }
-
-  .faq__list {
-    margin-bottom: 1.5625rem;
-    padding: 0;
-    background: transparent;
-  }
-
-  .item-faq__question {
-    font-size: 1.125rem;
-  }
-
-  .item-faq__number {
-    width: 2.5rem;
-    font-size: 1.75rem;
-  }
-
-  .item-faq__indicator {
-    right: -2.0625rem;
-    width: 2.0625rem;
-    height: 2.0625rem;
-    font-size: 1rem;
-  }
-
-  .item-faq__answer {
-    font-size: 0.875rem;
-  }
-
-  .item-faq {
-    padding: 0.8125rem 0.625rem;
-    border-radius: 1.25rem;
-    background: var(--white, #fff);
-  }
-
-  .item-faq:not(:last-child) {
-    margin-bottom: 1.5625rem;
   }
 
   .top-awards__title {
@@ -1627,84 +1619,144 @@ ul {
     max-width: 100%;
   }
 
-  .prodvizhenie-saita .hero__container {
+  .faq__title {
+    margin-bottom: 2.8125rem;
+  }
+
+  .faq__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .faq {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .faq__list {
+    margin-bottom: 1.5625rem;
+    padding: 0;
+    background: transparent;
+  }
+
+  .item-faq__question {
+    font-size: 1.125rem;
+  }
+
+  .item-faq__number {
+    width: 2.5rem;
+    font-size: 1.75rem;
+  }
+
+  .item-faq__indicator {
+    right: -2.0625rem;
+    width: 2.0625rem;
+    height: 2.0625rem;
+    font-size: 1rem;
+  }
+
+  .item-faq__answer {
+    font-size: 0.875rem;
+  }
+
+  .item-faq {
+    padding: 0.8125rem 0.625rem;
+    border-radius: 1.25rem;
+    background: var(--white, #fff);
+  }
+
+  .item-faq:not(:last-child) {
+    margin-bottom: 1.5625rem;
+  }
+
+  .contextnaya-reklama .hero__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
 
-  .prodvizhenie-saita .hero__title {
+  .contextnaya-reklama .hero__content {
+    min-width: 0;
+  }
+
+  .contextnaya-reklama .hero__text {
     margin-bottom: 1.875rem;
   }
 
-  .prodvizhenie-saita .hero__img {
+  .contextnaya-reklama .hero__img {
     max-width: 80%;
     margin-bottom: 1.25rem;
   }
 
-  .prodvizhenie-saita .hero {
+  .contextnaya-reklama .hero {
     padding: 1.875rem 0;
   }
 
-  .prodvizhenie-saita .advantages__list {
-    gap: 2.5rem;
-    grid-template-columns: minmax(0, 23.125rem);
+  .contextnaya-reklama .advantages {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
   }
 
-  .prodvizhenie-saita .item-advantages__text {
+  .contextnaya-reklama .advantages__list {
+    grid-template-columns: 1fr;
+  }
+
+  .contextnaya-reklama .item-advantages__text {
     font-size: 1rem;
   }
 
-  .prodvizhenie-saita .report-data-lens__title {
+  .contextnaya-reklama .report-data-lens__title {
     margin-bottom: 1.5625rem;
   }
 
-  .prodvizhenie-saita .report-data-lens {
+  .contextnaya-reklama .report-data-lens {
     padding-top: 3.75rem;
   }
 
-  .prodvizhenie-saita .make-decisions__top {
+  .contextnaya-reklama .make-decisions__top {
     margin-bottom: 1.375rem;
   }
 
-  .prodvizhenie-saita .make-decisions__banner {
+  .contextnaya-reklama .make-decisions__banner {
     padding: 1.0625rem 1.25rem;
     font-size: 1rem;
   }
 
-  .prodvizhenie-saita .make-decisions__list {
+  .contextnaya-reklama .make-decisions__list {
     grid-template-columns: 1fr;
   }
 
-  .prodvizhenie-saita .make-decisions {
+  .contextnaya-reklama .make-decisions {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
   }
 
-  .prodvizhenie-saita .item-make-decisions__img {
+  .contextnaya-reklama .item-make-decisions__img {
     margin-bottom: 1rem;
   }
 
-  .prodvizhenie-saita .item-make-decisions__title {
+  .contextnaya-reklama .item-make-decisions__title {
     margin-bottom: 0.9375rem;
     font-size: 1.75rem;
   }
 
-  .prodvizhenie-saita .item-make-decisions__text {
+  .contextnaya-reklama .item-make-decisions__text {
     font-size: 1rem;
   }
 
-  .prodvizhenie-saita .seo-calculator__title {
+  .contextnaya-reklama .seo-calculator__title {
     margin-bottom: 1.25rem;
   }
 
-  .prodvizhenie-saita .seo-calculator {
+  .contextnaya-reklama .seo-calculator {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
   }
 
-  .prodvizhenie-saita .seo-form__group--options {
+  .contextnaya-reklama .seo-form__group--options {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: start;
@@ -1714,100 +1766,12 @@ ul {
     flex-direction: column;
   }
 
-  .prodvizhenie-saita .seo-form__submit {
+  .contextnaya-reklama .seo-form__submit {
     max-width: 100%;
   }
 
-  .prodvizhenie-saita .seo-form {
+  .contextnaya-reklama .seo-form {
     grid-template-columns: 1fr;
     grid-template-areas: "region" "queries" "theme" "pages" "options" "result" "button" "note";
-  }
-}
-
-@media (width <= 991.98px) {
-  .logo__text img {
-    min-width: 6rem;
-  }
-
-  .logo__icon img {
-    min-width: 1rem;
-  }
-
-  .top-awards__prev {
-    display: none;
-  }
-
-  .top-awards__next {
-    display: none;
-  }
-
-  .item-top-awards:not(:last-child)::before {
-    left: 110%;
-  }
-
-  .federal-brands__prev {
-    display: none;
-  }
-
-  .federal-brands__next {
-    display: none;
-  }
-
-  .media-about-us__prev {
-    display: none;
-  }
-
-  .media-about-us__next {
-    display: none;
-  }
-
-  .item-price__price {
-    font-size: 1.875rem;
-  }
-
-  .prodvizhenie-saita .advantages__list {
-    grid-template-columns: repeat(2, minmax(0, 23.125rem));
-  }
-
-  .prodvizhenie-saita .report-data-lens__container {
-    grid-template-columns: 1fr;
-    grid-template-areas: "content" "img" "button";
-    grid-template-rows: repeat(3, auto);
-  }
-
-  .prodvizhenie-saita .report-data-lens__img {
-    margin-bottom: 1.875rem;
-  }
-
-  .prodvizhenie-saita .report-data-lens__button {
-    max-width: 100%;
-  }
-
-  .prodvizhenie-saita .make-decisions__top {
-    grid-template-columns: 1fr;
-  }
-
-  .prodvizhenie-saita .seo-calculator__banner {
-    padding: 0;
-    border: none;
-  }
-}
-
-@media (width <= 1199.98px) {
-  .cases__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cases__list .item-cases:last-child {
-    grid-column: span 2;
-    aspect-ratio: unset;
-  }
-
-  .prodvizhenie-saita .seo-form__estimate-label {
-    font-size: 1.75rem;
-  }
-
-  .prodvizhenie-saita .seo-form__estimate-value {
-    font-size: 1.75rem;
   }
 }

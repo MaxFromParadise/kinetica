@@ -64,7 +64,7 @@ ul {
 		color: var(--black-main-color);
 	}
 
-	@media (width <= 767.98px) {
+	@media (max-width: 767.98px) {
 		font-size: rem(28);
 	}
 }

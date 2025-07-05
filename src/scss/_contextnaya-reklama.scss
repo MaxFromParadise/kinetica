@@ -5,7 +5,7 @@
 @use './price';
 @use './faq';
 
-.prodvizhenie-saita {
+.contextnaya-reklama {
 	font-family: Montserrat, sans-serif;
 
 	.hero {
@@ -17,6 +17,7 @@
 		&__container {
 			display: flex;
 			align-items: center;
+			justify-content: space-between;
 
 			@media (max-width: 767.98px) {
 				flex-direction: column-reverse;
@@ -25,19 +26,28 @@
 
 		// .hero__content
 		&__content {
+			min-width: rem(400);
+			@media (max-width: 767.98px) {
+				min-width: 0;
+			}
 		}
 
 		// .hero__title
 		&__title {
-			margin-bottom: rem(60);
+			margin-bottom: rem(35);
 
 			font-size: clamp(1.625rem, 1rem + 2.5vw, 4rem);
-
+		}
+		&__text {
+			color: var(--Color-7, #636878);
+			font-size: rem(18);
+			font-weight: 400;
+			line-height: 155.556%;
+			margin-bottom: rem(60);
 			@media (max-width: 767.98px) {
 				margin-bottom: rem(30);
 			}
 		}
-
 		// .hero__button
 		&__button {
 			width: 100%;
@@ -51,6 +61,8 @@
 		// .hero__img
 		&__img {
 			position: relative;
+
+			max-width: rem(615);
 
 			&:hover {
 				.hero__img-decor svg {
@@ -96,11 +108,14 @@
 			padding: rem(30) 0;
 		}
 	}
-
 	// advantages
 	.advantages {
-		padding-top: rem(65);
-
+		padding-top: rem(120);
+		padding-bottom: rem(120);
+		@media (max-width: 767.98px) {
+			padding-top: rem(60);
+			padding-bottom: rem(60);
+		}
 		// .advantages__container
 		&__container {
 		}
@@ -108,18 +123,18 @@
 		// .advantages__list
 		&__list {
 			display: grid;
-			gap: rem(50);
-			grid-template-columns: repeat(4, minmax(0, rem(370)));
+			gap: rem(20);
+			grid-template-columns: repeat(3, 1fr);
 
 			justify-content: center;
 
 			@media (max-width: 991.98px) {
-				grid-template-columns: repeat(2, minmax(0, rem(370)));
+				grid-template-columns: repeat(2, 1fr);
+				gap: rem(40);
 			}
 
 			@media (max-width: 767.98px) {
-				gap: rem(40);
-				grid-template-columns: minmax(0, rem(370));
+				grid-template-columns: 1fr;
 			}
 		}
 
@@ -130,32 +145,33 @@
 
 	.item-advantages {
 		overflow: hidden;
-
+		&:hover {
+			.item-advantages__img--decor {
+				rotate: -45deg;
+				svg {
+					scale: 0.8;
+					fill: var(--primary-color);
+				}
+			}
+		}
 		// .item-advantages__img
 		&__img {
 			position: relative;
 
 			margin-bottom: rem(25);
-
-			&::before {
+			&--decor {
 				position: absolute;
-				z-index: -1;
-				top: 50%;
 				left: 0;
-
-				display: block;
-
-				width: 120%;
-				height: 120%;
-
-				content: '';
-				transform: translateY(-50%);
-
-				background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='145' height='115' viewBox='0 0 145 115' fill='none'><path d='M16.2189 0L67.1793 30.594L81.0836 8.35469L83.1789 37.1745L127.193 8.35469L98.0889 51.0751L144.614 83.8937L91.2037 70.0751L108.519 114.903L71.9319 67.443L55.9346 96.5723L56.9935 67.772L0.651208 80.2744L48.2525 48.854L16.2189 0Z' fill='%23CAFF3D'/></svg>");
-				background-repeat: no-repeat;
-				background-size: contain;
+				top: 0;
+				z-index: -1;
+				transition: rotate 0.3s ease 0s;
+				svg {
+					width: 120%;
+					height: 120%;
+					fill: var(--secondary-color);
+					transition: fill 0.3s ease 0s, scale 0.3s ease 0s;
+				}
 			}
-
 			img {
 				max-width: rem(194);
 			}
@@ -163,12 +179,35 @@
 
 		// .item-advantages__title
 		&__title {
-			margin-bottom: rem(25);
+			color: var(--Color-6, #292b32);
 
-			font-size: rem(20);
+			font-size: rem(36);
 			font-weight: 700;
+			margin-bottom: rem(35);
+			span {
+				color: var(--primary-color);
+			}
 		}
+		&__list {
+			&--item {
+				position: relative;
+				padding-left: rem(20);
 
+				&::before {
+					content: '+';
+					position: absolute;
+					left: 0;
+					color: var(--primary-color);
+					font-weight: 700;
+					top: 0;
+					font-size: rem(20);
+					line-height: 100%;
+				}
+				&:not(:last-child) {
+					margin-bottom: rem(25);
+				}
+			}
+		}
 		// .item-advantages__text
 		&__text {
 			color: var(--Color-7, #636878);
@@ -182,7 +221,6 @@
 			}
 		}
 	}
-
 	.report-data-lens {
 		padding-top: rem(120);
 
