@@ -533,8 +533,27 @@
 	}
 
 	.report {
+		background: #f3f4f5;
+		padding-top: rem(110);
+		padding-bottom: rem(110);
+		@media (max-width: 767.98px) {
+			padding-top: rem(60);
+			padding-bottom: rem(60);
+		}
+		&__title {
+			margin-bottom: rem(60);
+			@media (max-width: 767.98px) {
+				margin-bottom: rem(35);
+			}
+		}
 		&__container {
-			display: flex;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: rem(40);
+			@media (max-width: 991.98px) {
+				display: flex;
+				flex-direction: column-reverse;
+			}
 		}
 		&__slider {
 			position: relative;
@@ -543,8 +562,15 @@
 
 		&__slide {
 			transition: transform 0.5s ease, opacity 0.5s ease;
-			opacity: 0.8;
-			transform: scale(0.8);
+			opacity: 0.5;
+			transform: scale(0.6);
+			width: rem(355);
+			height: rem(575);
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: fill;
+			}
 		}
 
 		&__slide.swiper-slide-active {
@@ -555,39 +581,38 @@
 
 		&__slide.triple-prev,
 		&__slide.triple-next {
-			opacity: 0.8;
+			opacity: 0.5;
 			transform: scale(0.8);
 			z-index: 1;
 		}
-
-		&__button-prev,
-		&__button-next {
-			position: absolute;
-			top: 50%;
-			width: 30px;
-			height: 30px;
-			margin-top: -15px;
-			cursor: pointer;
-			z-index: 10;
-			background-size: 30px 30px;
-			background-repeat: no-repeat;
-			background-position: center;
-			opacity: 0.7;
-			transition: opacity 0.3s;
-
-			&:hover {
+		&__bullets {
+			border-radius: rem(28);
+			background: var(--Color-5, #fff);
+			backdrop-filter: blur(2px);
+			padding: rem(8);
+			width: max-content;
+			.swiper-pagination-bullet {
+				width: rem(12);
+				height: rem(12);
+				background: transparent;
+				border: 1px solid #d1d3d9;
+				border-radius: 50%;
 				opacity: 1;
+				transition: background 0.3s ease 0s;
+				&-active {
+					background: #caff3d;
+					border: none;
+				}
 			}
 		}
-
-		&__button-prev {
-			left: 10px;
-			background-image: url('data:image/svg+xml;utf8,<svg fill="black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>');
-		}
-
-		&__button-next {
-			right: 10px;
-			background-image: url('data:image/svg+xml;utf8,<svg fill="black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>');
+		&__button {
+			max-width: rem(368);
+			width: 100%;
+			padding: rem(19);
+			margin-bottom: rem(60);
+			@media (max-width: 767.98px) {
+				margin-bottom: rem(35);
+			}
 		}
 	}
 	.report-data-lens {

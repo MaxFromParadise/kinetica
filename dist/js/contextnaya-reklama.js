@@ -127,13 +127,21 @@ ranges.forEach((range) => {
 
 // report
 const reportSwiper = new Swiper('.report__slider', {
-	slidesPerView: 3,
+	slidesPerView: 'auto',
 	centeredSlides: true,
-	loop: true,
-	spaceBetween: 20,
-	navigation: {
-		nextEl: '.report__button-next',
-		prevEl: '.report__button-prev',
+	// loop: true,
+	spaceBetween: 0,
+
+	pagination: {
+		el: '.report__bullets',
+		clickable: true,
+	},
+	breakpoints: {
+		// when window width is >= 992px
+		992: {
+			slidesPerView: 'auto',
+			spaceBetween: -120,
+		},
 	},
 	on: {
 		init(swiper) {

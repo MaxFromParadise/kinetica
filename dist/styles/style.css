@@ -1325,10 +1325,20 @@ ul {
   color: #beebff;
 }
 
+.contextnaya-reklama .report {
+  background: #f3f4f5;
+  padding-top: 6.875rem;
+  padding-bottom: 6.875rem;
+}
+
+.contextnaya-reklama .report__title {
+  margin-bottom: 3.75rem;
+}
+
 .contextnaya-reklama .report__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
 }
 
 .contextnaya-reklama .report__slider {
@@ -1341,10 +1351,19 @@ ul {
   transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
   transition: transform 0.5s ease, opacity 0.5s ease;
   transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
-  opacity: 0.8;
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
+  opacity: 0.5;
+  -webkit-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  transform: scale(0.6);
+  width: 22.1875rem;
+  height: 35.9375rem;
+}
+
+.contextnaya-reklama .report__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+  object-fit: fill;
 }
 
 .contextnaya-reklama .report__slide.swiper-slide-active {
@@ -1357,43 +1376,45 @@ ul {
 
 .contextnaya-reklama .report__slide.triple-prev,
 .contextnaya-reklama .report__slide.triple-next {
-  opacity: 0.8;
+  opacity: 0.5;
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
   transform: scale(0.8);
   z-index: 1;
 }
 
-.contextnaya-reklama .report__button-prev,
-.contextnaya-reklama .report__button-next {
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 30px;
-  margin-top: -15px;
-  cursor: pointer;
-  z-index: 10;
-  background-size: 30px 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.7;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+.contextnaya-reklama .report__bullets {
+  border-radius: 1.75rem;
+  background: var(--Color-5, #fff);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  padding: 0.5rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
-.contextnaya-reklama .report__button-prev:hover,
-.contextnaya-reklama .report__button-next:hover {
+.contextnaya-reklama .report__bullets .swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: transparent;
+  border: 1px solid #d1d3d9;
+  border-radius: 50%;
   opacity: 1;
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
 }
 
-.contextnaya-reklama .report__button-prev {
-  left: 10px;
-  background-image: url('data:image/svg+xml;utf8,<svg fill="black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg>');
+.contextnaya-reklama .report__bullets .swiper-pagination-bullet-active {
+  background: #caff3d;
+  border: none;
 }
 
-.contextnaya-reklama .report__button-next {
-  right: 10px;
-  background-image: url('data:image/svg+xml;utf8,<svg fill="black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>');
+.contextnaya-reklama .report__button {
+  max-width: 23rem;
+  width: 100%;
+  padding: 1.1875rem;
+  margin-bottom: 3.75rem;
 }
 
 .contextnaya-reklama .report-data-lens {
@@ -1893,6 +1914,16 @@ ul {
     min-width: unset;
   }
 
+  .contextnaya-reklama .report__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
   .contextnaya-reklama .report-data-lens__container {
     grid-template-columns: 1fr;
     grid-template-areas: "content" "img" "button";
@@ -2136,6 +2167,19 @@ ul {
 
   .contextnaya-reklama .steps__title {
     gap: 0.9375rem;
+  }
+
+  .contextnaya-reklama .report {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .contextnaya-reklama .report__title {
+    margin-bottom: 2.1875rem;
+  }
+
+  .contextnaya-reklama .report__button {
+    margin-bottom: 2.1875rem;
   }
 
   .contextnaya-reklama .report-data-lens__title {
