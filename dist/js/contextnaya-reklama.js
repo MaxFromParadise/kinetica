@@ -124,3 +124,33 @@ ranges.forEach((range) => {
 	updateRangeBackground(range); // при загрузке
 	range.addEventListener('input', () => updateRangeBackground(range));
 });
+
+// report
+const reportSwiper = new Swiper('.report__slider', {
+	slidesPerView: 3,
+	centeredSlides: true,
+	loop: true,
+	spaceBetween: 20,
+	navigation: {
+		nextEl: '.report__button-next',
+		prevEl: '.report__button-prev',
+	},
+	on: {
+		init(swiper) {
+			updateClasses(swiper);
+		},
+		slideChange(swiper) {
+			updateClasses(swiper);
+		},
+	},
+});
+
+function updateClasses(swiper) {
+	swiper.slides.forEach((slide) => {
+		slide.classList.remove('triple-prev', 'triple-next');
+	});
+	const prevIndex = (swiper.activeIndex - 1 + swiper.slides.length) % swiper.slides.length;
+	const nextIndex = (swiper.activeIndex + 1) % swiper.slides.length;
+	swiper.slides[prevIndex].classList.add('triple-prev');
+	swiper.slides[nextIndex].classList.add('triple-next');
+}
