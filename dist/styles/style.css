@@ -1983,6 +1983,7 @@ ul {
 
 .contextnaya-reklama .price {
   background-color: var(--primary-color);
+  background-image: none;
   padding: 8.75rem 0;
   position: relative;
   -webkit-transition: background-color 0.3s ease 0s;
