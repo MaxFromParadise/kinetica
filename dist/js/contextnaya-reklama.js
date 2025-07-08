@@ -41,7 +41,7 @@ if (document.querySelector('.federal-brands__slider .swiper')) {
 	});
 }
 if (document.querySelector('.media-about-us__slider .swiper')) {
-	const federalBrandsSwiper = new Swiper('.media-about-us__slider .swiper', {
+	const mediaAboutSwiper = new Swiper('.media-about-us__slider .swiper', {
 		// Optional parameters
 		loop: false,
 		freeMode: true,
@@ -161,4 +161,47 @@ function updateClasses(swiper) {
 	const nextIndex = (swiper.activeIndex + 1) % swiper.slides.length;
 	swiper.slides[prevIndex].classList.add('triple-prev');
 	swiper.slides[nextIndex].classList.add('triple-next');
+}
+
+// thanks
+if (document.querySelector('.thanks__slider')) {
+	const thanksSwiper = new Swiper('.thanks__slider', {
+		// Optional parameters
+		loop: false,
+		freeMode: true,
+		slidesPerView: 'auto',
+		spaceBetween: 40,
+	});
+
+	const popup = document.getElementById('thanks-popup');
+	const popupImg = popup.querySelector('.thanks-popup__img');
+	const popupClose = popup.querySelector('.thanks-popup__close');
+
+	document.querySelectorAll('.thanks__slide img').forEach((img) => {
+		img.addEventListener('click', () => {
+			popupImg.src = img.src;
+			popup.style.display = 'flex';
+		});
+	});
+
+	popupClose.addEventListener('click', () => {
+		popup.style.display = 'none';
+	});
+
+	popup.addEventListener('click', (e) => {
+		if (e.target === popup) {
+			popup.style.display = 'none';
+		}
+	});
+}
+
+// digital-expertise
+if (document.querySelector('.digital-expertise__slider .swiper')) {
+	const digitalExpertiseSwiper = new Swiper('.digital-expertise__slider .swiper', {
+		// Optional parameters
+		loop: false,
+		freeMode: true,
+		slidesPerView: 'auto',
+		spaceBetween: 50,
+	});
 }

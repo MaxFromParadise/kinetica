@@ -355,102 +355,6 @@ ul {
   line-height: 142.857%;
 }
 
-.federal-brands {
-  padding-top: 7.8125rem;
-  padding-bottom: 7.8125rem;
-  background: #def5ff;
-}
-
-.federal-brands__title {
-  margin-bottom: 5.625rem;
-}
-
-.federal-brands__title_mobile {
-  display: none;
-}
-
-.federal-brands__slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 2.8125rem;
-}
-
-.federal-brands__prev {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 3.125rem;
-  height: 3.125rem;
-  cursor: pointer;
-  border-radius: 50%;
-  background: #def5ff;
-}
-
-.federal-brands__prev.swiper-button-disabled {
-  opacity: 0.5;
-}
-
-.federal-brands__prev img {
-  rotate: 180deg;
-}
-
-.federal-brands__next {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 3.125rem;
-  height: 3.125rem;
-  cursor: pointer;
-  border-radius: 50%;
-  background: #def5ff;
-}
-
-.federal-brands__next.swiper-button-disabled {
-  opacity: 0.5;
-}
-
-.federal-brands__slide {
-  width: auto;
-  max-width: 15.625rem;
-  height: 2.8125rem;
-  padding: 0.3125rem;
-}
-
-.federal-brands__slide:hover img {
-  scale: 1.1;
-  -webkit-filter: brightness(0) saturate(100%) invert(51%) sepia(64%) saturate(1696%) hue-rotate(174deg) brightness(101%) contrast(103%);
-  filter: brightness(0) saturate(100%) invert(51%) sepia(64%) saturate(1696%) hue-rotate(174deg) brightness(101%) contrast(103%);
-}
-
-.federal-brands__slide img {
-  width: 100%;
-  height: 100%;
-  -webkit-transition: scale 0.3s ease 0s, -webkit-filter 0.1s ease 0s;
-  transition: scale 0.3s ease 0s, -webkit-filter 0.1s ease 0s;
-  transition: scale 0.3s ease 0s, filter 0.1s ease 0s;
-  transition: scale 0.3s ease 0s, filter 0.1s ease 0s, -webkit-filter 0.1s ease 0s;
-}
-
 .media-about-us {
   padding-top: 7.8125rem;
   padding-bottom: 7.8125rem;
@@ -541,127 +445,6 @@ ul {
   transition: scale 0.3s ease 0s, -webkit-filter 0.1s ease 0s;
   transition: scale 0.3s ease 0s, filter 0.1s ease 0s;
   transition: scale 0.3s ease 0s, filter 0.1s ease 0s, -webkit-filter 0.1s ease 0s;
-}
-
-.price {
-  padding-top: 7.8125rem;
-  padding-bottom: 7.8125rem;
-  -webkit-transition: background 0.3s ease 0s;
-  transition: background 0.3s ease 0s;
-  background: url("../img/pages/prodvizhenie-saita/price/price-bg.jpg") center center/cover no-repeat;
-  background-color: var(--primary-color);
-}
-
-.price:hover {
-  background: url("../img/pages/prodvizhenie-saita/price/price-bg-hover.jpg") center center/cover no-repeat;
-}
-
-.price:hover .price__title {
-  color: var(--black-main-color);
-}
-
-.price__title {
-  margin-bottom: 5rem;
-  -webkit-transition: color 0.3s ease 0s;
-  transition: color 0.3s ease 0s;
-  color: var(--white);
-}
-
-.price__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  gap: 0.9375rem;
-}
-
-.item-price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  max-width: 31.9375rem;
-  padding: 2rem 1.5rem 0.3125rem;
-  border-radius: 1.25rem;
-  background: var(--white, #fff);
-}
-
-.item-price__title {
-  margin-bottom: 0.3125rem;
-  text-wrap: nowrap;
-  color: var(--black-main-color, #292b32);
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.item-price__price {
-  margin-bottom: 2rem;
-  text-wrap: nowrap;
-  color: var(--primary-color, #00b2ff);
-  font-size: 2.25rem;
-  font-weight: 700;
-}
-
-.item-price__subtitle {
-  margin-bottom: 0.625rem;
-  color: var(--Color-7, #636878);
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.item-price__text {
-  max-width: 25rem;
-  margin-bottom: 1.8125rem;
-  color: var(--Color-7, #636878);
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 142.857%;
-}
-
-.item-price__button {
-  width: 100%;
-  margin-bottom: 0.625rem;
-  padding: 1.1875rem 0.625rem;
-  text-align: center;
-  color: var(--primary-light-color, #def5ff);
-  font-size: 1.125rem;
-  font-weight: 700;
-}
-
-.item-price__link {
-  display: block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: 0 auto;
-  text-align: center;
-  color: var(--Color-2, #71d5ff);
-  font-size: 0.875rem;
-  font-weight: 400;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
-}
-
-.item-price__bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-top: auto;
 }
 
 .faq {
@@ -1010,6 +793,10 @@ ul {
   line-height: 155.556%;
 }
 
+.contextnaya-reklama .steps {
+  margin-bottom: 7.5rem;
+}
+
 .contextnaya-reklama .steps .main-steps {
   max-width: 66.8125rem;
   margin: 0 auto;
@@ -1329,6 +1116,7 @@ ul {
   background: #f3f4f5;
   padding-top: 6.875rem;
   padding-bottom: 6.875rem;
+  margin-bottom: 7.5rem;
 }
 
 .contextnaya-reklama .report__title {
@@ -1417,55 +1205,471 @@ ul {
   margin-bottom: 3.75rem;
 }
 
-.contextnaya-reklama .report-data-lens {
-  padding-top: 7.5rem;
-}
-
-.contextnaya-reklama .report-data-lens__container {
-  display: grid;
-  grid-template-columns: 1fr 1.05fr;
-  grid-template-rows: -webkit-min-content 4.125rem;
-  grid-template-rows: min-content 4.125rem;
-  -webkit-column-gap: 4.375rem;
-  -moz-column-gap: 4.375rem;
-  column-gap: 4.375rem;
-  grid-template-areas: "img content" "img button";
-}
-
-.contextnaya-reklama .report-data-lens__img {
+.contextnaya-reklama .price {
+  background-color: var(--primary-color);
+  padding: 8.75rem 0;
+  position: relative;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
   overflow: hidden;
-  border-bottom: 1px solid var(--Color-9, #d1d3d9);
-  border-radius: 0 1.25rem 1.25rem 0;
-  grid-area: img;
 }
 
-.contextnaya-reklama .report-data-lens__img img {
+.contextnaya-reklama .price:hover {
+  background-color: var(--secondary-color);
+}
+
+.contextnaya-reklama .price:hover .price__title {
+  color: var(--black-main-color);
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.contextnaya-reklama .price:hover .price__title span {
+  color: var(--primary-color);
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.contextnaya-reklama .price:hover .price__decor {
+  -webkit-transform: translate(55%, -73%) scale(1.7) rotate(-20deg);
+  -ms-transform: translate(55%, -73%) scale(1.7) rotate(-20deg);
+  transform: translate(55%, -73%) scale(1.7) rotate(-20deg);
+}
+
+.contextnaya-reklama .price:hover .price__decor--star {
+  opacity: 0;
+}
+
+.contextnaya-reklama .price:hover .price__decor--line_main {
+  opacity: 0;
+}
+
+.contextnaya-reklama .price:hover .price__decor--line_hover {
+  opacity: 1;
+}
+
+.contextnaya-reklama .price__container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.9375rem;
+}
+
+.contextnaya-reklama .price__title {
+  color: var(--white, #fff);
+  position: relative;
+  z-index: 3;
+}
+
+.contextnaya-reklama .price__title span {
+  color: var(--secondary-color);
+}
+
+.contextnaya-reklama .price__banner {
+  position: relative;
+  z-index: 3;
+}
+
+.contextnaya-reklama .price__decor {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out 0s;
+  transition: -webkit-transform 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, -webkit-transform 0.4s ease-in-out 0s;
+}
+
+.contextnaya-reklama .price__decor--line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 52.9501875rem;
+  height: 54.0609375rem;
+  -webkit-transform: translateY(50%) rotate(20deg);
+  -ms-transform: translateY(50%) rotate(20deg);
+  transform: translateY(50%) rotate(20deg);
+  z-index: 1;
+}
+
+.contextnaya-reklama .price__decor--line_main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  z-index: 1;
+}
+
+.contextnaya-reklama .price__decor--line_hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  z-index: 1;
+}
+
+.contextnaya-reklama .price__decor--rocket {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: rotate(-10deg) translateX(-50%);
+  -ms-transform: rotate(-10deg) translateX(-50%);
+  transform: rotate(-10deg) translateX(-50%);
+  z-index: 2;
+}
+
+.contextnaya-reklama .price__decor--rocket img {
+  position: relative;
+  z-index: 2;
+}
+
+.contextnaya-reklama .price__decor--star {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.contextnaya-reklama .banner-price {
+  padding: 4.375rem 2.3125rem 4.375rem 5.375rem;
+  background: var(--white);
+  border-radius: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.875rem;
+  width: 100%;
+  max-width: 49.1875rem;
+}
+
+.contextnaya-reklama .banner-price__title {
+  color: var(--primary-color, #00b2ff);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.9375rem;
+}
+
+.contextnaya-reklama .banner-price__descr {
+  color: var(--Color-7, #636878);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+
+.contextnaya-reklama .banner-price__right {
+  width: 100%;
+}
+
+.contextnaya-reklama .banner-price__list--title {
+  color: var(--Color-7, #636878);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5625rem;
+}
+
+.contextnaya-reklama .banner-price__list {
+  margin-bottom: 1.875rem;
+}
+
+.contextnaya-reklama .banner-price__list-item {
+  margin-bottom: 0.9375rem;
+  position: relative;
+  padding-left: 1.0625rem;
+}
+
+.contextnaya-reklama .banner-price__list-item::before {
+  content: "✓";
+  position: absolute;
+  font-weight: 700;
+  left: 0;
+  top: 0;
+}
+
+.contextnaya-reklama .banner-price__button {
+  max-width: 14.4375rem;
+  width: 100%;
+  padding: 0.9375rem 0;
+  margin-bottom: 0.625rem;
+}
+
+.contextnaya-reklama .banner-price__link {
+  display: block;
+  color: var(--Color-2, #71d5ff);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  cursor: pointer;
+}
+
+.contextnaya-reklama .thanks {
+  overflow: hidden;
+  padding: 7.5rem 0;
+}
+
+.contextnaya-reklama .thanks__title {
+  max-width: 86.875rem;
+  margin-bottom: 3.4375rem;
+}
+
+.contextnaya-reklama .thanks__slider {
+  overflow: visible;
+}
+
+.contextnaya-reklama .thanks__slide {
+  width: 21.25rem;
+}
+
+.contextnaya-reklama .thanks__slide:hover .thanks__slide--title {
+  color: var(--primary-color);
+}
+
+.contextnaya-reklama .thanks__slide--title {
+  text-align: center;
+  color: var(--black-main-color, #292b32);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.3125rem;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.contextnaya-reklama .thanks__slide--img {
+  width: 100%;
+  height: 30.3125rem;
+}
+
+.contextnaya-reklama .thanks__slide--img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.contextnaya-reklama .thanks-popup {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1.25rem;
+}
+
+.contextnaya-reklama .thanks-popup__img {
+  max-width: 100%;
+  max-height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-.contextnaya-reklama .report-data-lens__content {
-  grid-area: content;
+.contextnaya-reklama .thanks-popup__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.875rem;
+  font-size: 2.25rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
 }
 
-.contextnaya-reklama .report-data-lens__title {
-  margin-bottom: 2.5rem;
+.contextnaya-reklama .digital-expertise {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  overflow: hidden;
 }
 
-.contextnaya-reklama .report-data-lens__text {
-  margin-bottom: 1.5625rem;
-  color: #000;
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 155.556%;
+.contextnaya-reklama .digital-expertise__title {
+  margin-bottom: 3.4375rem;
 }
 
-.contextnaya-reklama .report-data-lens__button {
-  max-width: 23.125rem;
-  padding: 0.9375rem;
-  grid-area: button;
+.contextnaya-reklama .digital-expertise__slider .swiper {
+  overflow: visible;
+}
+
+.contextnaya-reklama .slide-digital-expertise {
+  width: 14.375rem;
+  height: 12.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--Color-9, #d1d3d9);
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding: 1rem;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.contextnaya-reklama .slide-digital-expertise:hover {
+  background-color: var(--secondary-color);
+}
+
+.contextnaya-reklama .slide-digital-expertise:hover .slide-digital-expertise__star {
+  fill: var(--white);
+}
+
+.contextnaya-reklama .slide-digital-expertise__icon {
+  position: relative;
+  z-index: 2;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.contextnaya-reklama .slide-digital-expertise__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.contextnaya-reklama .slide-digital-expertise__star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 6.625rem;
+  height: 4.5625rem;
+  fill: var(--secondary-color);
+  z-index: -1;
+  -webkit-transition: fill 0.3s ease 0s;
+  transition: fill 0.3s ease 0s;
+}
+
+.contextnaya-reklama .slide-digital-expertise__title {
+  color: var(--Color-6, #292b32);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.contextnaya-reklama .federal-brands {
+  padding-top: 7.8125rem;
+  padding-bottom: 7.8125rem;
+  background: #def5ff;
+}
+
+.contextnaya-reklama .federal-brands__title {
+  margin-bottom: 5.625rem;
+}
+
+.contextnaya-reklama .federal-brands__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2.8125rem;
+}
+
+.contextnaya-reklama .federal-brands__prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #def5ff;
+}
+
+.contextnaya-reklama .federal-brands__prev.swiper-button-disabled {
+  opacity: 0.5;
+}
+
+.contextnaya-reklama .federal-brands__prev img {
+  rotate: 180deg;
+}
+
+.contextnaya-reklama .federal-brands__next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #def5ff;
+}
+
+.contextnaya-reklama .federal-brands__next.swiper-button-disabled {
+  opacity: 0.5;
+}
+
+.contextnaya-reklama .federal-brands__slide {
+  width: auto;
+  max-width: 15.625rem;
+  height: 2.8125rem;
+  padding: 0.3125rem;
+}
+
+.contextnaya-reklama .federal-brands__slide:hover img {
+  scale: 1.1;
+  -webkit-filter: brightness(0) saturate(100%) invert(51%) sepia(64%) saturate(1696%) hue-rotate(174deg) brightness(101%) contrast(103%);
+  filter: brightness(0) saturate(100%) invert(51%) sepia(64%) saturate(1696%) hue-rotate(174deg) brightness(101%) contrast(103%);
+}
+
+.contextnaya-reklama .federal-brands__slide img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: scale 0.3s ease 0s, -webkit-filter 0.1s ease 0s;
+  transition: scale 0.3s ease 0s, -webkit-filter 0.1s ease 0s;
+  transition: scale 0.3s ease 0s, filter 0.1s ease 0s;
+  transition: scale 0.3s ease 0s, filter 0.1s ease 0s, -webkit-filter 0.1s ease 0s;
 }
 
 .contextnaya-reklama .make-decisions {
@@ -1885,24 +2089,12 @@ ul {
     left: 110%;
   }
 
-  .federal-brands__prev {
-    display: none;
-  }
-
-  .federal-brands__next {
-    display: none;
-  }
-
   .media-about-us__prev {
     display: none;
   }
 
   .media-about-us__next {
     display: none;
-  }
-
-  .item-price__price {
-    font-size: 1.875rem;
   }
 
   .contextnaya-reklama .advantages__list {
@@ -1924,18 +2116,22 @@ ul {
     flex-direction: column-reverse;
   }
 
-  .contextnaya-reklama .report-data-lens__container {
+  .contextnaya-reklama .price__container {
     grid-template-columns: 1fr;
-    grid-template-areas: "content" "img" "button";
-    grid-template-rows: repeat(3, auto);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
-  .contextnaya-reklama .report-data-lens__img {
-    margin-bottom: 1.875rem;
+  .contextnaya-reklama .federal-brands__prev {
+    display: none;
   }
 
-  .contextnaya-reklama .report-data-lens__button {
-    max-width: 100%;
+  .contextnaya-reklama .federal-brands__next {
+    display: none;
   }
 
   .contextnaya-reklama .make-decisions__top {
@@ -1978,24 +2174,6 @@ ul {
     padding-bottom: 3.75rem;
   }
 
-  .federal-brands__title_mobile {
-    display: block;
-  }
-
-  .federal-brands__title {
-    display: none;
-    margin-bottom: 1.625rem;
-  }
-
-  .federal-brands__slide {
-    height: 1.625rem;
-  }
-
-  .federal-brands {
-    padding-top: 4.0625rem;
-    padding-bottom: 4.0625rem;
-  }
-
   .media-about-us__title {
     margin-bottom: 1.625rem;
   }
@@ -2007,37 +2185,6 @@ ul {
   .media-about-us {
     padding-top: 4.0625rem;
     padding-bottom: 4.0625rem;
-  }
-
-  .price__title {
-    margin-bottom: 2.1875rem;
-  }
-
-  .price__items {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .price {
-    padding-top: 4.0625rem;
-    padding-bottom: 4.0625rem;
-  }
-
-  .item-price__price {
-    margin-bottom: 1.25rem;
-    font-size: 1.75rem;
-  }
-
-  .item-price {
-    max-width: 100%;
   }
 
   .faq__title {
@@ -2129,6 +2276,10 @@ ul {
     font-size: 1rem;
   }
 
+  .contextnaya-reklama .steps {
+    margin-bottom: 3.75rem;
+  }
+
   .contextnaya-reklama .steps .main-steps__flex {
     gap: 1.875rem;
   }
@@ -2144,6 +2295,15 @@ ul {
 
   .contextnaya-reklama .steps .item-main-steps__text {
     font-size: 1rem;
+  }
+
+  .contextnaya-reklama .steps .item-main-steps__toggle span {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.3125rem;
   }
 
   .contextnaya-reklama .steps .item-main-steps__toggle span::after {
@@ -2172,6 +2332,7 @@ ul {
   .contextnaya-reklama .report {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
+    margin-bottom: 3.75rem;
   }
 
   .contextnaya-reklama .report__title {
@@ -2182,12 +2343,47 @@ ul {
     margin-bottom: 2.1875rem;
   }
 
-  .contextnaya-reklama .report-data-lens__title {
-    margin-bottom: 1.5625rem;
+  .contextnaya-reklama .price {
+    padding: 4.0625rem 0;
   }
 
-  .contextnaya-reklama .report-data-lens {
+  .contextnaya-reklama .banner-price {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .contextnaya-reklama .banner-price__button {
+    max-width: 100%;
+  }
+
+  .contextnaya-reklama .banner-price__link {
+    text-align: center;
+  }
+
+  .contextnaya-reklama .thanks {
+    padding: 3.75rem 0;
+  }
+
+  .contextnaya-reklama .thanks__title {
+    margin-bottom: 2.1875rem;
+  }
+
+  .contextnaya-reklama .digital-expertise {
     padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .contextnaya-reklama .digital-expertise__title {
+    margin-bottom: 2.1875rem;
+  }
+
+  .contextnaya-reklama .federal-brands__slide {
+    height: 1.625rem;
+  }
+
+  .contextnaya-reklama .federal-brands {
+    padding-top: 4.0625rem;
+    padding-bottom: 4.0625rem;
   }
 
   .contextnaya-reklama .make-decisions__top {
@@ -2252,6 +2448,6 @@ ul {
 
 @media (max-width: 479.98px) {
   .contextnaya-reklama .steps .item-main-steps__text {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
