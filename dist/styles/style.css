@@ -554,6 +554,7 @@ ul {
 
 .price:hover {
   background: url("../img/pages/prodvizhenie-saita/price/price-bg-hover.jpg") center center/cover no-repeat;
+  background-color: var(--secondary-color);
 }
 
 .price:hover .price__title {
