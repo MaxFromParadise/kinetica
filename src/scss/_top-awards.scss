@@ -98,6 +98,14 @@
 	width: rem(246);
 	height: 10rem;
 
+	&:hover {
+		.item-top-awards__wreaths {
+			fill: var(--secondary-color);
+		}
+		.item-top-awards__middle {
+			text-decoration: underline;
+		}
+	}
 	&:not(:last-child) {
 		&::before {
 			position: absolute;
@@ -154,7 +162,7 @@
 		top: 50%;
 		left: 50%;
 
-		transition: fill 0.3s ease 0s;
+		transition: fill 0.2s ease 0s;
 		transform: translate(-50%, -50%);
 		fill: #00b2ff;
 	}

@@ -289,6 +289,14 @@ ul {
   height: 10rem;
 }
 
+.item-top-awards:hover .item-top-awards__wreaths {
+  fill: var(--secondary-color);
+}
+
+.item-top-awards:hover .item-top-awards__middle {
+  text-decoration: underline;
+}
+
 .item-top-awards:not(:last-child)::before {
   position: absolute;
   top: 50%;
@@ -338,8 +346,8 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transition: fill 0.3s ease 0s;
-  transition: fill 0.3s ease 0s;
+  -webkit-transition: fill 0.2s ease 0s;
+  transition: fill 0.2s ease 0s;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
