@@ -864,6 +864,8 @@
 		// .thanks__slide
 		&__slide {
 			width: rem(340);
+			border-radius: rem(20);
+			border: 1px solid var(--Color-4, #def5ff);
 			&:hover {
 				.thanks__slide--title {
 					color: var(--primary-color);

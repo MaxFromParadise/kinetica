@@ -2227,6 +2227,8 @@ ul {
 
 .contextnaya-reklama .thanks__slide {
   width: 21.25rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--Color-4, #def5ff);
 }
 
 .contextnaya-reklama .thanks__slide:hover .thanks__slide--title {
