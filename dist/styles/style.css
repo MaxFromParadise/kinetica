@@ -1902,6 +1902,12 @@ ul {
   padding-top: 6.875rem;
   padding-bottom: 6.875rem;
   margin-bottom: 7.5rem;
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
+}
+
+.contextnaya-reklama .report:hover {
+  background: var(--secondary-color);
 }
 
 .contextnaya-reklama .report__title {

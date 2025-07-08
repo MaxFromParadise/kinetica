@@ -544,6 +544,10 @@
 		padding-top: rem(110);
 		padding-bottom: rem(110);
 		margin-bottom: rem(120);
+		transition: background 0.3s ease 0s;
+		&:hover {
+			background: var(--secondary-color);
+		}
 		@media (max-width: 767.98px) {
 			padding-top: rem(60);
 			padding-bottom: rem(60);
