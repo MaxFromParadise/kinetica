@@ -355,6 +355,102 @@ ul {
   line-height: 142.857%;
 }
 
+.federal-brands {
+  padding-top: 7.8125rem;
+  padding-bottom: 7.8125rem;
+  background: #def5ff;
+}
+
+.federal-brands__title {
+  margin-bottom: 5.625rem;
+}
+
+.federal-brands__title_mobile {
+  display: none;
+}
+
+.federal-brands__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2.8125rem;
+}
+
+.federal-brands__prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #def5ff;
+}
+
+.federal-brands__prev.swiper-button-disabled {
+  opacity: 0.5;
+}
+
+.federal-brands__prev img {
+  rotate: 180deg;
+}
+
+.federal-brands__next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #def5ff;
+}
+
+.federal-brands__next.swiper-button-disabled {
+  opacity: 0.5;
+}
+
+.federal-brands__slide {
+  width: auto;
+  max-width: 15.625rem;
+  height: 2.8125rem;
+  padding: 0.3125rem;
+}
+
+.federal-brands__slide:hover img {
+  scale: 1.1;
+  -webkit-filter: brightness(0) saturate(100%) invert(51%) sepia(64%) saturate(1696%) hue-rotate(174deg) brightness(101%) contrast(103%);
+  filter: brightness(0) saturate(100%) invert(51%) sepia(64%) saturate(1696%) hue-rotate(174deg) brightness(101%) contrast(103%);
+}
+
+.federal-brands__slide img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: scale 0.3s ease 0s, -webkit-filter 0.1s ease 0s;
+  transition: scale 0.3s ease 0s, -webkit-filter 0.1s ease 0s;
+  transition: scale 0.3s ease 0s, filter 0.1s ease 0s;
+  transition: scale 0.3s ease 0s, filter 0.1s ease 0s, -webkit-filter 0.1s ease 0s;
+}
+
 .media-about-us {
   padding-top: 7.8125rem;
   padding-bottom: 7.8125rem;
@@ -445,6 +541,127 @@ ul {
   transition: scale 0.3s ease 0s, -webkit-filter 0.1s ease 0s;
   transition: scale 0.3s ease 0s, filter 0.1s ease 0s;
   transition: scale 0.3s ease 0s, filter 0.1s ease 0s, -webkit-filter 0.1s ease 0s;
+}
+
+.price {
+  padding-top: 7.8125rem;
+  padding-bottom: 7.8125rem;
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
+  background: url("../img/pages/prodvizhenie-saita/price/price-bg.jpg") center center/cover no-repeat;
+  background-color: var(--primary-color);
+}
+
+.price:hover {
+  background: url("../img/pages/prodvizhenie-saita/price/price-bg-hover.jpg") center center/cover no-repeat;
+}
+
+.price:hover .price__title {
+  color: var(--black-main-color);
+}
+
+.price__title {
+  margin-bottom: 5rem;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  color: var(--white);
+}
+
+.price__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.9375rem;
+}
+
+.item-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  max-width: 31.9375rem;
+  padding: 2rem 1.5rem 0.3125rem;
+  border-radius: 1.25rem;
+  background: var(--white, #fff);
+}
+
+.item-price__title {
+  margin-bottom: 0.3125rem;
+  text-wrap: nowrap;
+  color: var(--black-main-color, #292b32);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.item-price__price {
+  margin-bottom: 2rem;
+  text-wrap: nowrap;
+  color: var(--primary-color, #00b2ff);
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.item-price__subtitle {
+  margin-bottom: 0.625rem;
+  color: var(--Color-7, #636878);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.item-price__text {
+  max-width: 25rem;
+  margin-bottom: 1.8125rem;
+  color: var(--Color-7, #636878);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+
+.item-price__button {
+  width: 100%;
+  margin-bottom: 0.625rem;
+  padding: 1.1875rem 0.625rem;
+  text-align: center;
+  color: var(--primary-light-color, #def5ff);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.item-price__link {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--Color-2, #71d5ff);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.item-price__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: auto;
 }
 
 .faq {
@@ -618,6 +835,565 @@ ul {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   background: var(--secondary-color);
+}
+
+.prodvizhenie-saita {
+  font-family: Montserrat, sans-serif;
+}
+
+.prodvizhenie-saita .hero {
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+.prodvizhenie-saita .hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.prodvizhenie-saita .hero__title {
+  margin-bottom: 3.75rem;
+  font-size: clamp(1.625rem, 1rem + 2.5vw, 4rem);
+}
+
+.prodvizhenie-saita .hero__button {
+  width: 100%;
+  max-width: 23.125rem;
+  padding: 1.1875rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.prodvizhenie-saita .hero__img {
+  position: relative;
+}
+
+.prodvizhenie-saita .hero__img:hover .hero__img-decor svg {
+  rotate: -30deg;
+  fill: #beebff;
+  scale: 80%;
+}
+
+.prodvizhenie-saita .hero__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.prodvizhenie-saita .hero__img-decor {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.prodvizhenie-saita .hero__img-decor svg {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: rotate 0.3s ease 0s, fill 0.3s ease 0s, scale 0.3s ease 0s;
+  transition: rotate 0.3s ease 0s, fill 0.3s ease 0s, scale 0.3s ease 0s;
+  fill: #caff3d;
+}
+
+.prodvizhenie-saita .advantages {
+  padding-top: 4.0625rem;
+}
+
+.prodvizhenie-saita .advantages__list {
+  display: grid;
+  gap: 3.125rem;
+  grid-template-columns: repeat(4, minmax(0, 23.125rem));
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.prodvizhenie-saita .item-advantages {
+  overflow: hidden;
+}
+
+.prodvizhenie-saita .item-advantages__img {
+  position: relative;
+  margin-bottom: 1.5625rem;
+}
+
+.prodvizhenie-saita .item-advantages__img::before {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 120%;
+  height: 120%;
+  content: "";
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='145' height='115' viewBox='0 0 145 115' fill='none'><path d='M16.2189 0L67.1793 30.594L81.0836 8.35469L83.1789 37.1745L127.193 8.35469L98.0889 51.0751L144.614 83.8937L91.2037 70.0751L108.519 114.903L71.9319 67.443L55.9346 96.5723L56.9935 67.772L0.651208 80.2744L48.2525 48.854L16.2189 0Z' fill='%23CAFF3D'/></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.prodvizhenie-saita .item-advantages__img img {
+  max-width: 12.125rem;
+}
+
+.prodvizhenie-saita .item-advantages__title {
+  margin-bottom: 1.5625rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.prodvizhenie-saita .item-advantages__text {
+  color: var(--Color-7, #636878);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+}
+
+.prodvizhenie-saita .report-data-lens {
+  padding-top: 7.5rem;
+}
+
+.prodvizhenie-saita .report-data-lens__container {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  grid-template-rows: -webkit-min-content 4.125rem;
+  grid-template-rows: min-content 4.125rem;
+  -webkit-column-gap: 4.375rem;
+  -moz-column-gap: 4.375rem;
+  column-gap: 4.375rem;
+  grid-template-areas: "img content" "img button";
+}
+
+.prodvizhenie-saita .report-data-lens__img {
+  overflow: hidden;
+  border-bottom: 1px solid var(--Color-9, #d1d3d9);
+  border-radius: 0 1.25rem 1.25rem 0;
+  grid-area: img;
+}
+
+.prodvizhenie-saita .report-data-lens__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.prodvizhenie-saita .report-data-lens__content {
+  grid-area: content;
+}
+
+.prodvizhenie-saita .report-data-lens__title {
+  margin-bottom: 2.5rem;
+}
+
+.prodvizhenie-saita .report-data-lens__text {
+  margin-bottom: 1.5625rem;
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+}
+
+.prodvizhenie-saita .report-data-lens__button {
+  max-width: 23.125rem;
+  padding: 0.9375rem;
+  grid-area: button;
+}
+
+.prodvizhenie-saita .make-decisions {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.prodvizhenie-saita .make-decisions__top {
+  display: grid;
+  grid-template-columns: 1fr minmax(23.75rem, 26.25rem);
+  gap: 2.1875rem;
+  margin-bottom: 5rem;
+}
+
+.prodvizhenie-saita .make-decisions__banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2.125rem 2.5rem;
+  color: var(--black);
+  border-radius: 1.25rem;
+  background-color: var(--secondary-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.prodvizhenie-saita .make-decisions__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.1875rem;
+}
+
+.prodvizhenie-saita .item-make-decisions__img {
+  width: 6.875rem;
+  height: 6.0625rem;
+  margin-bottom: 2rem;
+}
+
+.prodvizhenie-saita .item-make-decisions__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.prodvizhenie-saita .item-make-decisions__title {
+  margin-bottom: 1.5625rem;
+  color: var(--black-main-color, #292b32);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.prodvizhenie-saita .item-make-decisions__text {
+  color: var(--Color-7, #636878);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+}
+
+.prodvizhenie-saita .seo-calculator {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.prodvizhenie-saita .seo-calculator__banner {
+  padding: 5.625rem;
+  border: 1px solid var(--Neutral-Grey, #dddce0);
+  border-radius: 1.25rem;
+  background: var(--white, #fff);
+}
+
+.prodvizhenie-saita .seo-calculator__title {
+  margin-bottom: 2.1875rem;
+}
+
+.prodvizhenie-saita .seo-calculator__subtitle {
+  margin-bottom: 2rem;
+  color: #6c6c6c;
+  font-size: 1.125rem;
+}
+
+.prodvizhenie-saita .seo-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 42.1875rem));
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 2.1875rem;
+  grid-template-areas: "region theme" "queries pages" "options options" "result button" "note note";
+}
+
+.prodvizhenie-saita .seo-form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.prodvizhenie-saita .seo-form__group--region {
+  grid-area: region;
+}
+
+.prodvizhenie-saita .seo-form__group--theme {
+  grid-area: theme;
+}
+
+.prodvizhenie-saita .seo-form__group--queries {
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border: 1px solid var(--Neutral-Grey, #dddce0);
+  border-radius: 0.75rem;
+  background: var(--White, #fff);
+  grid-area: queries;
+  grid-template-columns: minmax(0, 33.125rem) auto;
+  -webkit-column-gap: 2.75rem;
+  -moz-column-gap: 2.75rem;
+  column-gap: 2.75rem;
+}
+
+.prodvizhenie-saita .seo-form__group--queries label {
+  grid-column: span 2;
+}
+
+.prodvizhenie-saita .seo-form__group--pages {
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border: 1px solid var(--Neutral-Grey, #dddce0);
+  border-radius: 0.75rem;
+  background: var(--White, #fff);
+  grid-area: pages;
+  grid-template-columns: minmax(0, 33.125rem) auto;
+  -webkit-column-gap: 2.75rem;
+  -moz-column-gap: 2.75rem;
+  column-gap: 2.75rem;
+}
+
+.prodvizhenie-saita .seo-form__group--pages label {
+  grid-column: span 2;
+}
+
+.prodvizhenie-saita .seo-form__group--options {
+  grid-area: options;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.prodvizhenie-saita .seo-form__group--options label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.prodvizhenie-saita .seo-form__checkbox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 1rem;
+  gap: 0.5rem;
+}
+
+.prodvizhenie-saita .seo-form__checkbox input[type=checkbox] {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.prodvizhenie-saita .seo-form__checkbox-box {
+  position: relative;
+  width: 1.25rem;
+  height: 1.25rem;
+  -webkit-transition: background-color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
+  border: 0.125rem solid #ccc;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+.prodvizhenie-saita .seo-form__checkbox input[type=checkbox]:checked + .seo-form__checkbox-box {
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+}
+
+.prodvizhenie-saita .seo-form__checkbox input[type=checkbox]:checked + .seo-form__checkbox-box::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.375rem;
+  height: 0.625rem;
+  content: "";
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border: solid #000;
+  border-width: 0 0.125rem 0.125rem 0;
+}
+
+.prodvizhenie-saita .seo-form__checkbox-label {
+  font-size: 1rem;
+}
+
+.prodvizhenie-saita .seo-form__label {
+  margin-bottom: 0.75rem;
+  color: var(--Color-8, #adb0bc);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.prodvizhenie-saita .seo-form__select {
+  color: var(--Color-6, #292b32);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.prodvizhenie-saita .seo-form__select,
+.prodvizhenie-saita .seo-form__range {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: #f9f9f9;
+  font-size: 1rem;
+}
+
+.prodvizhenie-saita .seo-form__select:focus,
+.prodvizhenie-saita .seo-form__range:focus {
+  border-color: #007aff;
+  outline: none;
+}
+
+.prodvizhenie-saita .seo-form__range {
+  height: 0.5rem;
+  padding: 0;
+  border-radius: 1.5rem;
+  background: var(--Color-4, #def5ff);
+  background: -webkit-gradient(linear, left top, right top, from(var(--secondary-color)), color-stop(var(--secondary-color)), color-stop(#def5ff), to(#def5ff));
+  background: linear-gradient(to right, var(--secondary-color) 0%, var(--secondary-color) var(--value-percent, 50%), #def5ff var(--value-percent, 50%), #def5ff 100%);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.prodvizhenie-saita .seo-form__range::-webkit-slider-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  background: var(--white);
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-filter: drop-shadow(0 4px 24px rgba(16, 24, 64, 0.16));
+  filter: drop-shadow(0 4px 24px rgba(16, 24, 64, 0.16));
+}
+
+.prodvizhenie-saita .seo-form__range::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  background: var(--white);
+  -moz-appearance: none;
+  appearance: none;
+  filter: drop-shadow(0 4px 24px rgba(16, 24, 64, 0.16));
+}
+
+.prodvizhenie-saita .seo-form__output {
+  padding: 0.75rem 1.375rem;
+  color: var(--Color-6, #292b32);
+  border: 1px solid var(--Color-9, #d1d3d9);
+  border-radius: 0.5rem;
+  background: var(--White, #fff);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.prodvizhenie-saita .seo-form__checkbox-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 0.9375rem;
+  gap: 0.5rem;
+}
+
+.prodvizhenie-saita .seo-form__checkbox-label input[type=checkbox] {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.prodvizhenie-saita .seo-form__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-area: result;
+  gap: 0.5rem;
+}
+
+.prodvizhenie-saita .seo-form__estimate-label {
+  color: var(--Color-6, #292b32);
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.prodvizhenie-saita .seo-form__estimate-value {
+  color: var(--primary-color);
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.prodvizhenie-saita .seo-form__submit {
+  width: 100%;
+  max-width: 23.125rem;
+  padding: 1.125rem 2rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  background: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 600;
+  grid-area: button;
+  justify-self: end;
+}
+
+.prodvizhenie-saita .seo-form__submit:hover {
+  background-color: #005bb5;
+}
+
+.prodvizhenie-saita .seo-form__note {
+  color: var(--Color-8, #adb0bc);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 142.857%;
+  grid-area: note;
 }
 
 .contextnaya-reklama {
@@ -2059,6 +2835,14 @@ ul {
 }
 
 @media (max-width: 1199.98px) {
+  .prodvizhenie-saita .seo-form__estimate-label {
+    font-size: 1.75rem;
+  }
+
+  .prodvizhenie-saita .seo-form__estimate-value {
+    font-size: 1.75rem;
+  }
+
   .contextnaya-reklama .seo-form__estimate-label {
     font-size: 1.75rem;
   }
@@ -2089,12 +2873,51 @@ ul {
     left: 110%;
   }
 
+  .federal-brands__prev {
+    display: none;
+  }
+
+  .federal-brands__next {
+    display: none;
+  }
+
   .media-about-us__prev {
     display: none;
   }
 
   .media-about-us__next {
     display: none;
+  }
+
+  .item-price__price {
+    font-size: 1.875rem;
+  }
+
+  .prodvizhenie-saita .advantages__list {
+    grid-template-columns: repeat(2, minmax(0, 23.125rem));
+  }
+
+  .prodvizhenie-saita .report-data-lens__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "content" "img" "button";
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .prodvizhenie-saita .report-data-lens__img {
+    margin-bottom: 1.875rem;
+  }
+
+  .prodvizhenie-saita .report-data-lens__button {
+    max-width: 100%;
+  }
+
+  .prodvizhenie-saita .make-decisions__top {
+    grid-template-columns: 1fr;
+  }
+
+  .prodvizhenie-saita .seo-calculator__banner {
+    padding: 0;
+    border: none;
   }
 
   .contextnaya-reklama .advantages__list {
@@ -2174,6 +2997,24 @@ ul {
     padding-bottom: 3.75rem;
   }
 
+  .federal-brands__title_mobile {
+    display: block;
+  }
+
+  .federal-brands__title {
+    display: none;
+    margin-bottom: 1.625rem;
+  }
+
+  .federal-brands__slide {
+    height: 1.625rem;
+  }
+
+  .federal-brands {
+    padding-top: 4.0625rem;
+    padding-bottom: 4.0625rem;
+  }
+
   .media-about-us__title {
     margin-bottom: 1.625rem;
   }
@@ -2185,6 +3026,37 @@ ul {
   .media-about-us {
     padding-top: 4.0625rem;
     padding-bottom: 4.0625rem;
+  }
+
+  .price__title {
+    margin-bottom: 2.1875rem;
+  }
+
+  .price__items {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .price {
+    padding-top: 4.0625rem;
+    padding-bottom: 4.0625rem;
+  }
+
+  .item-price__price {
+    margin-bottom: 1.25rem;
+    font-size: 1.75rem;
+  }
+
+  .item-price {
+    max-width: 100%;
   }
 
   .faq__title {
@@ -2237,6 +3109,102 @@ ul {
 
   .item-faq:not(:last-child) {
     margin-bottom: 1.5625rem;
+  }
+
+  .prodvizhenie-saita .hero__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .prodvizhenie-saita .hero__title {
+    margin-bottom: 1.875rem;
+  }
+
+  .prodvizhenie-saita .hero__img {
+    max-width: 80%;
+    margin-bottom: 1.25rem;
+  }
+
+  .prodvizhenie-saita .hero {
+    padding: 1.875rem 0;
+  }
+
+  .prodvizhenie-saita .advantages__list {
+    gap: 2.5rem;
+    grid-template-columns: minmax(0, 23.125rem);
+  }
+
+  .prodvizhenie-saita .item-advantages__text {
+    font-size: 1rem;
+  }
+
+  .prodvizhenie-saita .report-data-lens__title {
+    margin-bottom: 1.5625rem;
+  }
+
+  .prodvizhenie-saita .report-data-lens {
+    padding-top: 3.75rem;
+  }
+
+  .prodvizhenie-saita .make-decisions__top {
+    margin-bottom: 1.375rem;
+  }
+
+  .prodvizhenie-saita .make-decisions__banner {
+    padding: 1.0625rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .prodvizhenie-saita .make-decisions__list {
+    grid-template-columns: 1fr;
+  }
+
+  .prodvizhenie-saita .make-decisions {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .prodvizhenie-saita .item-make-decisions__img {
+    margin-bottom: 1rem;
+  }
+
+  .prodvizhenie-saita .item-make-decisions__title {
+    margin-bottom: 0.9375rem;
+    font-size: 1.75rem;
+  }
+
+  .prodvizhenie-saita .item-make-decisions__text {
+    font-size: 1rem;
+  }
+
+  .prodvizhenie-saita .seo-calculator__title {
+    margin-bottom: 1.25rem;
+  }
+
+  .prodvizhenie-saita .seo-calculator {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .prodvizhenie-saita .seo-form__group--options {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .prodvizhenie-saita .seo-form__submit {
+    max-width: 100%;
+  }
+
+  .prodvizhenie-saita .seo-form {
+    grid-template-columns: 1fr;
+    grid-template-areas: "region" "queries" "theme" "pages" "options" "result" "button" "note";
   }
 
   .contextnaya-reklama .hero__container {
