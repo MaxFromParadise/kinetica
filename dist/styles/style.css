@@ -2583,6 +2583,7 @@ ul {
 .email-marketing .hero__img {
   position: relative;
   max-width: 38.4375rem;
+  width: 100%;
 }
 
 .email-marketing .hero__img:hover .hero__img-decor {
