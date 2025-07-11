@@ -102,10 +102,12 @@
 		.item-top-awards__wreaths {
 			fill: var(--secondary-color);
 		}
+
 		.item-top-awards__middle {
 			text-decoration: underline;
 		}
 	}
+
 	&:not(:last-child) {
 		&::before {
 			position: absolute;

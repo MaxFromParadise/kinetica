@@ -11,6 +11,7 @@
 	.hero {
 		overflow: hidden;
 
+		min-height: 90vh;
 		padding: rem(80) 0;
 
 		// .hero__container
@@ -129,7 +130,14 @@
 	}
 
 	.item-advantages {
-		overflow: hidden;
+		// overflow: hidden;
+
+		&:hover {
+			.item-advantages__img::before {
+				rotate: -30deg;
+				filter: brightness(0.8) saturate(2) hue-rotate(140deg);
+			}
+		}
 
 		// .item-advantages__img
 		&__img {
@@ -145,10 +153,11 @@
 
 				display: block;
 
-				width: 120%;
-				height: 120%;
+				width: rem(144);
+				height: rem(114);
 
 				content: '';
+				transition: rotate 0.3s ease 0s, filter 0s linear 0s;
 				transform: translateY(-50%);
 
 				background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='145' height='115' viewBox='0 0 145 115' fill='none'><path d='M16.2189 0L67.1793 30.594L81.0836 8.35469L83.1789 37.1745L127.193 8.35469L98.0889 51.0751L144.614 83.8937L91.2037 70.0751L108.519 114.903L71.9319 67.443L55.9346 96.5723L56.9935 67.772L0.651208 80.2744L48.2525 48.854L16.2189 0Z' fill='%23CAFF3D'/></svg>");
@@ -255,6 +264,16 @@
 			max-width: rem(370);
 			padding: rem(15);
 			grid-area: button;
+
+			color: var(--white, #fff);
+
+			font-size: rem(18);
+			font-weight: 700;
+
+			&:hover {
+				color: var(--black-main-color);
+				background: var(--primary-hover-color);
+			}
 
 			@media (max-width: 991.98px) {
 				max-width: 100%;
@@ -715,7 +734,8 @@
 			justify-self: end;
 
 			&:hover {
-				background-color: #005bb5;
+				color: var(--black-main-color);
+				background: var(--primary-hover-color);
 			}
 
 			@media (max-width: 767.98px) {

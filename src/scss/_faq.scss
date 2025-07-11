@@ -48,7 +48,7 @@
 		padding: rem(23) 0;
 
 		cursor: pointer;
-		transition: opacity 0.3s ease 0s;
+		transition: background 0.3s ease 0s;
 
 		color: var(--Color-5, #fff);
 		border-radius: rem(12);
@@ -58,7 +58,7 @@
 		font-weight: 700;
 
 		&:hover {
-			opacity: 0.9;
+			background: #636878;
 		}
 	}
 

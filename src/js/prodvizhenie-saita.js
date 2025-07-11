@@ -41,7 +41,7 @@ if (document.querySelector('.federal-brands__slider .swiper')) {
 	});
 }
 if (document.querySelector('.media-about-us__slider .swiper')) {
-	const federalBrandsSwiper = new Swiper('.media-about-us__slider .swiper', {
+	const mediaAboutSwiper = new Swiper('.media-about-us__slider .swiper', {
 		// Optional parameters
 		loop: false,
 		freeMode: true,
