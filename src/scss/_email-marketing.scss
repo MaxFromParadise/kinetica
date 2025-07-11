@@ -419,6 +419,10 @@
 
 			font-size: rem(18);
 			font-weight: 700;
+			&:hover {
+				background: var(--primary-hover-color);
+				color: var(--black-main-color);
+			}
 		}
 		// .amp-email__bullets
 		&__bullets {
@@ -672,6 +676,10 @@
 			font-size: rem(18);
 
 			font-weight: 700;
+			&:hover {
+				background: var(--primary-hover-color);
+				color: var(--black-main-color);
+			}
 		}
 		// .results__img
 		&__img {

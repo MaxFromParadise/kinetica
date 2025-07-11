@@ -2869,6 +2869,11 @@ ul {
   font-weight: 700;
 }
 
+.email-marketing .amp-email__button:hover {
+  background: var(--primary-hover-color);
+  color: var(--black-main-color);
+}
+
 .email-marketing .amp-email__bullets {
   grid-area: bullets;
   margin-top: auto;
@@ -3041,6 +3046,11 @@ ul {
   color: var(--white, #fff);
   font-size: 1.125rem;
   font-weight: 700;
+}
+
+.email-marketing .results__button:hover {
+  background: var(--primary-hover-color);
+  color: var(--black-main-color);
 }
 
 .email-marketing .results__img {
