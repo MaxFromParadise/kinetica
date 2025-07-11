@@ -23,7 +23,7 @@
 		<section class="hero">
 			<div class="hero__container">
 				<div class="hero__content">
-					<h1 class="title hero__title">
+					<h1 class="title hero__title cssm left">
 						Быстрое поисковое продвижение<span
 							><br />с AI-процессами <br />
 							и финансовыми<br />гарантиями</span
@@ -31,7 +31,7 @@
 					</h1>
 					<button class="button hero__button">Отправить заявку</button>
 				</div>
-				<div class="hero__img">
+				<div class="hero__img cssm right">
 					<img
 						src="img/pages/prodvizhenie-saita/hero/juicy-girl-and-boy-searching-for-the-right-files.gif"
 						alt="juicy-girl-and-boy-searching-for-the-right-files"
@@ -51,7 +51,7 @@
 		</section>
 		<section class="advantages">
 			<div class="advantages__container">
-				<ul class="advantages__list">
+				<ul class="advantages__list cssm down">
 					<li class="advantages__item item-advantages">
 						<div class="item-advantages__img">
 							<img
@@ -101,13 +101,13 @@
 		@@include('./components/_top-awards.html') @@include('./components/_federal-brands.html') @@include('./components/_price.html')
 		<section class="report-data-lens">
 			<div class="report-data-lens__container">
-				<div class="report-data-lens__img">
+				<div class="report-data-lens__img cssm left">
 					<img
 						src="img/pages/prodvizhenie-saita/report-data-lens/report.png"
 						alt="DataLens report"
 					/>
 				</div>
-				<div class="report-data-lens__content">
+				<div class="report-data-lens__content cssm right">
 					<h2 class="title report-data-lens__title">
 						<span>Отчетность</span> в DataLens<br />
 						<span>30 ключевых срезов</span>
@@ -120,10 +120,10 @@
 		<section class="make-decisions">
 			<div class="make-decisions__container">
 				<div class="make-decisions__top">
-					<h2 class="title make-decisions__title">Принимаем решения на основе AI-аналитики, <span>а не по-старому</span></h2>
-					<article class="make-decisions__banner">Разрабатываем инструменты и алгоритмы для максимально точных прогнозов</article>
+					<h2 class="title make-decisions__title cssm left">Принимаем решения на основе AI-аналитики, <span>а не по-старому</span></h2>
+					<article class="make-decisions__banner cssm right">Разрабатываем инструменты и алгоритмы для максимально точных прогнозов</article>
 				</div>
-				<ul class="make-decisions__list">
+				<ul class="make-decisions__list cssm down">
 					<li class="make-decisions__item item-make-decisions">
 						<div class="item-make-decisions__img">
 							<img
@@ -164,13 +164,13 @@
 		<section class="seo-calculator">
 			<div class="seo-calculator__container">
 				<article class="seo-calculator__banner">
-					<h2 class="title seo-calculator__title"><span>Калькулятор SEO</span></h2>
-					<p class="seo-calculator__subtitle">Хотите узнать ориентировочную цену SEO-оптимизации сайта? Воспользуйтесь для этого простым калькулятором</p>
+					<h2 class="title seo-calculator__title cssm left"><span>Калькулятор SEO</span></h2>
+					<p class="seo-calculator__subtitle cssm left">Хотите узнать ориентировочную цену SEO-оптимизации сайта? Воспользуйтесь для этого простым калькулятором</p>
 					<form
 						id="seoCalculator"
 						class="seo-form"
 					>
-						<div class="seo-form__group seo-form__group--region">
+						<div class="seo-form__group seo-form__group--region cssm left">
 							<label
 								class="seo-form__label"
 								for="region"
@@ -192,7 +192,7 @@
 							</select>
 						</div>
 
-						<div class="seo-form__group seo-form__group--theme">
+						<div class="seo-form__group seo-form__group--theme cssm right">
 							<label class="seo-form__label">Тематика сайта:</label>
 							<select
 								name="theme"
@@ -207,7 +207,7 @@
 							</select>
 						</div>
 
-						<div class="seo-form__group seo-form__group--queries">
+						<div class="seo-form__group seo-form__group--queries cssm down">
 							<label class="seo-form__label">Количество запросов:</label>
 							<input
 								type="range"
@@ -222,7 +222,7 @@
 							<output class="seo-form__output">200</output>
 						</div>
 
-						<div class="seo-form__group seo-form__group--pages">
+						<div class="seo-form__group seo-form__group--pages cssm down">
 							<label class="seo-form__label">Количество страниц на сайте:</label>
 							<input
 								type="range"
@@ -257,7 +257,7 @@
 							</label>
 						</div>
 
-						<div class="seo-form__result">
+						<div class="seo-form__result cssm left">
 							<span class="seo-form__estimate-label">Примерная стоимость</span>
 							<span
 								class="seo-form__estimate-value"
@@ -269,19 +269,17 @@
 						<button
 							type="button"
 							id="calculateButton"
-							class="seo-form__submit"
+							class="seo-form__submit cssm right"
 						>
 							Отправить заявку
 						</button>
 
-						<p class="seo-form__note">Сумма является ориентировочной, не является офертой и может отличаться в зависимости от индивидуальных потребностей.</p>
+						<p class="seo-form__note cssm down">Сумма является ориентировочной, не является офертой и может отличаться в зависимости от индивидуальных потребностей.</p>
 					</form>
 				</article>
 			</div>
 		</section>
 		@@include('./components/_media-about-us.html')
-		<section>Empty</section>
-		@@include('./components/_footer.html') @@include('./components/_svg-icons.html')
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/index.js"></script>
 		<script src="js/prodvizhenie-saita.js"></script>
