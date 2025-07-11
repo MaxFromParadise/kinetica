@@ -3,7 +3,7 @@
 
 :root {
 	--primary-color: #00b2ff;
-	--primary-hover-color: #00a1e6;
+	--primary-hover-color: #71d5ff;
 	--primary-light-color: #def5ff;
 	--secondary-color: #caff3d;
 	--black: #000;
@@ -71,7 +71,7 @@ ul {
 
 .button {
 	cursor: pointer;
-	transition: background 0.3s ease 0s;
+	transition: background 0.3s ease 0s, color 0.3s ease 0s;
 
 	color: var(--white);
 	border-radius: rem(12);
@@ -81,5 +81,6 @@ ul {
 
 	&:hover {
 		background: var(--primary-hover-color);
+		color: var(--black-main-color);
 	}
 }

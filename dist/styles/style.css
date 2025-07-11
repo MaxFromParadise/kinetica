@@ -4,7 +4,7 @@
 
 :root {
   --primary-color: #00b2ff;
-  --primary-hover-color: #00a1e6;
+  --primary-hover-color: #71d5ff;
   --primary-light-color: #def5ff;
   --secondary-color: #caff3d;
   --black: #000;
@@ -66,8 +66,8 @@ ul {
 
 .button {
   cursor: pointer;
-  -webkit-transition: background 0.3s ease 0s;
-  transition: background 0.3s ease 0s;
+  -webkit-transition: background 0.3s ease 0s, color 0.3s ease 0s;
+  transition: background 0.3s ease 0s, color 0.3s ease 0s;
   color: var(--white);
   border-radius: 0.75rem;
   background: var(--primary-color);
@@ -76,6 +76,7 @@ ul {
 
 .button:hover {
   background: var(--primary-hover-color);
+  color: var(--black-main-color);
 }
 
 /* Header */
@@ -1410,6 +1411,7 @@ ul {
 }
 
 .contextnaya-reklama .hero {
+  min-height: 90vh;
   overflow: hidden;
   padding: 5rem 0;
 }
@@ -1869,6 +1871,7 @@ ul {
 
 .contextnaya-reklama .steps .banner-steps__button:hover {
   opacity: 0.9;
+  color: var(--white);
 }
 
 .contextnaya-reklama .steps__title {
@@ -1917,7 +1920,7 @@ ul {
 .contextnaya-reklama .report__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
+  gap: 8.75rem;
 }
 
 .contextnaya-reklama .report__slider {
@@ -2529,39 +2532,298 @@ ul {
   line-height: 155.556%;
 }
 
-.contextnaya-reklama .seo-calculator {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
+.email-marketing {
+  font-family: Montserrat, sans-serif;
+  overflow-x: hidden;
 }
 
-.contextnaya-reklama .seo-calculator__banner {
-  padding: 5.625rem;
-  border: 1px solid var(--Neutral-Grey, #dddce0);
-  border-radius: 1.25rem;
-  background: var(--white, #fff);
+.email-marketing .hero {
+  min-height: 90vh;
+  overflow: hidden;
+  padding: 5rem 0;
 }
 
-.contextnaya-reklama .seo-calculator__title {
+.email-marketing .hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.email-marketing .hero__content {
+  min-width: 25rem;
+}
+
+.email-marketing .hero__title {
   margin-bottom: 2.1875rem;
+  font-size: clamp(1.625rem, 1rem + 2.5vw, 4rem);
 }
 
-.contextnaya-reklama .seo-calculator__subtitle {
-  margin-bottom: 2rem;
-  color: #6c6c6c;
+.email-marketing .hero__text {
+  color: var(--Color-7, #636878);
   font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+  margin-bottom: 3.75rem;
 }
 
-.contextnaya-reklama .seo-form {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 42.1875rem));
+.email-marketing .hero__button {
+  width: 100%;
+  max-width: 23.125rem;
+  padding: 1.1875rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.email-marketing .hero__img {
+  position: relative;
+  max-width: 38.4375rem;
+}
+
+.email-marketing .hero__img:hover .hero__img-decor {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.email-marketing .hero__img:hover .hero__img-decor svg {
+  -webkit-transform: rotate(0) scale(1);
+  -ms-transform: rotate(0) scale(1);
+  transform: rotate(0) scale(1);
+  fill: #beebff;
+}
+
+.email-marketing .hero__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.email-marketing .hero__img-decor {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  -webkit-transform: translate(-70%, -70%);
+  -ms-transform: translate(-70%, -70%);
+  transform: translate(-70%, -70%);
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.email-marketing .hero__img-decor svg {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1.3) rotate(30deg);
+  -ms-transform: scale(1.3) rotate(30deg);
+  transform: scale(1.3) rotate(30deg);
+  -webkit-transition: fill 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: fill 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, fill 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, fill 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  fill: #caff3d;
+}
+
+.email-marketing .blur-banner {
+  margin-bottom: 7.5rem;
+}
+
+.email-marketing .blur-banner__list {
+  border-radius: 1.25rem;
+  border: 1px solid var(--Color-4, #def5ff);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(110.8000030518px);
+  backdrop-filter: blur(110.8000030518px);
+  padding: 4.375rem 5.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 1.875rem;
+  z-index: 5;
+  position: relative;
+}
+
+.email-marketing .item-blur-banner {
+  max-width: 26.25rem;
+}
+
+.email-marketing .item-blur-banner__title {
+  margin-bottom: 2.1875rem;
+  color: var(--black);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.email-marketing .item-blur-banner__text {
+  color: var(--black);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+}
+
+.email-marketing .ecosystem-banner {
+  position: relative;
+  padding-top: 7.125rem;
+  padding-bottom: 7.125rem;
+  background: var(--primary-color);
+  width: 100%;
+}
+
+.email-marketing .ecosystem-banner__container {
+  position: relative;
+}
+
+.email-marketing .ecosystem-banner__title {
+  color: var(--white);
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 122.222%;
+  position: relative;
+  z-index: 3;
+  max-width: 66.125rem;
+  margin: 0 auto;
+}
+
+.email-marketing .ecosystem-banner__left-star {
+  fill: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 68.375rem;
+  height: auto;
+  height: 49.375rem;
+  max-width: 100%;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.email-marketing .ecosystem-banner__left-star svg {
+  width: 100%;
+  height: 100%;
+  rotate: -90deg;
+  -webkit-transform: translateX(5%) translateY(-50%);
+  -ms-transform: translateX(5%) translateY(-50%);
+  transform: translateX(5%) translateY(-50%);
+}
+
+.email-marketing .ecosystem-banner__right-star {
+  position: absolute;
+  fill: var(--primary-color);
+  -webkit-filter: blur(28px);
+  filter: blur(28px);
+  height: 49.375rem;
+  width: 93.125rem;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.email-marketing .ecosystem-banner__right-star svg {
+  -webkit-transform: translateY(60%) translateX(5%);
+  -ms-transform: translateY(60%) translateX(5%);
+  transform: translateY(60%) translateX(5%);
+  rotate: -110deg;
+  width: 100%;
+  height: 100%;
+}
+
+.email-marketing .about-features {
+  padding-top: 7.5rem;
+}
+
+.email-marketing .about-features__title {
+  margin-bottom: 5rem;
+}
+
+.email-marketing .about-features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 2.1875rem;
-  grid-template-areas: "region theme" "queries pages" "options options" "result button" "note note";
 }
 
-.contextnaya-reklama .seo-form__group {
+.email-marketing .item-about-features {
+  max-width: 23.125rem;
+  width: 100%;
+}
+
+.email-marketing .item-about-features__img {
+  max-height: 11.5rem;
+  max-width: 6.5625rem;
+  margin-bottom: 2rem;
+}
+
+.email-marketing .item-about-features__img img {
+  height: 100%;
+  width: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.email-marketing .item-about-features__title {
+  color: var(--black-main-color, #292b32);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5625rem;
+}
+
+.email-marketing .item-about-features__text {
+  color: var(--Color-7, #636878);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.email-marketing .amp-email {
+  padding-bottom: 7.5rem;
+  padding-top: 7.5rem;
+  position: relative;
+}
+
+.email-marketing .amp-email__container {
+  display: grid;
+  gap: 1.25rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-template-columns: minmax(23.125rem, 35rem) minmax(0, 51.875rem);
+  grid-template-areas: "slider title" "slider text" "slider button" "slider bullets";
+}
+
+.email-marketing .amp-email__slider {
+  width: 100%;
+  grid-area: slider;
+}
+
+.email-marketing .amp-email__slider--decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-15%);
+  -ms-transform: translateY(-15%);
+  transform: translateY(-15%);
+  z-index: -1;
+}
+
+.email-marketing .amp-email__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2569,287 +2831,596 @@ ul {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
-.contextnaya-reklama .seo-form__group--region {
-  grid-area: region;
-}
-
-.contextnaya-reklama .seo-form__group--theme {
-  grid-area: theme;
-}
-
-.contextnaya-reklama .seo-form__group--queries {
-  display: grid;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 1.5rem;
-  border: 1px solid var(--Neutral-Grey, #dddce0);
-  border-radius: 0.75rem;
-  background: var(--White, #fff);
-  grid-area: queries;
-  grid-template-columns: minmax(0, 33.125rem) auto;
-  -webkit-column-gap: 2.75rem;
-  -moz-column-gap: 2.75rem;
-  column-gap: 2.75rem;
-}
-
-.contextnaya-reklama .seo-form__group--queries label {
-  grid-column: span 2;
-}
-
-.contextnaya-reklama .seo-form__group--pages {
-  display: grid;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 1.5rem;
-  border: 1px solid var(--Neutral-Grey, #dddce0);
-  border-radius: 0.75rem;
-  background: var(--White, #fff);
-  grid-area: pages;
-  grid-template-columns: minmax(0, 33.125rem) auto;
-  -webkit-column-gap: 2.75rem;
-  -moz-column-gap: 2.75rem;
-  column-gap: 2.75rem;
-}
-
-.contextnaya-reklama .seo-form__group--pages label {
-  grid-column: span 2;
-}
-
-.contextnaya-reklama .seo-form__group--options {
-  grid-area: options;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.contextnaya-reklama .seo-form__group--options label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.contextnaya-reklama .seo-form__checkbox {
+.email-marketing .amp-email__title {
+  margin-bottom: 2.1875rem;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1rem;
-  gap: 0.5rem;
+  grid-area: title;
 }
 
-.contextnaya-reklama .seo-form__checkbox input[type=checkbox] {
+.email-marketing .amp-email__title--decor {
   position: absolute;
-  pointer-events: none;
-  opacity: 0;
+  right: 100%;
+  top: 50%;
 }
 
-.contextnaya-reklama .seo-form__checkbox-box {
+.email-marketing .amp-email__text {
+  grid-area: text;
+  color: var(--black);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+  margin-bottom: 2.1875rem;
   position: relative;
-  width: 1.25rem;
-  height: 1.25rem;
-  -webkit-transition: background-color 0.2s, border-color 0.2s;
-  transition: background-color 0.2s, border-color 0.2s;
-  border: 0.125rem solid #ccc;
-  border-radius: 0.25rem;
-  background-color: #fff;
+  z-index: 2;
 }
 
-.contextnaya-reklama .seo-form__checkbox input[type=checkbox]:checked + .seo-form__checkbox-box {
-  border-color: var(--secondary-color);
+.email-marketing .amp-email__button {
+  grid-area: button;
+  padding: 0.9375rem 2.375rem;
+  max-width: 35.0625rem;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.email-marketing .amp-email__bullets {
+  grid-area: bullets;
+  margin-top: auto;
+}
+
+.email-marketing .amp-email__bullets .swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: transparent;
+  border: 1px solid #d1d3d9;
+  border-radius: 50%;
+  opacity: 1;
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
+}
+
+.email-marketing .amp-email__bullets .swiper-pagination-bullet-active {
+  background: #caff3d;
+  border: none;
+}
+
+.email-marketing .slide-amp-email__img {
+  height: 48.125rem;
+  margin-bottom: 1.875rem;
+}
+
+.email-marketing .slide-amp-email__img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 1.25rem;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.email-marketing .slide-amp-email__title {
+  color: var(--black);
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.email-marketing .tasks {
+  padding-top: 8.75rem;
+  padding-bottom: 10rem;
+  background: var(--secondary-color);
+  position: relative;
+}
+
+.email-marketing .tasks__title {
+  margin-bottom: 2.1875rem;
+  position: relative;
+  z-index: 2;
+}
+
+.email-marketing .tasks__text {
+  margin-bottom: 4.375rem;
+  color: var(--black-main-color, #292b32);
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+  font-weight: 400;
+  line-height: 151.125%;
+  max-width: 73.8125rem;
+}
+
+.email-marketing .tasks__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2.5rem;
+  -webkit-column-gap: 2.5rem;
+  -moz-column-gap: 2.5rem;
+  column-gap: 2.5rem;
+}
+
+.email-marketing .tasks__decor {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  transform: translateY(-30%);
+}
+
+.email-marketing .item-tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.25rem;
+  border-radius: 1.25rem;
+  padding: 0.9375rem 1.875rem;
+  background: var(--white);
+  position: relative;
+  z-index: 3;
+}
+
+.email-marketing .item-tasks__icon {
+  border-radius: 0.625rem;
+  background: #ffa0db;
+  width: 4.0625rem;
+  height: 4.0625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.email-marketing .item-tasks__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.email-marketing .item-tasks__title {
+  color: var(--black-main-color, #292b32);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.email-marketing .results {
+  padding-top: 7.5rem;
+  overflow: hidden;
+}
+
+.email-marketing .results__slider .swiper {
+  overflow: visible;
+}
+
+.email-marketing .results__slide {
+  padding-bottom: 10rem;
+}
+
+.email-marketing .results__slide:nth-child(even) .results__img--decor svg path {
+  fill: var(--primary-color);
+}
+
+.email-marketing .results .results__img--decor svg path {
+  -webkit-transition: fill 0.3s ease 0s;
+  transition: fill 0.3s ease 0s;
+}
+
+.email-marketing .results__title {
+  margin-bottom: 3.125rem;
+}
+
+.email-marketing .results__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 3.125rem;
+}
+
+.email-marketing .results__button {
+  max-width: 23rem;
+  padding: 0.9375rem;
+  width: 100%;
+}
+
+.email-marketing .results__img {
+  position: relative;
+}
+
+.email-marketing .results__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.email-marketing .results__img--decor {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 200%;
+  height: 200%;
+}
+
+.email-marketing .results__img--decor svg {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(10%);
+  -ms-transform: translateX(10%);
+  transform: translateX(10%);
+}
+
+.email-marketing .results__bullets {
+  border-radius: 1.75rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid var(--Color-10, #f3f4f5);
+  background: var(--Color-5, #fff);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+.email-marketing .results__bullets .swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: transparent;
+  border: 1px solid #d1d3d9;
+  border-radius: 50%;
+  opacity: 1;
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
+}
+
+.email-marketing .results__bullets .swiper-pagination-bullet-active {
+  background: #caff3d;
+  border: none;
+}
+
+.email-marketing .item-results {
+  max-width: 49.4375rem;
+  margin-bottom: 3.125rem;
+}
+
+.email-marketing .item-results:last-child {
+  max-width: 40.5rem;
+}
+
+.email-marketing .item-results__title {
+  color: var(--primary-color);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 128.571%;
+  margin-bottom: 1.25rem;
+}
+
+.email-marketing .item-results__text {
+  color: var(--black-main-color);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+}
+
+.email-marketing .price {
+  background-color: var(--primary-color);
+  background-image: none;
+  padding: 8.75rem 0;
+  position: relative;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+  overflow: hidden;
+}
+
+.email-marketing .price:hover {
   background-color: var(--secondary-color);
 }
 
-.contextnaya-reklama .seo-form__checkbox input[type=checkbox]:checked + .seo-form__checkbox-box::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0.375rem;
-  height: 0.625rem;
-  content: "";
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  -ms-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
-  border: solid #000;
-  border-width: 0 0.125rem 0.125rem 0;
+.email-marketing .price:hover .price__title {
+  color: var(--black-main-color);
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 
-.contextnaya-reklama .seo-form__checkbox-label {
-  font-size: 1rem;
-}
-
-.contextnaya-reklama .seo-form__label {
-  margin-bottom: 0.75rem;
-  color: var(--Color-8, #adb0bc);
-  font-size: 0.875rem;
-  font-weight: 400;
-}
-
-.contextnaya-reklama .seo-form__select {
-  color: var(--Color-6, #292b32);
-  font-size: 1.125rem;
-  font-weight: 400;
-}
-
-.contextnaya-reklama .seo-form__select,
-.contextnaya-reklama .seo-form__range {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border-radius: 0.75rem;
-  background: #f9f9f9;
-  font-size: 1rem;
-}
-
-.contextnaya-reklama .seo-form__select:focus,
-.contextnaya-reklama .seo-form__range:focus {
-  border-color: #007aff;
-  outline: none;
-}
-
-.contextnaya-reklama .seo-form__range {
-  height: 0.5rem;
-  padding: 0;
-  border-radius: 1.5rem;
-  background: var(--Color-4, #def5ff);
-  background: -webkit-gradient(linear, left top, right top, from(var(--secondary-color)), color-stop(var(--secondary-color)), color-stop(#def5ff), to(#def5ff));
-  background: linear-gradient(to right, var(--secondary-color) 0%, var(--secondary-color) var(--value-percent, 50%), #def5ff var(--value-percent, 50%), #def5ff 100%);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.contextnaya-reklama .seo-form__range::-webkit-slider-thumb {
-  width: 1.5rem;
-  height: 1.5rem;
-  cursor: pointer;
-  border: none;
-  border: 1px solid var(--secondary-color);
-  border-radius: 50%;
-  background: var(--white);
-  -webkit-appearance: none;
-  appearance: none;
-  -webkit-filter: drop-shadow(0 4px 24px rgba(16, 24, 64, 0.16));
-  filter: drop-shadow(0 4px 24px rgba(16, 24, 64, 0.16));
-}
-
-.contextnaya-reklama .seo-form__range::-moz-range-thumb {
-  width: 1.5rem;
-  height: 1.5rem;
-  cursor: pointer;
-  border: none;
-  border: 1px solid var(--secondary-color);
-  border-radius: 50%;
-  background: var(--white);
-  -moz-appearance: none;
-  appearance: none;
-  filter: drop-shadow(0 4px 24px rgba(16, 24, 64, 0.16));
-}
-
-.contextnaya-reklama .seo-form__output {
-  padding: 0.75rem 1.375rem;
-  color: var(--Color-6, #292b32);
-  border: 1px solid var(--Color-9, #d1d3d9);
-  border-radius: 0.5rem;
-  background: var(--White, #fff);
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.contextnaya-reklama .seo-form__checkbox-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 0.9375rem;
-  gap: 0.5rem;
-}
-
-.contextnaya-reklama .seo-form__checkbox-label input[type=checkbox] {
-  width: 1.125rem;
-  height: 1.125rem;
-}
-
-.contextnaya-reklama .seo-form__result {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  grid-area: result;
-  gap: 0.5rem;
-}
-
-.contextnaya-reklama .seo-form__estimate-label {
-  color: var(--Color-6, #292b32);
-  font-size: 2.25rem;
-  font-weight: 700;
-}
-
-.contextnaya-reklama .seo-form__estimate-value {
+.email-marketing .price:hover .price__title span {
   color: var(--primary-color);
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.email-marketing .price:hover .price__decor {
+  -webkit-transform: translate(55%, -73%) scale(1.7) rotate(-20deg);
+  -ms-transform: translate(55%, -73%) scale(1.7) rotate(-20deg);
+  transform: translate(55%, -73%) scale(1.7) rotate(-20deg);
+}
+
+.email-marketing .price:hover .price__decor--star {
+  opacity: 0;
+}
+
+.email-marketing .price:hover .price__decor--line_main {
+  opacity: 0;
+}
+
+.email-marketing .price:hover .price__decor--line_hover {
+  opacity: 1;
+}
+
+.email-marketing .price__container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.9375rem;
+}
+
+.email-marketing .price__title {
+  color: var(--white, #fff);
+  position: relative;
+  z-index: 3;
+}
+
+.email-marketing .price__title span {
+  color: var(--secondary-color);
+}
+
+.email-marketing .price__banner {
+  position: relative;
+  z-index: 3;
+}
+
+.email-marketing .price__decor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out 0s;
+  transition: -webkit-transform 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, -webkit-transform 0.4s ease-in-out 0s;
+}
+
+.email-marketing .price__decor--line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 52.9501875rem;
+  height: 54.0609375rem;
+  -webkit-transform: translateY(50%) rotate(20deg);
+  -ms-transform: translateY(50%) rotate(20deg);
+  transform: translateY(50%) rotate(20deg);
+  z-index: 1;
+}
+
+.email-marketing .price__decor--line_main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  z-index: 1;
+}
+
+.email-marketing .price__decor--line_hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  z-index: 1;
+}
+
+.email-marketing .price__decor--rocket {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: rotate(-10deg) translateX(-50%);
+  -ms-transform: rotate(-10deg) translateX(-50%);
+  transform: rotate(-10deg) translateX(-50%);
+  z-index: 2;
+}
+
+.email-marketing .price__decor--rocket img {
+  position: relative;
+  z-index: 2;
+}
+
+.email-marketing .price__decor--star {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.email-marketing .banner-price {
+  padding: 4.375rem 2.3125rem 4.375rem 5.375rem;
+  background: var(--white);
+  border-radius: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.875rem;
+  width: 100%;
+  max-width: 49.1875rem;
+}
+
+.email-marketing .banner-price__title {
+  color: var(--black-main-color, #292b32);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.9375rem;
+}
+
+.email-marketing .banner-price__price {
+  color: var(--primary-color, #00b2ff);
   font-size: 2.25rem;
   font-weight: 700;
+  margin-bottom: 0.9375rem;
 }
 
-.contextnaya-reklama .seo-form__submit {
-  width: 100%;
-  max-width: 23.125rem;
-  padding: 1.125rem 2rem;
-  cursor: pointer;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
-  color: #fff;
-  border: none;
-  border-radius: 0.75rem;
-  background: var(--primary-color);
-  font-size: 1rem;
-  font-weight: 600;
-  grid-area: button;
-  justify-self: end;
-}
-
-.contextnaya-reklama .seo-form__submit:hover {
-  background-color: #005bb5;
-}
-
-.contextnaya-reklama .seo-form__note {
-  color: var(--Color-8, #adb0bc);
+.email-marketing .banner-price__descr {
+  color: var(--Color-7, #636878);
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 142.857%;
-  grid-area: note;
+}
+
+.email-marketing .banner-price__right {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.email-marketing .banner-price__list--title {
+  color: var(--Color-7, #636878);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5625rem;
+}
+
+.email-marketing .banner-price__list {
+  margin-bottom: 0rem;
+}
+
+.email-marketing .banner-price__list-item {
+  margin-bottom: 0.9375rem;
+  position: relative;
+  padding-left: 1.0625rem;
+}
+
+.email-marketing .banner-price__list-item::before {
+  content: "•";
+  position: absolute;
+  font-weight: 400;
+  left: 0;
+  top: 0em;
+}
+
+.email-marketing .banner-price__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.email-marketing .banner-price__button {
+  max-width: 14.4375rem;
+  width: 100%;
+  padding: 0.9375rem 0;
+  margin-bottom: 1.5625rem;
+  margin-top: auto;
+}
+
+.email-marketing .banner-price__link {
+  display: block;
+  color: var(--Color-2, #71d5ff);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  cursor: pointer;
+}
+
+.email-marketing .oleg {
+  overflow: hidden;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.email-marketing .oleg__banner {
+  border-radius: 1.25rem;
+  background: var(--secondary-color, #caff3d);
+  padding: 4.25rem 0 0 5.625rem;
+  position: relative;
+}
+
+.email-marketing .oleg__title {
+  padding-right: 5.625rem;
+  margin-bottom: 2.1875rem;
+}
+
+.email-marketing .oleg__text {
+  padding-right: 5.625rem;
+  max-width: 64.375rem;
+  margin-bottom: 0.9375rem;
+  position: relative;
+  z-index: 2;
+}
+
+.email-marketing .oleg__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 3.125rem;
+  width: 100%;
+}
+
+.email-marketing .oleg__img {
+  max-width: 42.75rem;
+  z-index: 1;
+}
+
+.email-marketing .oleg__img img {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(0.1875rem);
+  -ms-transform: translateY(0.1875rem);
+  transform: translateY(0.1875rem);
+}
+
+.email-marketing .oleg__subtitle {
+  border-radius: 1rem;
+  background: var(--primary-color, #00b2ff);
+  margin-bottom: 3.125rem;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  padding: 0.625rem 3rem;
+}
+
+.email-marketing .oleg__comments {
+  max-width: 47.5rem;
+}
+
+.email-marketing .oleg__comments img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 @media (max-width: 1199.98px) {
@@ -2861,12 +3432,34 @@ ul {
     font-size: 1.75rem;
   }
 
-  .contextnaya-reklama .seo-form__estimate-label {
-    font-size: 1.75rem;
+  .email-marketing .amp-email__container {
+    grid-template-columns: 100%;
+    grid-template-areas: "title" "slider" "bullets" "text" "button";
   }
 
-  .contextnaya-reklama .seo-form__estimate-value {
-    font-size: 1.75rem;
+  .email-marketing .slide-amp-email {
+    width: auto;
+  }
+
+  .email-marketing .slide-amp-email__img {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+
+  .email-marketing .slide-amp-email__img img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    overflow: hidden;
+    width: auto;
+  }
+
+  .email-marketing .item-tasks__title {
+    font-size: 1.125rem;
+  }
+
+  .email-marketing .banner-price {
+    padding: 2.5rem 1.875rem 2.5rem 2.5rem;
   }
 }
 
@@ -2955,6 +3548,7 @@ ul {
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
+    gap: 2.5rem;
   }
 
   .contextnaya-reklama .price__container {
@@ -2979,9 +3573,110 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .contextnaya-reklama .seo-calculator__banner {
-    padding: 0;
-    border: none;
+  .email-marketing .blur-banner__list {
+    padding: 1.875rem 2.1875rem;
+  }
+
+  .email-marketing .ecosystem-banner__left-star {
+    z-index: -1;
+  }
+
+  .email-marketing .amp-email__slider--decor {
+    display: none;
+  }
+
+  .email-marketing .tasks__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .email-marketing .tasks__decor {
+    display: none;
+  }
+
+  .email-marketing .results__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .email-marketing .results__img--decor {
+    width: 150%;
+    height: 150%;
+  }
+
+  .email-marketing .results__img--decor svg {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .email-marketing .price__container {
+    grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .email-marketing .oleg__banner {
+    padding: 3.75rem 2.1875rem;
+  }
+
+  .email-marketing .oleg__title {
+    padding-right: 0;
+  }
+
+  .email-marketing .oleg__text {
+    padding-right: 0;
+    margin-bottom: 18.75rem;
+  }
+
+  .email-marketing .oleg__bottom {
+    display: block;
+  }
+
+  .email-marketing .oleg__img {
+    height: 20.4375rem;
+    width: 21rem;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    position: absolute;
+    right: 0;
+    bottom: 21.875rem;
+  }
+
+  .email-marketing .oleg__img img {
+    rotate: -90deg;
+    -webkit-transform: translateY(1.25rem);
+    -ms-transform: translateY(1.25rem);
+    transform: translateY(1.25rem);
+  }
+
+  .email-marketing .oleg__comments {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    width: 100%;
+    max-width: 100%;
+    -ms-overflow-style: none;
+  }
+
+  .email-marketing .oleg__comments::-webkit-scrollbar {
+    display: none;
+  }
+
+  .email-marketing .oleg__comments img {
+    overflow: hidden;
+    scrollbar-width: none;
+    height: 12.5rem;
+    width: auto;
+    -ms-overflow-style: none;
+  }
+
+  .email-marketing .oleg__comments img::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -3403,32 +4098,193 @@ ul {
     font-size: 1rem;
   }
 
-  .contextnaya-reklama .seo-calculator__title {
+  .email-marketing .hero__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .email-marketing .hero__content {
+    min-width: 0;
+  }
+
+  .email-marketing .hero__text {
+    margin-bottom: 1.875rem;
+  }
+
+  .email-marketing .hero__img {
+    max-width: 80%;
     margin-bottom: 1.25rem;
   }
 
-  .contextnaya-reklama .seo-calculator {
-    padding-top: 3.75rem;
-    padding-bottom: 3.75rem;
+  .email-marketing .hero {
+    padding: 1.875rem 0;
   }
 
-  .contextnaya-reklama .seo-form__group--options {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
+  .email-marketing .blur-banner {
+    margin-bottom: 4.375rem;
+  }
+
+  .email-marketing .blur-banner__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .email-marketing .item-blur-banner__title {
+    margin-bottom: 0.9375rem;
+    font-size: 1rem;
+  }
+
+  .email-marketing .item-blur-banner__text {
+    font-size: 0.875rem;
+  }
+
+  .email-marketing .ecosystem-banner {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
+
+  .email-marketing .ecosystem-banner__title {
+    font-size: 1.75rem;
+  }
+
+  .email-marketing .ecosystem-banner__left-star {
+    z-index: 2;
+  }
+
+  .email-marketing .ecosystem-banner__left-star svg {
+    -webkit-transform: translateX(5%) translateY(-20%);
+    -ms-transform: translateX(5%) translateY(-20%);
+    transform: translateX(5%) translateY(-20%);
+  }
+
+  .email-marketing .ecosystem-banner__right-star svg {
+    -webkit-transform: translateX(20%) translateY(40%);
+    -ms-transform: translateX(20%) translateY(40%);
+    transform: translateX(20%) translateY(40%);
+  }
+
+  .email-marketing .about-features {
+    padding-top: 3.75rem;
+  }
+
+  .email-marketing .about-features__title {
+    margin-bottom: 1.875rem;
+  }
+
+  .email-marketing .about-features__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
 
-  .contextnaya-reklama .seo-form__submit {
+  .email-marketing .item-about-features {
     max-width: 100%;
   }
 
-  .contextnaya-reklama .seo-form {
+  .email-marketing .item-about-features__img {
+    margin-bottom: 0.9375rem;
+  }
+
+  .email-marketing .item-about-features__title {
+    margin-bottom: 0.625rem;
+    font-size: 1.75rem;
+    line-height: 128.571%;
+  }
+
+  .email-marketing .item-about-features__text {
+    font-size: 1rem;
+  }
+
+  .email-marketing .amp-email {
+    padding-bottom: 3.75rem;
+    padding-top: 3.75rem;
+  }
+
+  .email-marketing .slide-amp-email__img {
+    height: 22.5rem;
+  }
+
+  .email-marketing .tasks {
+    padding-top: 4.0625rem;
+    padding-bottom: 4.0625rem;
+  }
+
+  .email-marketing .tasks__title {
+    margin-bottom: 0.9375rem;
+  }
+
+  .email-marketing .tasks__text {
+    margin-bottom: 1.5625rem;
+    font-size: 1rem;
+  }
+
+  .email-marketing .tasks__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: scroll;
+    border-radius: 1.25rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .email-marketing .tasks__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .email-marketing .item-tasks__title {
+    font-size: 1rem;
+  }
+
+  .email-marketing .results {
+    padding-top: 3.75rem;
+    padding-bottom: 0rem;
+  }
+
+  .email-marketing .results__slide {
+    padding-bottom: 3.75rem;
+  }
+
+  .email-marketing .price {
+    padding: 4.0625rem 0;
+  }
+
+  .email-marketing .banner-price {
     grid-template-columns: 1fr;
-    grid-template-areas: "region" "queries" "theme" "pages" "options" "result" "button" "note";
+    padding: 1.25rem;
+  }
+
+  .email-marketing .banner-price__button {
+    max-width: 100%;
+  }
+
+  .email-marketing .banner-price__link {
+    text-align: center;
+  }
+
+  .email-marketing .oleg {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .email-marketing .oleg__title {
+    margin-bottom: 0.9375rem;
+  }
+
+  .email-marketing .oleg__subtitle {
+    font-size: 0.875rem;
+    text-align: center;
   }
 }
 
