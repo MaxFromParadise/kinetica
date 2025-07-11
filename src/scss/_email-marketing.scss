@@ -415,6 +415,10 @@
 			width: 100%;
 			position: relative;
 			z-index: 2;
+			color: var(--white, #fff);
+
+			font-size: rem(18);
+			font-weight: 700;
 		}
 		// .amp-email__bullets
 		&__bullets {
@@ -614,9 +618,9 @@
 		}
 		// .results__slide
 		&__slide {
-			padding-bottom: rem(160);
-			@media (max-width: 767.98px) {
-				padding-bottom: rem(60);
+			padding-bottom: rem(100);
+			@media (max-width: 991.98px) {
+				padding-bottom: rem(30);
 			}
 
 			&:nth-child(even) {
@@ -663,6 +667,11 @@
 			max-width: rem(368);
 			padding: rem(15);
 			width: 100%;
+			color: var(--white, #fff);
+
+			font-size: rem(18);
+
+			font-weight: 700;
 		}
 		// .results__img
 		&__img {
@@ -677,10 +686,10 @@
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			transform: translate(-50%, -50%);
+			transform: translate(-50%, -60%);
 			z-index: -1;
-			width: 200%;
-			height: 200%;
+			width: 160%;
+			height: 160%;
 			@media (max-width: 991.98px) {
 				width: 150%;
 				height: 150%;
@@ -700,6 +709,16 @@
 			border: 1px solid var(--Color-10, #f3f4f5);
 			background: var(--Color-5, #fff);
 			backdrop-filter: blur(2px);
+			margin: 0 auto;
+			margin-top: rem(-110);
+			margin-left: 60%;
+			margin-bottom: rem(100);
+			z-index: 10;
+			position: relative;
+			@media (max-width: 991.98px) {
+				margin: 0 auto;
+				margin-bottom: rem(60);
+			}
 			.swiper-pagination-bullet {
 				width: rem(12);
 				height: rem(12);

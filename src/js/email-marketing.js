@@ -211,7 +211,9 @@ if (document.querySelector('.amp-email__slider .swiper')) {
 	const ampEmailSwiper = new Swiper('.amp-email__slider .swiper', {
 		freeMode: true,
 		spaceBetween: 30,
-
+		autoplay: {
+			delay: 3000,
+		},
 		slidesPerView: 'auto',
 		pagination: {
 			el: '.amp-email__bullets',
@@ -224,7 +226,7 @@ if (document.querySelector('.amp-email__slider .swiper')) {
 				loop: true,
 				grabCursor: true,
 				autoplay: {
-					delay: 3000,
+					delay: 4000,
 				},
 			},
 		},
@@ -232,10 +234,9 @@ if (document.querySelector('.amp-email__slider .swiper')) {
 }
 // results
 if (document.querySelector('.results .swiper')) {
+	const bullets = document.querySelector('.results__bullets');
+
 	const resultsSwiper = new Swiper('.results .swiper', {
-		// Optional parameters
-		loop: false,
-		freeMode: false,
 		slidesPerView: 1,
 		spaceBetween: 500,
 		pagination: {
@@ -243,7 +244,7 @@ if (document.querySelector('.results .swiper')) {
 			clickable: true,
 		},
 		autoplay: {
-			delay: 5000,
+			delay: 4000,
 		},
 	});
 }

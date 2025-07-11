@@ -2864,6 +2864,9 @@ ul {
   width: 100%;
   position: relative;
   z-index: 2;
+  color: var(--white, #fff);
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
 .email-marketing .amp-email__bullets {
@@ -3005,7 +3008,7 @@ ul {
 }
 
 .email-marketing .results__slide {
-  padding-bottom: 10rem;
+  padding-bottom: 6.25rem;
 }
 
 .email-marketing .results__slide:nth-child(even) .results__img--decor svg path {
@@ -3035,6 +3038,9 @@ ul {
   max-width: 23rem;
   padding: 0.9375rem;
   width: 100%;
+  color: var(--white, #fff);
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
 .email-marketing .results__img {
@@ -3050,12 +3056,12 @@ ul {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -60%);
+  -ms-transform: translate(-50%, -60%);
+  transform: translate(-50%, -60%);
   z-index: -1;
-  width: 200%;
-  height: 200%;
+  width: 160%;
+  height: 160%;
 }
 
 .email-marketing .results__img--decor svg {
@@ -3075,6 +3081,12 @@ ul {
   background: var(--Color-5, #fff);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
+  margin: 0 auto;
+  margin-top: -6.875rem;
+  margin-left: 60%;
+  margin-bottom: 6.25rem;
+  z-index: 10;
+  position: relative;
 }
 
 .email-marketing .results__bullets .swiper-pagination-bullet {
@@ -3594,6 +3606,10 @@ ul {
     display: none;
   }
 
+  .email-marketing .results__slide {
+    padding-bottom: 1.875rem;
+  }
+
   .email-marketing .results__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -3610,6 +3626,11 @@ ul {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
+  }
+
+  .email-marketing .results__bullets {
+    margin: 0 auto;
+    margin-bottom: 3.75rem;
   }
 
   .email-marketing .price__container {
@@ -4251,10 +4272,6 @@ ul {
   .email-marketing .results {
     padding-top: 3.75rem;
     padding-bottom: 0rem;
-  }
-
-  .email-marketing .results__slide {
-    padding-bottom: 3.75rem;
   }
 
   .email-marketing .price {
