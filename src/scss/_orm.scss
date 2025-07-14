@@ -455,6 +455,14 @@
 			border: 2px solid #ddd;
 			border-radius: rem(4);
 			gap: rem(5);
+			cursor: pointer;
+			&:hover {
+				.item-bad-reviews__like--icon {
+					svg path {
+						fill: var(--primary-color);
+					}
+				}
+			}
 		}
 
 		// .item-bad-reviews__like--icon
@@ -475,6 +483,16 @@
 
 		// .item-bad-reviews__wrong
 		&__wrong {
+			cursor: pointer;
+
+			&:hover {
+				svg path {
+					fill: rgb(179, 2, 2);
+				}
+			}
+			svg path {
+				transition: fill 0.5s ease 0s;
+			}
 		}
 
 		@media (max-width: 767.98px) {
