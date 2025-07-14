@@ -6,9 +6,9 @@
 // @use './cases';
 // @use './faq';
 // @use './footer';
-// @use './prodvizhenie-saita';
-// @use './contextnaya-reklama';
-// @use './email-marketing';
+@use './prodvizhenie-saita';
+@use './contextnaya-reklama';
+@use './email-marketing';
 @use './target';
 @use './orm';
 @use './cpa';
