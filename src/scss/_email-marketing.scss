@@ -1196,7 +1196,11 @@
 
 			margin-bottom: rem(15);
 			padding-left: rem(17);
+			color: var(--Color-7, #636878);
 
+			/* Body 3 */
+			font-size: rem(14);
+			font-weight: 400;
 			&::before {
 				position: absolute;
 				top: 0;
