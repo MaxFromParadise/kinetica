@@ -597,7 +597,7 @@ ul {
   flex-direction: column;
   width: 100%;
   max-width: 31.9375rem;
-  padding: 2rem 1.5rem 0.3125rem;
+  padding: 2rem 1.5rem 0.9375rem;
   border-radius: 1.25rem;
   background: var(--white, #fff);
 }
@@ -1117,8 +1117,10 @@ ul {
 
 .prodvizhenie-saita .seo-calculator__subtitle {
   margin-bottom: 2rem;
-  color: #6c6c6c;
+  color: var(--Color-6, #292b32);
+  /* Body 1 */
   font-size: 1.125rem;
+  font-weight: 400;
 }
 
 .prodvizhenie-saita .seo-form {
@@ -1127,6 +1129,7 @@ ul {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  font-family: Montserrat;
   gap: 2.1875rem;
   grid-template-areas: "region theme" "queries pages" "options options" "result button" "note note";
 }
@@ -1208,6 +1211,7 @@ ul {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 2.1875rem;
 }
 
 .prodvizhenie-saita .seo-form__group--options label {
@@ -1274,7 +1278,13 @@ ul {
 }
 
 .prodvizhenie-saita .seo-form__checkbox-label {
-  font-size: 1rem;
+  color: var(--black-main-color, #292b32);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.prodvizhenie-saita .seo-form .seo-form__checkbox-label {
+  font-size: 1.125rem;
 }
 
 .prodvizhenie-saita .seo-form__label {
@@ -1288,6 +1298,17 @@ ul {
   color: var(--Color-6, #292b32);
   font-size: 1.125rem;
   font-weight: 400;
+  border-radius: 8px;
+  border: 1px solid var(--Color-9, #d1d3d9);
+  background-color: var(--White, #fff) !important;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%23DDDCE0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
 }
 
 .prodvizhenie-saita .seo-form__select,
@@ -1295,8 +1316,11 @@ ul {
   width: 100%;
   padding: 0.75rem 1rem;
   border-radius: 0.75rem;
-  background: #f9f9f9;
-  font-size: 1rem;
+  background-color: #f9f9f9;
+  font-size: 1.125rem;
+  color: var(--Color-6, #292b32);
+  /* Body 1 */
+  font-family: Montserrat;
 }
 
 .prodvizhenie-saita .seo-form__select:focus,
@@ -1396,7 +1420,7 @@ ul {
 .prodvizhenie-saita .seo-form__submit {
   width: 100%;
   max-width: 23.125rem;
-  padding: 1.125rem 2rem;
+  padding: 1.375rem 2rem;
   cursor: pointer;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
@@ -2155,7 +2179,7 @@ ul {
   display: grid;
   width: 100%;
   max-width: 49.1875rem;
-  padding: 4.375rem 2.3125rem 4.375rem 5.375rem;
+  padding: 3.75rem;
   border-radius: 1.25rem;
   background: var(--white);
   grid-template-columns: repeat(2, 1fr);

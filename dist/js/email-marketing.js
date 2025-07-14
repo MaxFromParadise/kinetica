@@ -54,6 +54,14 @@ if (document.querySelector('.amp-email__slider .swiper')) {
 			el: '.amp-email__bullets',
 			clickable: true,
 		},
+		effect: 'coverflow',
+		coverflowEffect: {
+			rotate: -60,
+			stretch: 100,
+			depth: 500,
+			modifier: 0.9,
+			slideShadows: false,
+		},
 		breakpoints: {
 			1200: {
 				slidesPerView: 1,
@@ -74,6 +82,7 @@ if (document.querySelector('.results .swiper')) {
 	const resultsSwiper = new Swiper('.results .swiper', {
 		slidesPerView: 1,
 		spaceBetween: 500,
+		speed: 2000,
 		pagination: {
 			el: '.results__bullets',
 			clickable: true,
