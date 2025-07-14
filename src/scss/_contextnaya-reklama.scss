@@ -213,7 +213,8 @@
 				position: relative;
 
 				padding-left: rem(20);
-
+				color: #636878;
+				font-size: rem(18);
 				&::before {
 					position: absolute;
 					top: 0;
@@ -999,6 +1000,8 @@
 
 			margin-bottom: rem(15);
 			padding-left: rem(17);
+			color: #636878;
+			font-size: rem(14);
 
 			&::before {
 				position: absolute;

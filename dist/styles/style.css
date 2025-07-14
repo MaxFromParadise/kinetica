@@ -1573,6 +1573,8 @@ ul {
 .contextnaya-reklama .item-advantages__list--item {
   position: relative;
   padding-left: 1.25rem;
+  color: #636878;
+  font-size: 1.125rem;
 }
 
 .contextnaya-reklama .item-advantages__list--item::before {
@@ -2193,6 +2195,8 @@ ul {
   position: relative;
   margin-bottom: 0.9375rem;
   padding-left: 1.0625rem;
+  color: #636878;
+  font-size: 0.875rem;
 }
 
 .contextnaya-reklama .banner-price__list-item::before {
