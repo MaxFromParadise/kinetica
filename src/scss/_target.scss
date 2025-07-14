@@ -454,6 +454,7 @@
 			max-width: rem(252);
 			padding: rem(15);
 
+			font-size: rem(18);
 			background: var(--black-main-color);
 
 			&:hover {
@@ -836,6 +837,7 @@
 		&__button {
 			width: 100%;
 			padding: rem(19);
+			font-size: rem(18);
 		}
 	}
 
@@ -1254,7 +1256,7 @@
 			margin-top: auto;
 			margin-bottom: rem(25);
 			padding: rem(15) 0;
-
+			font-size: rem(18);
 			@media (max-width: 767.98px) {
 				max-width: 100%;
 			}
