@@ -523,7 +523,11 @@
 			grid-area: bullets;
 
 			margin-top: auto;
-
+			border-radius: rem(28);
+			border: 1px solid var(--Color-10, #f3f4f5);
+			background: var(--Color-5, #fff);
+			backdrop-filter: blur(2px);
+			width: max-content;
 			.swiper-pagination-bullet {
 				width: rem(12);
 				height: rem(12);

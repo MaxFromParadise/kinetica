@@ -2916,6 +2916,14 @@ ul {
 .email-marketing .amp-email__bullets {
   grid-area: bullets;
   margin-top: auto;
+  border-radius: 1.75rem;
+  border: 1px solid var(--Color-10, #f3f4f5);
+  background: var(--Color-5, #fff);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .email-marketing .amp-email__bullets .swiper-pagination-bullet {
