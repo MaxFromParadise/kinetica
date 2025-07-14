@@ -76,7 +76,9 @@ const reportSwiper = new Swiper('.report__slider', {
 		modifier: 0.1,
 		slideShadows: false,
 	},
-
+	autoplay: {
+		delay: 4000,
+	},
 	pagination: {
 		el: '.report__bullets',
 		clickable: true,
