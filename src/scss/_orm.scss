@@ -452,10 +452,12 @@
 
 			padding: rem(5) rem(11);
 
+			cursor: pointer;
+
 			border: 2px solid #ddd;
 			border-radius: rem(4);
 			gap: rem(5);
-			cursor: pointer;
+
 			&:hover {
 				.item-bad-reviews__like--icon {
 					svg path {
@@ -487,9 +489,10 @@
 
 			&:hover {
 				svg path {
-					fill: rgb(179, 2, 2);
+					fill: rgb(179 2 2);
 				}
 			}
+
 			svg path {
 				transition: fill 0.5s ease 0s;
 			}
@@ -569,6 +572,7 @@
 
 			font-size: rem(20);
 			font-weight: 700;
+
 			&:hover {
 				color: var(--white);
 				background: #636878;
