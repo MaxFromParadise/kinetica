@@ -528,11 +528,6 @@
 			align-items: center;
 			gap: rem(30);
 
-			&:hover {
-				color: var(--white);
-				background: #636878;
-			}
-
 			@media (max-width: 767.98px) {
 				grid-template-columns: 100%;
 			}
@@ -556,6 +551,10 @@
 
 			font-size: rem(20);
 			font-weight: 700;
+			&:hover {
+				color: var(--white);
+				background: #636878;
+			}
 		}
 
 		@media (max-width: 767.98px) {

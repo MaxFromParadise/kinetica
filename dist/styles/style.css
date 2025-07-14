@@ -1739,11 +1739,6 @@ ul {
   gap: 1.875rem;
 }
 
-.orm .problems__bottom:hover {
-  color: var(--white);
-  background: #636878;
-}
-
 .orm .problems__text {
   color: #000;
   font-size: 1.25rem;
@@ -1757,6 +1752,11 @@ ul {
   background: var(--black-main-color, #292b32);
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+.orm .problems__button:hover {
+  color: var(--white);
+  background: #636878;
 }
 
 .orm .item-problems {
