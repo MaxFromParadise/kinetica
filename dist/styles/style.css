@@ -379,19 +379,19 @@ ul {
 }
 
 .federal-brands__slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   gap: 2.8125rem;
 }
 
+.federal-brands__slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
 .federal-brands__prev {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -416,9 +416,7 @@ ul {
 }
 
 .federal-brands__next {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -471,19 +469,19 @@ ul {
 }
 
 .media-about-us__slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   gap: 2.8125rem;
 }
 
+.media-about-us__slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
 .media-about-us__prev {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -508,9 +506,7 @@ ul {
 }
 
 .media-about-us__next {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -865,6 +861,7 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: 100%;
 }
 
 .prodvizhenie-saita .hero__title {
@@ -1467,6 +1464,7 @@ ul {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  height: 100%;
 }
 
 .contextnaya-reklama .hero__content {
@@ -2427,9 +2425,6 @@ ul {
 }
 
 .contextnaya-reklama .federal-brands__slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2437,9 +2432,7 @@ ul {
 }
 
 .contextnaya-reklama .federal-brands__prev {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2464,9 +2457,7 @@ ul {
 }
 
 .contextnaya-reklama .federal-brands__next {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;

@@ -23,11 +23,16 @@ if (document.querySelector('.top-awards__slider .swiper')) {
 if (document.querySelector('.media-about-us__slider .swiper')) {
 	const mediaAboutSwiper = new Swiper('.media-about-us__slider .swiper', {
 		// Optional parameters
-		loop: false,
+		loop: true,
 		freeMode: true,
 		slidesPerView: 'auto',
 		spaceBetween: 20,
-
+		speed: 2000,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
 		navigation: {
 			nextEl: '.media-about-us__next',
 			prevEl: '.media-about-us__prev',
@@ -54,7 +59,7 @@ if (document.querySelector('.amp-email__slider .swiper')) {
 			el: '.amp-email__bullets',
 			clickable: true,
 		},
-		effect: 'coverflow',
+		// effect: 'coverflow',
 		coverflowEffect: {
 			rotate: -60,
 			stretch: 100,

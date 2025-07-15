@@ -23,10 +23,16 @@ if (document.querySelector('.top-awards__slider .swiper')) {
 if (document.querySelector('.federal-brands__slider .swiper')) {
 	const federalBrandsSwiper = new Swiper('.federal-brands__slider .swiper', {
 		// Optional parameters
-		loop: false,
+		loop: true,
 		freeMode: true,
 		slidesPerView: 'auto',
 		spaceBetween: 20,
+		speed: 2000,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
 
 		navigation: {
 			nextEl: '.federal-brands__next',
@@ -43,10 +49,16 @@ if (document.querySelector('.federal-brands__slider .swiper')) {
 if (document.querySelector('.media-about-us__slider .swiper')) {
 	const mediaAboutSwiper = new Swiper('.media-about-us__slider .swiper', {
 		// Optional parameters
-		loop: false,
+		loop: true,
 		freeMode: true,
 		slidesPerView: 'auto',
 		spaceBetween: 20,
+		speed: 2000,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
 
 		navigation: {
 			nextEl: '.media-about-us__next',

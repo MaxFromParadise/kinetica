@@ -18,6 +18,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			height: 100%;
 
 			@media (max-width: 767.98px) {
 				flex-direction: column-reverse;
@@ -1278,13 +1279,13 @@
 
 		// .federal-brands__slider
 		&__slider {
-			display: flex;
+			// display: flex;
 			align-items: center;
 			gap: rem(45);
 		}
 
 		&__prev {
-			display: flex;
+			display: none;
 			align-items: center;
 			flex-shrink: 0;
 			justify-content: center;
@@ -1311,7 +1312,7 @@
 		}
 
 		&__next {
-			display: flex;
+			display: none;
 			align-items: center;
 			flex-shrink: 0;
 			justify-content: center;
