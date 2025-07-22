@@ -1,4 +1,5 @@
 @use './functions' as *;
+@use './base';
 @use './top-awards';
 @use './media-about-us';
 @use './faq';
@@ -9,15 +10,16 @@
 	.hero {
 		overflow: hidden;
 
-		min-height: 90vh;
+		min-height: 100vh;
 
-		padding: rem(80) 0;
+		padding: rem(80) 0 0;
 
 		// .hero__container
 		&__container {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+
 			height: 100%;
 
 			@media (max-width: 767.98px) {
@@ -118,7 +120,7 @@
 
 	// advantages
 	.advantages {
-		padding-top: rem(120);
+		padding-top: rem(10);
 		padding-bottom: rem(120);
 
 		// .advantages__container
@@ -214,8 +216,11 @@
 				position: relative;
 
 				padding-left: rem(20);
+
 				color: #636878;
+
 				font-size: rem(18);
+
 				&::before {
 					position: absolute;
 					top: 0;
@@ -728,7 +733,7 @@
 		}
 
 		&__bullets {
-			width: max-content;
+			width: max-content !important;
 			padding: rem(8);
 
 			border-radius: rem(28);
@@ -785,11 +790,16 @@
 
 		transition: background-color 0.3s ease 0s;
 
+		background: none;
+
 		background-color: var(--primary-color);
-		background-image: none;
+		background-image: none !important;
 
 		&:hover {
+			background: none;
+
 			background-color: var(--secondary-color);
+			background-image: none;
 
 			.price__title {
 				transition: color 0.3s ease 0s;
@@ -1001,7 +1011,9 @@
 
 			margin-bottom: rem(15);
 			padding-left: rem(17);
+
 			color: #636878;
+
 			font-size: rem(14);
 
 			&::before {
@@ -1054,6 +1066,11 @@
 
 			padding: rem(20);
 		}
+	}
+
+	.media {
+		margin-top: rem(100);
+		margin-bottom: rem(100);
 	}
 
 	.thanks {
@@ -1163,7 +1180,6 @@
 		overflow: hidden;
 
 		padding-top: rem(120);
-		padding-bottom: rem(120);
 
 		// .digital-expertise__container
 		&__container {
@@ -1487,5 +1503,9 @@
 				font-size: rem(16);
 			}
 		}
+	}
+
+	.top-awards {
+		padding-top: 0;
 	}
 }

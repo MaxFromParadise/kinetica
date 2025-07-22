@@ -1,6 +1,5 @@
 @use './variables' as *;
 @use './functions' as *;
-@use './base';
 @use './header';
 
 // @use './cases';
@@ -12,3 +11,4 @@
 @use './target';
 @use './orm';
 @use './cpa';
+@use './blog';

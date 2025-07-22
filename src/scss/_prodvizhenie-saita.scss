@@ -1,4 +1,5 @@
 @use './functions' as *;
+@use './base';
 @use './top-awards';
 @use './federal-brands';
 @use './media-about-us';
@@ -18,6 +19,7 @@
 		&__container {
 			display: flex;
 			align-items: center;
+
 			height: 100%;
 
 			@media (max-width: 767.98px) {
@@ -456,6 +458,7 @@
 		grid-template-columns: repeat(2, minmax(0, rem(675)));
 
 		justify-content: space-between;
+
 		font-family: Montserrat;
 		gap: rem(35);
 		grid-template-areas:
@@ -597,9 +600,11 @@
 				font-weight: 400;
 			}
 		}
+
 		.seo-form__checkbox-label {
 			font-size: rem(18);
 		}
+
 		&__label {
 			margin-bottom: rem(12);
 
@@ -610,21 +615,20 @@
 		}
 
 		&__select {
-			color: var(--Color-6, #292b32);
-
-			font-size: rem(18);
-			font-weight: 400;
-			border-radius: 8px;
-			border: 1px solid var(--Color-9, #d1d3d9);
-			background-color: var(--White, #fff) !important;
-			appearance: none;
-			-webkit-appearance: none;
-			-moz-appearance: none;
 			position: relative;
+
+			color: var(--Color-6, #292b32);
+			border: 1px solid var(--Color-9, #d1d3d9);
+			border-radius: 8px;
+			background-color: var(--White, #fff) !important;
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%23DDDCE0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 			background-repeat: no-repeat;
 			background-position: right 0.75rem center;
 			background-size: 1rem;
+
+			font-size: rem(18);
+			font-weight: 400;
+			appearance: none;
 		}
 
 		&__select,
@@ -632,14 +636,16 @@
 			width: 100%;
 			padding: rem(12) rem(16);
 
+			color: var(--Color-6, #292b32);
+
 			border-radius: rem(12);
 			background-color: #f9f9f9;
 
-			font-size: rem(18);
-			color: var(--Color-6, #292b32);
-
 			/* Body 1 */
 			font-family: Montserrat;
+
+			font-size: rem(18);
+
 			&:focus {
 				border-color: #007aff;
 				outline: none;

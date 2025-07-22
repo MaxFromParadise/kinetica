@@ -23,7 +23,15 @@
 }
 
 body {
+	overflow-x: hidden;
+
 	font-family: Montserrat, sans-serif;
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased;
+
+	&.no-scroll {
+		overflow-y: hidden;
+	}
 }
 
 body,
@@ -83,4 +91,19 @@ ul {
 		color: var(--black-main-color);
 		background: var(--primary-hover-color);
 	}
+}
+
+header.header,
+footer.footer {
+	flex: 0 0 auto;
+}
+
+#content {
+	position: relative;
+
+	overflow: hidden;
+}
+
+figure {
+	margin: 0;
 }
