@@ -11,9 +11,10 @@
 	.hero {
 		overflow: hidden;
 
-		min-height: 90vh;
+		min-height: 100vh;
 
 		padding: rem(80) 0;
+		padding-top: rem(160);
 
 		// .hero__container
 		&__container {
@@ -28,6 +29,9 @@
 
 		// .hero__content
 		&__content {
+			position: relative;
+			z-index: 10;
+
 			min-width: rem(400);
 
 			@media (max-width: 767.98px) {
@@ -847,7 +851,6 @@
 
 	.targets {
 		padding-top: rem(120);
-		padding-bottom: rem(120);
 
 		// .targets__container
 		&__container {
@@ -996,7 +999,6 @@
 
 		@media (max-width: 767.98px) {
 			padding-top: rem(60);
-			padding-bottom: rem(60);
 		}
 	}
 
@@ -1299,5 +1301,17 @@
 
 			padding: rem(20);
 		}
+	}
+
+	.reviews {
+		margin-bottom: rem(120);
+
+		@media (max-width: 767.98px) {
+			margin-bottom: rem(60);
+		}
+	}
+
+	.top-awards {
+		padding-top: 0;
 	}
 }

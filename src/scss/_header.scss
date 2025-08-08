@@ -5,6 +5,10 @@
 .header {
 	border-bottom: 1px solid #adb0bc;
 	background: var(--white, #fff);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 
 	// .header__container
 	&__container {

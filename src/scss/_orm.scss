@@ -307,6 +307,9 @@
 
 		// .bad-reviews__banner
 		&__banner {
+			position: relative;
+			z-index: 2;
+
 			padding: rem(30);
 
 			text-align: center;
@@ -505,8 +508,6 @@
 	}
 
 	.problems {
-		padding-bottom: rem(120);
-
 		// .problems__container
 		&__container {
 		}
@@ -753,7 +754,7 @@
 			color: var(--Color-9, #d1d3d9);
 			color: transparent;
 
-			font-family: Inter;
+			font-family: Inter, sans-serif;
 			font-size: rem(48);
 			font-weight: 700;
 			-webkit-text-stroke: 1px #000;
@@ -1066,6 +1067,14 @@
 			margin-bottom: rem(60);
 			padding-top: rem(60);
 			padding-bottom: rem(60);
+		}
+	}
+
+	.reviews {
+		margin-bottom: rem(120);
+
+		@media (max-width: 767.98px) {
+			margin-bottom: rem(60);
 		}
 	}
 }
