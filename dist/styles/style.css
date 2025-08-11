@@ -6585,7 +6585,7 @@ figure {
   -ms-flex-align: center;
   align-items: center;
   min-height: 100vh;
-  padding: 5rem 0 0;
+  padding: 5rem 0 3.75rem 0;
 }
 
 .optimizacia-conversiy .hero:hover .hero__img-decor svg {
@@ -6694,7 +6694,6 @@ figure {
 }
 
 .optimizacia-conversiy .advantages {
-  padding-top: 0.625rem;
   padding-bottom: 7.5rem;
 }
 
@@ -10129,13 +10128,14 @@ figure {
 
   .optimizacia-conversiy .hero__img {
     max-width: 80%;
-    margin-bottom: 1.25rem;
   }
 
   .optimizacia-conversiy .hero__img-decor {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
   }
 
   .optimizacia-conversiy .advantages__title {
@@ -10147,7 +10147,6 @@ figure {
   }
 
   .optimizacia-conversiy .advantages {
-    padding-top: 3.75rem;
     padding-bottom: 3.75rem;
   }
 
@@ -10224,12 +10223,12 @@ figure {
     grid-template-columns: repeat(5, 18.75rem);
   }
 
-  .optimizacia-conversiy .structure__main_mobile {
-    display: block;
-  }
-
   .optimizacia-conversiy .structure__main {
     display: none;
+  }
+
+  .optimizacia-conversiy .structure__main_mobile {
+    display: block;
   }
 
   .optimizacia-conversiy .structure__title {
@@ -10303,6 +10302,10 @@ figure {
 
   .optimizacia-conversiy .channels {
     margin-bottom: 3.75rem;
+  }
+
+  .optimizacia-conversiy .top-awards {
+    padding-bottom: 2.5rem;
   }
 
   .content-strategy .hero:hover .hero__img-decor svg {

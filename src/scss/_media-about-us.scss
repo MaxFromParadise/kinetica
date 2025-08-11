@@ -27,8 +27,9 @@
 		gap: rem(45);
 
 		.swiper-wrapper {
-			transition-timing-function: linear !important;
 			justify-content: space-between;
+
+			transition-timing-function: linear !important;
 		}
 	}
 

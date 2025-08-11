@@ -16,7 +16,7 @@
 
 		min-height: 100vh;
 
-		padding: rem(80) 0 0;
+		padding: rem(80) 0 rem(60);
 
 		&:hover {
 			.hero__img-decor {
@@ -119,7 +119,6 @@
 
 			@media (max-width: 767.98px) {
 				max-width: 80%;
-				margin-bottom: rem(20);
 			}
 		}
 
@@ -162,6 +161,9 @@
 			}
 
 			@media (max-width: 767.98px) {
+				width: 120%;
+				height: 120%;
+
 				transform: translate(-50%, -50%);
 			}
 		}
@@ -169,7 +171,6 @@
 
 	// advantages
 	.advantages {
-		padding-top: rem(10);
 		padding-bottom: rem(120);
 
 		&__title {
@@ -207,7 +208,6 @@
 		}
 
 		@media (max-width: 767.98px) {
-			padding-top: rem(60);
 			padding-bottom: rem(60);
 		}
 	}
@@ -1340,5 +1340,9 @@
 
 	.top-awards {
 		padding-top: 0;
+
+		@media (max-width: 767.98px) {
+			padding-bottom: rem(40);
+		}
 	}
 }
