@@ -4529,8 +4529,15 @@ figure {
 
 .orm .hero {
   overflow: hidden;
-  min-height: 90vh;
-  padding: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 7.5rem 0 1.25rem;
 }
 
 .orm .hero__container {
@@ -4868,7 +4875,7 @@ figure {
   cursor: pointer;
 }
 
-.orm .item-bad-reviews__wrong:hover svg path {
+.orm .item-bad-reviews__wrong:hover svg path:first-child {
   fill: rgb(179, 2, 2);
 }
 
@@ -4959,7 +4966,6 @@ figure {
 }
 
 .orm .faq {
-  padding-top: 7.5rem;
   padding-bottom: 7.5rem;
   background: var(--white);
 }
@@ -5012,7 +5018,6 @@ figure {
 }
 
 .orm .faq__list {
-  margin-bottom: 4.6875rem;
   padding: 3.125rem 3.75rem;
   border-radius: 1.25rem;
   background: var(--white);
@@ -5074,11 +5079,12 @@ figure {
   -ms-flex-pack: center;
   justify-content: center;
   width: 3rem;
+  color: var(--white);
   height: 3rem;
-  -webkit-transition: background 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  transition: background 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  transition: background 0.3s ease 0s, transform 0.3s ease 0s;
-  transition: background 0.3s ease 0s, transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -webkit-transition: background 0.3s ease 0s, color 0.3s ease, -webkit-transform 0.3s ease 0s;
+  transition: background 0.3s ease 0s, color 0.3s ease, -webkit-transform 0.3s ease 0s;
+  transition: background 0.3s ease 0s, transform 0.3s ease 0s, color 0.3s ease;
+  transition: background 0.3s ease 0s, transform 0.3s ease 0s, color 0.3s ease, -webkit-transform 0.3s ease 0s;
   border-radius: 50%;
   background: var(--primary-color);
 }
@@ -5124,7 +5130,7 @@ figure {
 
 .orm .item-faq__toggle:checked ~ .item-faq__answer {
   max-height: 1000px;
-  padding: 2rem 5rem 0 0;
+  padding: 0.625rem 5rem 0 0;
 }
 
 .orm .item-faq__toggle:checked ~ .item-faq__question .item-faq__indicator {
@@ -5132,6 +5138,7 @@ figure {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   background: var(--secondary-color);
+  color: var(--black-main-color);
 }
 
 .orm .price-banner {
@@ -5277,6 +5284,16 @@ figure {
 
 .orm .reviews {
   margin-bottom: 7.5rem;
+}
+
+.orm .media-about-us .swiper-wrapper {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.orm section.feedback .section-container .form .left form .field textarea {
+  width: calc(100% - 15px) !important;
 }
 
 .cpa {
@@ -8307,6 +8324,17 @@ figure {
   }
 }
 
+@media (max-width: 1630px) {
+  .orm .item-problems {
+    display: block;
+    height: unset;
+  }
+
+  .orm .item-problems__number {
+    margin-bottom: 1.25rem;
+  }
+}
+
 @media (max-width: 1199.98px) {
   .prodvizhenie-saita .seo-form__estimate-label {
     font-size: 1.75rem;
@@ -9852,6 +9880,7 @@ figure {
   .orm .problems__grid {
     margin-bottom: 2.1875rem;
     grid-template-columns: 100%;
+    gap: 1.875rem;
   }
 
   .orm .problems__bottom {
@@ -9874,14 +9903,12 @@ figure {
   }
 
   .orm .faq {
-    padding-top: 3.75rem;
     padding-bottom: 3.75rem;
   }
 
   .orm .faq__list {
     margin-bottom: 1.5625rem;
     padding: 0;
-    background: transparent;
   }
 
   .orm .item-faq__question {
@@ -9890,14 +9917,12 @@ figure {
 
   .orm .item-faq__number {
     width: 2.5rem;
-    font-size: 1.75rem;
+    font-size: 3rem;
   }
 
   .orm .item-faq__indicator {
     right: -2.0625rem;
-    width: 2.0625rem;
-    height: 2.0625rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .orm .item-faq__answer {
@@ -9907,15 +9932,40 @@ figure {
   .orm .item-faq {
     padding: 0.8125rem 0.625rem;
     border-radius: 1.25rem;
-    background: var(--white, #fff);
+    background: var(--Color-10, #f3f4f5);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.9375rem;
   }
 
   .orm .item-faq:not(:last-child) {
-    margin-bottom: 1.5625rem;
+    margin-bottom: 0rem;
+  }
+
+  .orm .item-faq__answer {
+    color: var(--black-main-color, #292b32);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 135%;
+  }
+
+  .orm .price-banner__title {
+    font-size: 1.875rem;
+  }
+
+  .orm .price-banner__price {
+    font-size: 1.25rem;
   }
 
   .orm .price-banner__button {
     max-width: 100%;
+    font-size: 0.875rem;
+  }
+
+  .orm .price-banner__text {
+    font-size: 0.75rem;
   }
 
   .orm .price-banner {
