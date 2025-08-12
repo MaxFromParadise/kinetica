@@ -17,7 +17,9 @@
 		min-height: 100vh;
 
 		padding: rem(80) 0 rem(60);
-
+		@media (max-width: 767.98px) {
+			min-height: 0;
+		}
 		&:hover {
 			.hero__img-decor {
 				svg {
