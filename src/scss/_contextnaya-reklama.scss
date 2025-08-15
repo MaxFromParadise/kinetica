@@ -8,11 +8,13 @@
 	font-family: Montserrat, sans-serif;
 
 	.hero {
+		display: flex;
 		overflow: hidden;
+		align-items: center;
 
 		min-height: 100vh;
 
-		padding: rem(80) 0 0;
+		padding: rem(120) 0 rem(60);
 
 		// .hero__container
 		&__container {
@@ -111,6 +113,11 @@
 				transition: rotate 0.3s ease 0s, fill 0.3s ease 0s, scale 0.3s ease 0s;
 				fill: #caff3d;
 			}
+		}
+
+		@media (max-width: 767.98px) {
+			min-height: 0;
+			padding-top: rem(90);
 		}
 	}
 
@@ -1524,5 +1531,9 @@
 
 	.top-awards {
 		padding-top: 0;
+
+		&__container {
+			padding-top: 0;
+		}
 	}
 }

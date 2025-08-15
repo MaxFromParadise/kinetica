@@ -143,6 +143,7 @@
 *,
 ::after,
 ::before {
+  font-family: "Montserrat", sans-serif;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
@@ -153,7 +154,7 @@
 
 body {
   overflow-x: hidden;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -224,7 +225,12 @@ footer.footer {
 
 #content {
   position: relative;
-  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#content::-webkit-scrollbar {
+  display: none;
 }
 
 figure {
@@ -1495,9 +1501,15 @@ figure {
 }
 
 .contextnaya-reklama .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-height: 100vh;
-  padding: 5rem 0 0;
+  padding: 7.5rem 0 3.75rem;
 }
 
 .contextnaya-reklama .hero__container {
@@ -2632,6 +2644,10 @@ figure {
 }
 
 .contextnaya-reklama .top-awards {
+  padding-top: 0;
+}
+
+.contextnaya-reklama .top-awards__container {
   padding-top: 0;
 }
 
@@ -9323,6 +9339,11 @@ figure {
     margin-bottom: 1.25rem;
   }
 
+  .contextnaya-reklama .hero {
+    min-height: 0;
+    padding-top: 5.625rem;
+  }
+
   .contextnaya-reklama .advantages__list {
     grid-template-columns: 1fr;
   }
@@ -10196,10 +10217,6 @@ figure {
     padding: 2.1875rem 1.25rem;
   }
 
-  .optimizacia-conversiy .hero {
-    min-height: 0;
-  }
-
   .optimizacia-conversiy .hero:hover .hero__img-decor svg {
     rotate: -10deg;
   }
@@ -10237,6 +10254,10 @@ figure {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+  }
+
+  .optimizacia-conversiy .hero {
+    min-height: 0;
   }
 
   .optimizacia-conversiy .advantages__title {

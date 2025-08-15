@@ -116,6 +116,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+
 				max-width: 120%;
 				margin-bottom: rem(20);
 			}
@@ -150,6 +151,7 @@
 			@media (max-width: 767.98px) {
 				width: 170%;
 				height: 170%;
+
 				transform: translate(-49%, -37%);
 			}
 		}

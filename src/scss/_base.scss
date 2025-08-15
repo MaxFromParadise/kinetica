@@ -14,6 +14,7 @@
 *,
 ::after,
 ::before {
+	font-family: 'Montserrat', sans-serif;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -25,7 +26,7 @@
 body {
 	overflow-x: hidden;
 
-	font-family: Montserrat, sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	text-rendering: optimizelegibility;
 	-webkit-font-smoothing: antialiased;
 
@@ -102,8 +103,12 @@ footer.footer {
 
 #content {
 	position: relative;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 
-	overflow: hidden;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 figure {
