@@ -7779,7 +7779,7 @@ figure {
   -ms-flex-align: center;
   align-items: center;
   min-height: 100vh;
-  padding: 7.5rem 0 1.25rem;
+  padding: 7.5rem 0 7.5rem 0;
 }
 
 .content-strategy .hero:hover .hero__img-decor {
@@ -10777,6 +10777,10 @@ figure {
 
   .optimizacia-conversiy .top-awards {
     padding-bottom: 2.5rem;
+  }
+
+  .content-strategy .hero {
+    padding-bottom: 4.0625rem;
   }
 
   .content-strategy .hero:hover .hero__img-decor svg {
