@@ -15,7 +15,7 @@
 
 		min-height: 100vh;
 
-		padding: rem(120) 0 rem(20);
+		padding: rem(120) 0 rem(120) 0;
 
 		// .hero__container
 		&__container {
@@ -126,14 +126,13 @@
 		}
 
 		@media (max-width: 767.98px) {
-			padding: rem(30) 0;
+			padding: rem(120) 0 rem(65) 0;
 		}
 	}
 
 	// advantages
 	.advantages {
 		padding-top: rem(120);
-		padding-bottom: rem(120);
 
 		// .advantages__container
 		&__container {
@@ -171,8 +170,7 @@
 		}
 
 		@media (max-width: 767.98px) {
-			padding-top: rem(60);
-			padding-bottom: rem(60);
+			padding-top: rem(0);
 		}
 	}
 
@@ -718,8 +716,8 @@
 		background: var(--white);
 		background: var(--Color-10, #f3f4f5);
 
+		margin-bottom: 0;
 		@media (max-width: 767.98px) {
-			margin-bottom: rem(25);
 			padding: 0;
 
 			// background: transparent;
@@ -772,7 +770,7 @@
 
 			@media (max-width: 767.98px) {
 				width: rem(40);
-
+				height: rem(48);
 				font-size: rem(48);
 			}
 		}
@@ -801,7 +799,8 @@
 			@media (max-width: 767.98px) {
 				right: rem(-33);
 
-				font-size: rem(20);
+				font-weight: 400;
+				font-size: rem(30);
 			}
 		}
 
@@ -1119,7 +1118,9 @@
 			justify-content: space-between;
 		}
 	}
-
+	.top-awards {
+		padding-top: 0;
+	}
 	section.feedback .section-container .form .left form .field textarea {
 		width: calc(100% - 15px) !important;
 	}

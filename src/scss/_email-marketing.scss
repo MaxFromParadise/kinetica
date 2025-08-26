@@ -8,6 +8,23 @@
 
 	font-family: Montserrat, sans-serif;
 
+	.my-page:nth-child(1) {
+		background: red;
+	}
+	.stf__item .stf__side--back {
+		background-color: red; /* обратная сторона */
+	}
+	&.--left {
+		// for left page (property will be added automatically)
+		border-right: 0;
+		box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
+	}
+
+	&.--right {
+		// for right page (property will be added automatically)
+		border-left: 0;
+		box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
+	}
 	.hero {
 		overflow: hidden;
 
@@ -829,6 +846,7 @@
 
 			@media (max-width: 991.98px) {
 				flex-direction: column-reverse;
+				gap: rem(30);
 			}
 		}
 
@@ -865,7 +883,9 @@
 		// .results__img
 		&__img {
 			position: relative;
-
+			@media (max-width: 767.98px) {
+				max-width: 80%;
+			}
 			img {
 				width: 100%;
 				height: 100%;
@@ -896,8 +916,8 @@
 			}
 
 			@media (max-width: 991.98px) {
-				width: 150%;
-				height: 150%;
+				width: 110%;
+				height: 110%;
 			}
 		}
 

@@ -544,8 +544,7 @@
 		&__banner {
 			position: relative;
 
-			display: grid;
-			overflow: hidden;
+			display: flex;
 			align-items: center;
 
 			width: 100%;
@@ -555,9 +554,15 @@
 			border-radius: rem(20);
 			background: var(--secondary-color);
 			grid-template-columns: repeat(2, 1fr);
-
+			gap: rem(160);
+			justify-content: center;
+			// justify-content: space-between;
+			// max-width: rem(1373);
+			@media (max-width: 1199.98px) {
+				gap: rem(30);
+			}
 			@media (max-width: 767.98px) {
-				display: block;
+				flex-direction: column-reverse;
 			}
 
 			@media (max-width: 479.98px) {
@@ -567,33 +572,43 @@
 
 		// .ratio-banner__img
 		&__img {
-			position: absolute;
-			z-index: 1;
-			top: 50%;
-			left: 0;
+			// position: absolute;
+			// z-index: 1;
+			// top: 50%;
+			// left: 0;
 
-			width: 55%;
+			// width: 55%;
 
-			transform: translateY(-50%);
-
-			img {
-				width: 100%;
-				height: auto;
+			// transform: translateY(-50%);
+			display: flex;
+			justify-content: center;
+			flex-shrink: 0;
+			@media (max-width: 1199.98px) {
+				flex-shrink: 1;
 			}
-
 			@media (max-width: 767.98px) {
-				top: unset;
-				bottom: 0;
-
+				// transform: translateY(30%);
+				margin-bottom: rem(-120);
+			}
+			img {
+				max-width: rem(448);
+				max-height: rem(448);
 				width: 100%;
-
-				transform: translateY(0);
+				height: 100%;
+				object-position: center;
 			}
 		}
 
 		// .ratio-banner__content
 		&__content {
-			grid-column: 2 / span 1;
+			max-width: rem(765);
+			width: 100%;
+			@media (max-width: 1199.98px) {
+				max-width: 50%;
+			}
+			@media (max-width: 767.98px) {
+				max-width: 100%;
+			}
 		}
 
 		// .ratio-banner__text
@@ -646,7 +661,7 @@
 		}
 
 		@media (max-width: 767.98px) {
-			margin-bottom: rem(65);
+			margin-bottom: rem(125);
 		}
 	}
 
@@ -685,6 +700,9 @@
 
 		// .structure__main
 		&__main {
+			@media (max-width: 767.98px) {
+				display: none;
+			}
 			&_mobile {
 				display: none;
 
@@ -693,10 +711,6 @@
 				@media (max-width: 767.98px) {
 					display: block;
 				}
-			}
-
-			@media (max-width: 767.98px) {
-				display: none;
 			}
 		}
 
@@ -1160,7 +1174,7 @@
 
 		// .banner-price__title
 		&__title {
-			margin-bottom: rem(25);
+			margin-bottom: rem(22);
 
 			color: var(--primary-color, #00b2ff);
 
@@ -1169,6 +1183,14 @@
 
 			@media (max-width: 767.98px) {
 				font-size: rem(36);
+			}
+			span {
+				color: var(--Color-9, #d1d3d9);
+
+				font-family: Montserrat;
+				font-size: rem(28);
+
+				font-weight: 700;
 			}
 		}
 

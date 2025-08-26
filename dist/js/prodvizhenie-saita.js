@@ -136,3 +136,30 @@ ranges.forEach((range) => {
 	updateRangeBackground(range); // при загрузке
 	range.addEventListener('input', () => updateRangeBackground(range));
 });
+if (document.querySelector('.report-data-lens')) {
+	const section = document.querySelector('.report-data-lens');
+
+	const img = section.querySelector('.report-data-lens__img img');
+	const button = section.querySelector('.report-data-lens__button');
+	const modal = section.querySelector('.report-data-lens__modal');
+	const modalImg = section.querySelector('.report-data-lens__modal-img');
+	const closeBtn = section.querySelector('.report-data-lens__modal-close');
+
+	const openModal = () => {
+		modal.style.display = 'flex';
+		modalImg.src = img.src;
+	};
+
+	img.addEventListener('click', openModal);
+	button.addEventListener('click', openModal);
+
+	closeBtn.addEventListener('click', () => {
+		modal.style.display = 'none';
+	});
+
+	modal.addEventListener('click', (e) => {
+		if (e.target === modal) {
+			modal.style.display = 'none';
+		}
+	});
+}

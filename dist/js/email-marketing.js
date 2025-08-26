@@ -97,3 +97,20 @@ if (document.querySelector('.results .swiper')) {
 		},
 	});
 }
+
+document.querySelectorAll('.my-page')[1].style.backgroundColor = 'white';
+
+const pageFlip = new St.PageFlip(document.getElementById('book'), {
+	width: window.innerWidth,
+	height: window.innerHeight,
+	showCover: false,
+	size: 'stretch',
+	// drawShadow: false,
+	maxShadowOpacity: 0.5, // Half shadow intensity
+});
+
+pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
+
+document.querySelector('#test').addEventListener('click', () => {
+	pageFlip.flipNext({ corner: 'top' });
+});

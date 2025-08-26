@@ -11,9 +11,11 @@
 	.hero {
 		overflow: hidden;
 
-		min-height: 90vh;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
 
-		padding: rem(80) 0;
+		padding: rem(120) 0 rem(120) 0;
 
 		// .hero__container
 		&__container {
@@ -128,7 +130,7 @@
 		}
 
 		@media (max-width: 767.98px) {
-			padding: rem(30) 0;
+			padding: rem(120) 0 rem(65) 0;
 		}
 	}
 
@@ -675,8 +677,6 @@
 	}
 
 	.consider {
-		margin-bottom: rem(80);
-
 		// .consider__container
 		&__container {
 		}
@@ -719,7 +719,6 @@
 		}
 
 		@media (max-width: 767.98px) {
-			margin-bottom: rem(20);
 		}
 	}
 
@@ -1164,7 +1163,6 @@
 	.cpa-banner {
 		position: relative;
 
-		margin-bottom: rem(120);
 		padding-top: rem(140);
 		padding-bottom: rem(140);
 
@@ -1233,9 +1231,11 @@
 		}
 
 		@media (max-width: 767.98px) {
-			margin-bottom: rem(60);
 			padding-top: rem(60);
 			padding-bottom: rem(60);
 		}
+	}
+	.top-awards {
+		padding-top: 0;
 	}
 }

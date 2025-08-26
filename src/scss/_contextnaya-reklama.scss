@@ -381,10 +381,7 @@
 
 				transition: color 0.3s ease 0s;
 
-				color: var(--Color-6, #292b32);
-
 				font-size: rem(28);
-				font-weight: 700;
 				line-height: 128.571%;
 
 				&:hover {
@@ -699,6 +696,7 @@
 
 		&__container {
 			display: grid;
+			align-items: center;
 			grid-template-columns: 0.8fr 1.05fr;
 			gap: rem(140);
 
@@ -1117,6 +1115,9 @@
 		// .thanks__slider
 		&__slider {
 			overflow: visible;
+			.swiper-wrapper {
+				transition-timing-function: linear !important;
+			}
 		}
 
 		// .thanks__slide
@@ -1533,7 +1534,8 @@
 		padding-top: 0;
 
 		&__container {
-			padding-top: 0;
+			padding-top: 0 !important;
+			padding-bottom: 0 !important;
 		}
 	}
 }
