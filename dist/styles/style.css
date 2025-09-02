@@ -167,6 +167,7 @@ body,
 html {
   min-width: 370px;
   height: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -2832,29 +2833,488 @@ figure {
 }
 
 .email-marketing {
-  overflow-x: hidden;
   font-family: Montserrat, sans-serif;
 }
 
-.email-marketing .my-page:nth-child(1) {
-  background: red;
+.email-marketing .page-wrap {
+  position: relative;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
 }
 
-.email-marketing .stf__item .stf__side--back {
-  background-color: red;
-  /* обратная сторона */
+.email-marketing .landing,
+.email-marketing .date-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
-.email-marketing.--left {
-  border-right: 0;
-  -webkit-box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
-  box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
+.email-marketing .landing {
+  background: #fff;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  z-index: 10;
 }
 
-.email-marketing.--right {
-  border-left: 0;
-  -webkit-box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
+.email-marketing .date-page {
+  position: relative;
+  background: #e6f7ff;
+  width: 100vw;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 2rem;
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  z-index: 100;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+}
+
+.email-marketing .page-wrap.show-date .landing {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  overflow: hidden;
+}
+
+.email-marketing .page-wrap.show-date .date-page {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transition: -webkit-transform 1.5s ease-in-out;
+  transition: -webkit-transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out, -webkit-transform 1.5s ease-in-out;
+}
+
+.email-marketing .page-wrap.show-date .date-page .karaoke-date {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.email-marketing #show-date {
+  background: transparent;
+  cursor: pointer;
+  margin-right: auto;
+  -webkit-transition: scale 0.3s ease 0s, visibility 0.3s ease 0s;
+  transition: scale 0.3s ease 0s, visibility 0.3s ease 0s;
+}
+
+.email-marketing #show-date:hover {
+  scale: 1.05;
+}
+
+.email-marketing .date-page {
+  overflow-x: hidden;
+  padding: 1rem;
+}
+
+.email-marketing .date-page__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 90px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 180px;
+}
+
+.email-marketing .date-page__button {
+  color: #fff;
+  font-size: 15px;
+  background: #00b2ff;
+  font-weight: 500;
+  max-width: 252px;
+  margin: 0 auto;
+  margin-top: 48px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 0.625rem;
+  min-height: 56px;
+  padding: 0.5rem;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, opacity 0.5s ease 2s;
+  transition: color 0.3s ease 0s, background 0.3s ease 0s, opacity 0.5s ease 2s;
+  opacity: 0;
+}
+
+.email-marketing .date-page__button:hover {
+  color: black;
+  background: #caff3d;
+}
+
+.email-marketing .calendar-date {
+  background: #fff;
+  min-height: 53vh;
+  border-radius: 12px 12px 6px 6px;
+  min-width: 20rem;
+  max-width: 25rem;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: linear-gradient(145deg, rgb(255, 255, 255) 0%, rgb(248, 249, 250) 50%, rgb(255, 255, 255) 100%), radial-gradient(circle at 20% 30%, rgba(139, 69, 19, 0.04) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(139, 69, 19, 0.03) 0%, transparent 50%), linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.5));
+  -webkit-box-shadow: rgba(0, 40, 58, 0.294) 0px 35.2557px 70.5114px -15px;
+  box-shadow: rgba(0, 40, 58, 0.294) 0px 35.2557px 70.5114px -15px;
+  border-radius: 12px 12px 6px 6px;
+  -webkit-transition: scale 0.7s ease-in-out 0s;
+  transition: scale 0.7s ease-in-out 0s;
+  position: relative;
+}
+
+.email-marketing .calendar-date:hover {
+  scale: 1.03;
+}
+
+.email-marketing .calendar-date_second {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: -50px;
+  -webkit-transition: opacity 0.8s ease 0s, -webkit-transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+  transition: opacity 0.8s ease 0s, -webkit-transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+  transition: transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, opacity 0.8s ease 0s;
+  transition: transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, opacity 0.8s ease 0s, -webkit-transform 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+}
+
+.email-marketing .calendar-date_second-out {
+  -webkit-transform: translateY(-80px) rotateY(90deg) rotateX(10deg);
+  transform: translateY(-80px) rotateY(90deg) rotateX(10deg);
+  opacity: 0;
+}
+
+.email-marketing .calendar-date_second-out .calendar-date__blue {
+  background: linear-gradient(135deg, #c6431d, #f15201);
+}
+
+.email-marketing .calendar-date__dots-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 6px;
+  height: 21px;
+}
+
+.email-marketing .calendar-date__dot {
+  background: radial-gradient(circle, rgb(221, 221, 221), rgb(187, 187, 187));
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0.5px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0.5px 1px inset;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border-radius: 50%;
+  height: 3.5px;
+  width: 3.5px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.email-marketing .calendar-date__blue {
+  height: 35px;
+  background: #00b2ff;
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
+}
+
+.email-marketing .calendar-date__date {
+  padding: 35px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.email-marketing .calendar-date__number {
+  font-weight: 800;
+  font-size: 112px;
+  color: #08a1e0;
+  font-weight: 800;
+  text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+}
+
+.email-marketing .calendar-date__weekday {
+  text-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+  font-size: 17.5px;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  color: #5a6c7d;
+  margin-bottom: 12px;
+}
+
+.email-marketing .calendar-date__dots {
+  width: 5.25px;
+  height: 5.25px;
+  background: #00b2ff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.email-marketing .calendar-date__dots::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #00b2ff;
+  opacity: 0.5;
+  left: -10px;
+  width: 5.25px;
+  height: 5.25px;
+}
+
+.email-marketing .calendar-date__dots::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #00b2ff;
+  opacity: 0.5;
+  right: -10px;
+  width: 5.25px;
+  height: 5.25px;
+}
+
+.email-marketing .month-calendar-date {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 248, 255, 0.8)), color-stop(50%, rgba(255, 255, 255, 0.9)), to(rgba(248, 250, 252, 0.8)));
+  background: linear-gradient(rgba(240, 248, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(248, 250, 252, 0.8) 100%);
+  border-bottom: 1px solid #b3e8ff;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.6) 0px 1px 0px inset;
+  box-shadow: rgba(255, 255, 255, 0.6) 0px 1px 0px inset;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  padding: 32px 0 32px 0;
+}
+
+.email-marketing .month-calendar-date__month {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.email-marketing .month-calendar-date__month::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 50px;
+  background: #66d0ff;
+  width: 40%;
+  height: 2px;
+}
+
+.email-marketing .month-calendar-date__year {
+  font-size: 14px;
+  color: #5a6c7d;
+  text-align: center;
+}
+
+.email-marketing .karaoke-date {
+  padding: 32px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6f7ff), to(#f8fcff));
+  background: linear-gradient(to bottom, #e6f7ff, #f8fcff);
+  border: 2px solid #66d0ff;
+  border-radius: 0.625rem;
+  max-width: 578px;
+  width: 100%;
+  -webkit-transform: translateX(40%);
+  -ms-transform: translateX(40%);
+  transform: translateX(40%);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease 2s, -webkit-transform 0.6s ease 2s;
+  transition: opacity 0.6s ease 2s, -webkit-transform 0.6s ease 2s;
+  transition: opacity 0.6s ease 2s, transform 0.6s ease 2s;
+  transition: opacity 0.6s ease 2s, transform 0.6s ease 2s, -webkit-transform 0.6s ease 2s;
+}
+
+.email-marketing .karaoke-date__title {
+  font-size: 17.5px;
+  border-bottom: 1px solid #b3e8ff;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  color: #00b2ff;
+  font-weight: 500;
+}
+
+.email-marketing .karaoke-date__item {
+  font-size: 21px;
+  margin-bottom: 16px;
+  padding: 12px;
+  color: #2c3e50;
+  font-weight: 400;
+  -webkit-transition: color 0.3s ease 0s, scale 0.3s ease 0s;
+  transition: color 0.3s ease 0s, scale 0.3s ease 0s;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  opacity: 0.6;
+}
+
+.email-marketing .karaoke-date__item::after {
+  content: "";
+  position: static;
+  width: 100%;
+  background: #00b2ff;
+  border-radius: 100px;
+  height: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#66d0ff), to(#00b2ff));
+  background: linear-gradient(to right, #66d0ff, #00b2ff);
+  width: 0;
+  margin-top: 12px;
+  -webkit-transition: width 2.7s linear 0s;
+  transition: width 2.7s linear 0s;
+}
+
+.email-marketing .karaoke-date__item_active {
+  color: #00b2ff;
+  scale: 1.05;
+  font-weight: 600;
+  background: #e6f7ff;
+  border-left: 3px solid #00b2ff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.email-marketing .karaoke-date__item_active::after {
+  height: 4px;
+  width: 100%;
+}
+
+.email-marketing .leaf {
+  position: fixed;
+  top: -10vh;
+  width: 30px;
+  height: 30px;
+  background: url("../img/september-3/leaves.png") no-repeat center/contain;
+  -webkit-animation: fall linear forwards;
+  animation: fall linear forwards;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 100;
+  -webkit-filter: hue-rotate(var(--hue)) brightness(var(--bright)) saturate(var(--sat));
+  filter: hue-rotate(var(--hue)) brightness(var(--bright)) saturate(var(--sat));
+  -webkit-transition: -webkit-transform 0.3s ease 0s, -webkit-filter 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s, -webkit-filter 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, filter 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, filter 0.3s ease 0s, -webkit-transform 0.3s ease 0s, -webkit-filter 0.3s ease 0s;
+}
+
+@-webkit-keyframes fall {
+  0% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+    /* ещё виден */
+  }
+
+  100% {
+    -webkit-transform: translateX(var(--x-move)) translateY(98vh) rotate(280deg);
+    transform: translateX(var(--x-move)) translateY(98vh) rotate(280deg);
+    opacity: 0;
+    /* плавное исчезновение */
+    visibility: hidden;
+  }
+}
+
+@keyframes fall {
+  0% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+    /* ещё виден */
+  }
+
+  100% {
+    -webkit-transform: translateX(var(--x-move)) translateY(98vh) rotate(280deg);
+    transform: translateX(var(--x-move)) translateY(98vh) rotate(280deg);
+    opacity: 0;
+    /* плавное исчезновение */
+    visibility: hidden;
+  }
 }
 
 .email-marketing .hero {
@@ -8910,6 +9370,10 @@ figure {
     grid-template-columns: 1fr;
   }
 
+  .email-marketing .date-page__main {
+    gap: 40px;
+  }
+
   .email-marketing .blur-banner__list {
     padding: 1.875rem 2.1875rem;
   }
@@ -9831,6 +10295,27 @@ figure {
 
   .contextnaya-reklama .item-make-decisions__text {
     font-size: 1rem;
+  }
+
+  .email-marketing .date-page__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .email-marketing .calendar-date {
+    min-height: 0;
+    display: none;
+  }
+
+  .email-marketing .calendar-date__date {
+    padding: 10px 0 20px 0;
+  }
+
+  .email-marketing .month-calendar-date {
+    display: none;
   }
 
   .email-marketing .hero__container {
