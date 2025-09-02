@@ -110,17 +110,15 @@ if (document.querySelector('.results .swiper')) {
 // });
 
 // pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
-const button = document.getElementById('show-date');
-const wrapper = document.querySelector('.page-wrap');
 
 if (document.querySelector('.karaoke-date__item')) {
 	const items = document.querySelectorAll('.karaoke-date__item');
+	const wrapper = document.querySelector('.date-page-wrap');
 	const button = document.querySelector('#show-date');
 
 	button.addEventListener('click', () => {
 		button.style.visibility = 'hidden';
 		// Сначала вращаем
-		wrapper.classList.add('show-rotate');
 
 		// Через 0.6–0.8 секунды сдвигаем лендинг
 		setTimeout(() => {
