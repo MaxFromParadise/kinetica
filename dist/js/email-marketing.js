@@ -143,7 +143,7 @@ if (document.querySelector('.karaoke-date__item')) {
 					if (i === items.length - 1) {
 						document.querySelector('.date-page__button').style.opacity = 1;
 					}
-				}, i * 3000);
+				}, i * 1200);
 			});
 		}, 2600);
 	});
