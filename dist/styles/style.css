@@ -10307,15 +10307,10 @@ figure {
 
   .email-marketing .calendar-date {
     min-height: 0;
-    display: none;
   }
 
   .email-marketing .calendar-date__date {
     padding: 10px 0 20px 0;
-  }
-
-  .email-marketing .month-calendar-date {
-    display: none;
   }
 
   .email-marketing .hero__container {
