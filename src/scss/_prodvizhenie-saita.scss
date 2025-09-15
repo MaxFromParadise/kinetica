@@ -15,8 +15,10 @@
 		align-items: center;
 
 		min-height: 100vh;
-		padding: rem(80) 0 rem(10);
-		padding-top: 10rem;
+		padding: rem(160) 0 rem(120) 0;
+		@media (max-width: 767.98px) {
+			padding-bottom: rem(60);
+		}
 
 		// .hero__container
 		&__container {
@@ -102,7 +104,7 @@
 
 	// advantages
 	.advantages {
-		padding-top: rem(65);
+		padding-top: rem(0);
 
 		// .advantages__container
 		&__container {
@@ -199,6 +201,7 @@
 		top: 10%;
 		z-index: 10;
 		padding-bottom: rem(350);
+		// max-height: calc(100vh + rem(470));
 		// margin-bottom: rem(350);
 		// .report-data-lens__container
 		&__container {
@@ -211,7 +214,9 @@
 			grid-template-areas:
 				'content img'
 				'button img';
-
+			@media (max-height: 1000px) {
+				grid-template-rows: auto rem(66);
+			}
 			@media (max-width: 991.98px) {
 				grid-template-columns: 1fr;
 				grid-template-areas:
@@ -252,7 +257,9 @@
 		// .report-data-lens__title
 		&__title {
 			margin-bottom: rem(40);
-
+			@media (max-height: 880px) {
+				font-size: rem(48);
+			}
 			@media (max-width: 767.98px) {
 				margin-bottom: rem(25);
 			}
@@ -1175,6 +1182,57 @@
 
 		@media (max-width: 767.98px) {
 			margin-bottom: rem(60);
+		}
+	}
+	.cities {
+		margin-bottom: rem(130);
+		@media (max-width: 767.98px) {
+			margin-bottom: rem(65);
+		}
+		// .cities__container
+		&__container {
+		}
+		// .cities__title
+		&__title {
+			margin-bottom: rem(64);
+			@media (max-width: 767.98px) {
+				margin-bottom: rem(30);
+			}
+		}
+		// .cities__list
+		&__list {
+			display: grid;
+			justify-content: space-between;
+			grid-template-columns: repeat(auto-fit, minmax(max-content, rem(230)));
+			column-gap: rem(50);
+			row-gap: rem(25);
+			@media (max-width: 767.98px) {
+				column-gap: rem(15);
+				row-gap: rem(7);
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		// .cities__item
+		&__item {
+			color: var(--primary-color, #00b2ff);
+			font-size: rem(18);
+			font-weight: 400;
+			line-height: 155.556%;
+			text-decoration-line: underline;
+			text-decoration-style: solid;
+			text-decoration-skip-ink: none;
+			text-decoration-thickness: auto;
+			text-underline-offset: auto;
+			text-underline-position: from-font;
+			&:hover {
+				text-decoration: none;
+			}
+			@media (max-width: 767.98px) {
+				font-size: rem(15);
+			}
+		}
+		// .cities__link
+		&__link {
 		}
 	}
 }

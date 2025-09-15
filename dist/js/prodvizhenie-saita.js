@@ -171,10 +171,9 @@ if (document.querySelector('.karaoke-date__item')) {
 
 	button.addEventListener('click', () => {
 		button.style.visibility = 'hidden';
-		// Сначала вращаем
+
 		wrapper.classList.add('show-date');
 
-		// Через 0.6–0.8 секунды сдвигаем лендинг
 		setTimeout(() => {
 			wrapper.classList.add('show-date');
 		}, 300);

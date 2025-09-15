@@ -228,6 +228,7 @@ footer.footer {
   position: relative;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  overflow-x: hidden;
 }
 
 #content::-webkit-scrollbar {
@@ -774,6 +775,7 @@ figure {
   z-index: -1;
   overflow-y: auto;
   height: 100vh;
+  width: 100%;
 }
 
 .page-wrap {
@@ -799,8 +801,6 @@ figure {
 .date-page {
   position: relative;
   background: #e6f7ff;
-  width: 100vw;
-  min-width: 380px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -874,6 +874,8 @@ figure {
   justify-content: center;
   padding-top: 180px;
   height: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .date-page__button {
@@ -883,7 +885,6 @@ figure {
   font-weight: 500;
   max-width: 252px;
   margin: 0 auto;
-  margin-top: 48px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -903,6 +904,7 @@ figure {
   -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s, opacity 0.5s ease 1s;
   transition: color 0.3s ease 0s, background 0.3s ease 0s, opacity 0.5s ease 1s;
   opacity: 0;
+  margin-top: 30px;
 }
 
 .date-page__button:hover {
@@ -914,7 +916,6 @@ figure {
   background: #fff;
   min-height: 53vh;
   border-radius: 12px 12px 6px 6px;
-  min-width: 320px;
   max-width: 400px;
   width: 100%;
   -webkit-backface-visibility: hidden;
@@ -1266,8 +1267,7 @@ figure {
   -ms-flex-align: center;
   align-items: center;
   min-height: 100vh;
-  padding: 5rem 0 0.625rem;
-  padding-top: 10rem;
+  padding: 10rem 0 7.5rem 0;
 }
 
 .prodvizhenie-saita .hero__container {
@@ -1329,7 +1329,7 @@ figure {
 }
 
 .prodvizhenie-saita .advantages {
-  padding-top: 4.0625rem;
+  padding-top: 0rem;
 }
 
 .prodvizhenie-saita .advantages__list {
@@ -2156,6 +2156,45 @@ figure {
 
 .prodvizhenie-saita .reviews {
   margin-bottom: 7.5rem;
+}
+
+.prodvizhenie-saita .cities {
+  margin-bottom: 8.125rem;
+}
+
+.prodvizhenie-saita .cities__title {
+  margin-bottom: 4rem;
+}
+
+.prodvizhenie-saita .cities__list {
+  display: grid;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(-webkit-max-content, 14.375rem));
+  grid-template-columns: repeat(auto-fit, minmax(max-content, 14.375rem));
+  -webkit-column-gap: 3.125rem;
+  -moz-column-gap: 3.125rem;
+  column-gap: 3.125rem;
+  row-gap: 1.5625rem;
+}
+
+.prodvizhenie-saita .cities__item {
+  color: var(--primary-color, #00b2ff);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.prodvizhenie-saita .cities__item:hover {
+  text-decoration: none;
 }
 
 .contextnaya-reklama {
@@ -3327,7 +3366,7 @@ figure {
 .email-marketing .hero {
   overflow: hidden;
   min-height: 100vh;
-  padding: 10rem 0 1.25rem;
+  padding: 10rem 0 7.5rem 0;
 }
 
 .email-marketing .hero__container {
@@ -3593,12 +3632,14 @@ figure {
 
 .email-marketing .amp-email__container {
   display: grid;
-  gap: 1.25rem;
+  -webkit-column-gap: 1.25rem;
+  -moz-column-gap: 1.25rem;
+  column-gap: 1.25rem;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
   grid-template-columns: minmax(23.125rem, 35rem) minmax(0, 51.875rem);
-  grid-template-areas: "slider title" "slider text" "slider button" "slider bullets";
+  grid-template-areas: "slider title" "slider text" "slider button" "slider bullets" "slider bullets";
 }
 
 .email-marketing .amp-email__slider {
@@ -3628,7 +3669,7 @@ figure {
 
 .email-marketing .amp-email__title {
   position: relative;
-  margin-bottom: 2.1875rem;
+  margin-bottom: 0;
   grid-area: title;
 }
 
@@ -3641,7 +3682,7 @@ figure {
 .email-marketing .amp-email__text {
   position: relative;
   z-index: 2;
-  margin-bottom: 2.1875rem;
+  margin-bottom: 0;
   color: var(--black);
   font-size: 1.125rem;
   font-weight: 400;
@@ -3769,6 +3810,8 @@ figure {
   border-radius: 1.25rem;
   background: var(--white);
   gap: 1.25rem;
+  -webkit-transition: opacity 0.5s ease 0s;
+  transition: opacity 0.5s ease 0s;
 }
 
 .email-marketing .item-tasks__icon {
@@ -4263,7 +4306,7 @@ figure {
 }
 
 .email-marketing .top-awards {
-  padding-top: 1.875rem;
+  padding-top: 0rem;
 }
 
 .email-marketing .top-awards__container {
@@ -6472,6 +6515,10 @@ figure {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   background: var(--secondary-color);
+}
+
+.cpa .consider {
+  padding-top: 7.5rem;
 }
 
 .cpa .consider__title {
@@ -9066,7 +9113,20 @@ figure {
 
   .email-marketing .amp-email__container {
     grid-template-columns: 100%;
-    grid-template-areas: "title" "slider" "bullets" "text" "button";
+    grid-template-areas: "title" "slider" "text" "button";
+    gap: 1.875rem;
+  }
+
+  .email-marketing .amp-email__title {
+    margin-bottom: 0.9375rem;
+  }
+
+  .email-marketing .amp-email__text {
+    margin-bottom: 0.9375rem;
+  }
+
+  .email-marketing .amp-email__bullets {
+    display: none;
   }
 
   .email-marketing .slide-amp-email__img img {
@@ -9998,6 +10058,15 @@ figure {
     padding: 10px 0 20px 0;
   }
 
+  .karaoke-date {
+    width: auto;
+    margin-top: 30px;
+  }
+
+  .prodvizhenie-saita .hero {
+    padding-bottom: 3.75rem;
+  }
+
   .prodvizhenie-saita .hero__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -10139,6 +10208,26 @@ figure {
 
   .prodvizhenie-saita .reviews {
     margin-bottom: 3.75rem;
+  }
+
+  .prodvizhenie-saita .cities {
+    margin-bottom: 4.0625rem;
+  }
+
+  .prodvizhenie-saita .cities__title {
+    margin-bottom: 1.875rem;
+  }
+
+  .prodvizhenie-saita .cities__list {
+    -webkit-column-gap: 0.9375rem;
+    -moz-column-gap: 0.9375rem;
+    column-gap: 0.9375rem;
+    row-gap: 0.4375rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .prodvizhenie-saita .cities__item {
+    font-size: 0.9375rem;
   }
 
   .contextnaya-reklama .hero__container {
@@ -10341,7 +10430,7 @@ figure {
   }
 
   .email-marketing .hero {
-    padding: 8rem 0 0;
+    padding: 8rem 0 3.75rem 0;
   }
 
   .email-marketing .blur-banner__list {
@@ -10506,6 +10595,10 @@ figure {
 
   .email-marketing .oleg {
     padding-top: 3.75rem;
+  }
+
+  .email-marketing .blog {
+    margin-top: 0;
   }
 
   .target .hero__container {
@@ -10954,6 +11047,10 @@ figure {
   .cpa .consider__grid {
     margin-bottom: 2.1875rem;
     grid-template-columns: 100%;
+  }
+
+  .cpa .consider {
+    padding-top: 4.0625rem;
   }
 
   .cpa .min-price__title {
@@ -11441,5 +11538,17 @@ figure {
 
   .optimizacia-conversiy .ratio-banner__text {
     max-width: 15.625rem;
+  }
+}
+
+@media (max-height: 1000px) {
+  .prodvizhenie-saita .neiro__container {
+    grid-template-rows: auto 4.125rem;
+  }
+}
+
+@media (max-height: 880px) {
+  .prodvizhenie-saita .neiro__title {
+    font-size: 3rem;
   }
 }

@@ -677,6 +677,7 @@
 	}
 
 	.consider {
+		padding-top: rem(120);
 		// .consider__container
 		&__container {
 		}
@@ -719,6 +720,7 @@
 		}
 
 		@media (max-width: 767.98px) {
+			padding-top: rem(65);
 		}
 	}
 

@@ -170,3 +170,38 @@ function createLeaf() {
 
 	setTimeout(() => leaf.remove(), duration * 1000);
 }
+
+if (document.querySelector('.tasks__list')) {
+	const list = document.querySelector('.tasks__list');
+	const items = document.querySelectorAll('.item-tasks');
+
+	function updateOpacity() {
+		if (window.innerWidth > 767.98) {
+			// если экран шире — всё видно
+			items.forEach((item) => (item.style.opacity = '1'));
+			return;
+		}
+
+		const listRect = list.getBoundingClientRect();
+		const screenCenter = window.innerWidth / 2;
+
+		items.forEach((item) => {
+			const rect = item.getBoundingClientRect();
+
+			const fullyVisible = rect.left >= listRect.left && rect.right <= listRect.right;
+
+			const itemCenter = rect.left + rect.width / 2;
+			const isCentered = itemCenter >= screenCenter - rect.width / 2 && itemCenter <= screenCenter + rect.width / 2;
+
+			if (fullyVisible || isCentered) {
+				item.style.opacity = '1';
+			} else {
+				item.style.opacity = '0.5';
+			}
+		});
+	}
+
+	list.addEventListener('scroll', updateOpacity);
+	window.addEventListener('resize', updateOpacity);
+	window.addEventListener('load', updateOpacity);
+}
