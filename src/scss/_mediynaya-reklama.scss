@@ -1,0 +1,87 @@
+@use './functions' as *;
+@use './base';
+@use './top-awards';
+@use './media-about-us';
+
+.mediynaya-reklama {
+	[class*='__container'] {
+		width: 100%;
+		max-width: 1854px !important;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+	@font-face {
+		font-family: 'Ampero SemBd';
+		src: url('../fonts/Ampero-Bold.otf') format('opentype');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+	.hero {
+		display: flex;
+		align-items: flex-end;
+		min-height: 100vh;
+		background: gray;
+
+		// .hero__container
+		&__container {
+			padding-bottom: rem(60);
+		}
+		// .hero__title
+		&__title {
+		}
+		// .hero__button
+		&__button {
+			padding: rem(33);
+			max-width: rem(450);
+			width: 100%;
+			border-radius: rem(50);
+			font-size: rem(20);
+			font-weight: 800;
+			line-height: 100%;
+			text-transform: uppercase;
+			@media (any-hover: hover) {
+				&:hover {
+					background: var(--secondary-color);
+					color: var(--black-main-color);
+				}
+			}
+		}
+	}
+	.title-hero {
+		color: #fff;
+
+		font-size: rem(150);
+		font-weight: 700;
+		line-height: 100%;
+		text-transform: uppercase;
+		margin-bottom: rem(56);
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+		span {
+			font-family: 'Ampero SemBd', sans-serif !important;
+		}
+		// .title-hero__first
+		&__first {
+			color: var(--secondary-color);
+		}
+		// .title-hero__second
+		&__second {
+			display: flex;
+			// align-items: center;
+			gap: rem(20);
+		}
+		// .title-hero__second-small
+		&__second-small {
+			color: #b8b8b8;
+			font-size: rem(30);
+			font-weight: 600;
+			line-height: 147%;
+			max-width: rem(240);
+		}
+		// .title-hero__third
+		&__third {
+		}
+	}
+}

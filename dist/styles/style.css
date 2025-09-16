@@ -9085,6 +9085,87 @@ figure {
   padding-top: 0;
 }
 
+.mediynaya-reklama [class*=__container] {
+  width: 100%;
+  max-width: 1854px !important;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@font-face {
+  font-family: "Ampero SemBd";
+  src: url("../fonts/Ampero-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.mediynaya-reklama .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  min-height: 100vh;
+  background: gray;
+}
+
+.mediynaya-reklama .hero__container {
+  padding-bottom: 3.75rem;
+}
+
+.mediynaya-reklama .hero__button {
+  padding: 2.0625rem;
+  max-width: 28.125rem;
+  width: 100%;
+  border-radius: 3.125rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.mediynaya-reklama .title-hero {
+  color: #fff;
+  font-size: 9.375rem;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mediynaya-reklama .title-hero span {
+  font-family: "Ampero SemBd", sans-serif !important;
+}
+
+.mediynaya-reklama .title-hero__first {
+  color: var(--secondary-color);
+}
+
+.mediynaya-reklama .title-hero__second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.mediynaya-reklama .title-hero__second-small {
+  color: #b8b8b8;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 147%;
+  max-width: 15rem;
+}
+
 @media (max-width: 1660px) {
   .content-strategy .not-article__title-decor {
     display: none;
@@ -11550,5 +11631,12 @@ figure {
 @media (max-height: 880px) {
   .prodvizhenie-saita .neiro__title {
     font-size: 3rem;
+  }
+}
+
+@media (any-hover: hover) {
+  .mediynaya-reklama .hero__button:hover {
+    background: var(--secondary-color);
+    color: var(--black-main-color);
   }
 }
