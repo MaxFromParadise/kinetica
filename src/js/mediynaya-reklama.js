@@ -13,8 +13,11 @@ if (document.querySelector('.top-awards__slider .swiper')) {
 		},
 		breakpoints: {
 			// when window width is >= 992px
+			1850: {
+				spaceBetween: 280,
+			},
 			992: {
-				spaceBetween: 150,
+				spaceBetween: 140,
 			},
 		},
 	});

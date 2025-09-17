@@ -9109,6 +9109,7 @@ figure {
   align-items: flex-end;
   min-height: 100vh;
   background: gray;
+  background: var(--292-b-322-paints, linear-gradient(180deg, rgba(41, 43, 50, 0) 59.53%, #292b32 100%), #292b32);
 }
 
 .mediynaya-reklama .hero__container {
@@ -9164,6 +9165,37 @@ figure {
   font-weight: 600;
   line-height: 147%;
   max-width: 15rem;
+}
+
+.mediynaya-reklama .top-awards {
+  background: var(--black-main-color);
+}
+
+.mediynaya-reklama .top-awards__title {
+  color: var(--secondary-color);
+  font-family: "Ampero SemBd", sans-serif;
+  font-size: 5.625rem;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.mediynaya-reklama .top-awards .item-top-awards__middle {
+  color: var(--white);
+}
+
+.mediynaya-reklama .top-awards .item-top-awards__bottom {
+  color: var(--white);
+}
+
+.mediynaya-reklama .top-awards .item-top-awards:not(:last-child)::before {
+  left: 150%;
+}
+
+@media (max-width: 1850px) {
+  .mediynaya-reklama .top-awards .item-top-awards:not(:last-child)::before {
+    left: 125%;
+  }
 }
 
 @media (max-width: 1660px) {
@@ -10007,6 +10039,10 @@ figure {
 
   .content-strategy .price__container {
     grid-template-columns: 1fr;
+  }
+
+  .mediynaya-reklama .top-awards .item-top-awards:not(:last-child)::before {
+    left: 110%;
   }
 }
 
