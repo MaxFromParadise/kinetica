@@ -2,6 +2,8 @@
 
 @import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap';
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
 /* Header */
 
 .header {
@@ -9085,6 +9087,10 @@ figure {
   padding-top: 0;
 }
 
+.mediynaya-reklama {
+  /* спец-анимации */
+}
+
 .mediynaya-reklama [class*=__container] {
   width: 100%;
   max-width: 1854px !important;
@@ -9190,6 +9196,335 @@ figure {
 
 .mediynaya-reklama .top-awards .item-top-awards:not(:last-child)::before {
   left: 150%;
+}
+
+.mediynaya-reklama .influence {
+  background: var(--black-main-color);
+  padding-bottom: 8.75rem;
+  position: relative;
+}
+
+.mediynaya-reklama .influence__title {
+  color: var(--white);
+  font-family: "Ampero SemBd", sans-serif;
+  font-size: 5.625rem;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+.mediynaya-reklama .influence__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.625rem;
+}
+
+.mediynaya-reklama .item-influence {
+  border-radius: 1.25rem;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0);
+  padding: 2.1875rem;
+  -webkit-transition: border-color 0.5s ease 0s, background 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  transition: border-color 0.5s ease 0s, background 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  transition: border-color 0.5s ease 0s, background 0.5s ease 0s, transform 0.5s ease 0s;
+  transition: border-color 0.5s ease 0s, background 0.5s ease 0s, transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+
+.mediynaya-reklama .item-influence:hover {
+  border-color: var(--secondary-color);
+  background: var(--secondary-color);
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.mediynaya-reklama .item-influence:hover .item-influence__title {
+  color: var(--black-main-color);
+}
+
+.mediynaya-reklama .item-influence:hover .item-influence__title span {
+  color: var(--primary-color);
+}
+
+.mediynaya-reklama .item-influence:first-child:hover {
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+.mediynaya-reklama .item-influence:last-child:hover {
+  -webkit-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+.mediynaya-reklama .item-influence__icon {
+  width: 5.875rem;
+  height: 5.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.mediynaya-reklama .item-influence__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.mediynaya-reklama .item-influence__title {
+  color: var(--white, #fff);
+  font-family: "Ampero SemBd", sans-serif;
+  font-size: 2.1875rem;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+  -webkit-transition: color 0.5s ease 0s;
+  transition: color 0.5s ease 0s;
+}
+
+.mediynaya-reklama .item-influence__title span {
+  display: block;
+  color: var(--secondary-color);
+  font-family: "Ampero SemBd", sans-serif;
+  -webkit-transition: color 0.5s ease 0s;
+  transition: color 0.5s ease 0s;
+}
+
+.mediynaya-reklama .marquee-influence {
+  background: var(--white);
+  padding-bottom: 1.25rem;
+  -webkit-transform: rotate(-2deg) translateY(2.1875rem);
+  -ms-transform: rotate(-2deg) translateY(2.1875rem);
+  transform: rotate(-2deg) translateY(2.1875rem);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.mediynaya-reklama .marquee-influence__slider {
+  background: var(--secondary-color);
+  padding: 1.125rem 0;
+}
+
+.mediynaya-reklama .marquee-influence .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
+.mediynaya-reklama .marquee-influence__item {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--black-main-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.mediynaya-reklama .marquee-influence__item::after {
+  content: "";
+  position: static;
+  top: 0;
+  left: 0;
+  width: 0.6875rem;
+  height: 0.6875rem;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11' fill='none'><path d='M3.69515 0.42344C3.69738 0.211329 4.04289 0.114453 4.1533 0.295645C4.67256 1.14492 5.5487 2.38845 6.5123 2.935C7.47583 3.47962 8.99484 3.59235 9.98973 3.60001C10.2018 3.60225 10.2968 3.94782 10.1156 4.05824C9.26633 4.5775 8.02472 5.45357 7.47817 6.41716C6.93162 7.38076 6.82082 8.8997 6.81316 9.8946C6.81093 10.1067 6.46343 10.2017 6.35494 10.0205C5.83568 9.17119 4.95961 7.92959 3.99408 7.38311C3.03049 6.83656 1.51155 6.72576 0.518577 6.71802C0.306466 6.71579 0.209519 6.36836 0.390777 6.25987C1.24005 5.74061 2.48358 4.86447 3.03007 3.89895C3.57469 2.93542 3.68742 1.41641 3.69515 0.42344Z' fill='%23292B32'/></svg>") no-repeat center/contain;
+}
+
+.mediynaya-reklama .increase {
+  position: relative;
+  overflow: hidden;
+  min-height: 40.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.mediynaya-reklama .increase__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+}
+
+.mediynaya-reklama .increase__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+  text-align: center;
+  color: var(--black-main-color, #292b32);
+  text-align: center;
+  font-family: "Ampero SemBd", sans-serif;
+  font-size: 5.625rem;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.mediynaya-reklama .increase__item:first-child {
+  color: var(--primary-color);
+}
+
+.mediynaya-reklama .increase__item.active {
+  opacity: 1;
+}
+
+.mediynaya-reklama .increase__item.slide-up-out {
+  -webkit-animation: slideUpOut 0.8s forwards;
+  animation: slideUpOut 0.8s forwards;
+}
+
+.mediynaya-reklama .increase__item.slide-up-in {
+  -webkit-animation: slideUpIn 0.8s forwards;
+  animation: slideUpIn 0.8s forwards;
+}
+
+.mediynaya-reklama .increase__item.slide-down-out {
+  -webkit-animation: slideDownOut 0.8s forwards;
+  animation: slideDownOut 0.8s forwards;
+}
+
+.mediynaya-reklama .increase__item.slide-down-in {
+  -webkit-animation: slideDownIn 0.8s forwards;
+  animation: slideDownIn 0.8s forwards;
+}
+
+@-webkit-keyframes slideUpOut {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideUpOut {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes slideUpIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideDownOut {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slideDownOut {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@-webkit-keyframes slideDownIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDownIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.mediynaya-reklama .federal-brands {
+  background: var(--Color-10, #f3f4f5);
 }
 
 @media (max-width: 1850px) {
@@ -9405,6 +9740,18 @@ figure {
 
   .content-strategy .item-outcomes {
     height: unset;
+  }
+
+  .mediynaya-reklama .influence__list {
+    gap: 1.875rem;
+  }
+
+  .mediynaya-reklama .item-influence {
+    padding: 1.125rem;
+  }
+
+  .mediynaya-reklama .item-influence__title {
+    font-size: 1.875rem;
   }
 }
 
@@ -10043,6 +10390,24 @@ figure {
 
   .mediynaya-reklama .top-awards .item-top-awards:not(:last-child)::before {
     left: 110%;
+  }
+
+  .mediynaya-reklama .item-influence__icon {
+    width: 3.6875rem;
+    height: 3.6875rem;
+    margin-bottom: 1.125rem;
+  }
+
+  .mediynaya-reklama .item-influence__title {
+    font-size: 1.375rem;
+  }
+
+  .mediynaya-reklama .increase {
+    min-height: 23.75rem;
+  }
+
+  .mediynaya-reklama .increase__item {
+    font-size: 3.75rem;
   }
 }
 
@@ -11641,6 +12006,28 @@ figure {
 
   .content-strategy .channels {
     margin-bottom: 3.75rem;
+  }
+
+  .mediynaya-reklama .top-awards__title {
+    font-size: 2rem;
+  }
+
+  .mediynaya-reklama .influence {
+    padding-bottom: 5rem;
+  }
+
+  .mediynaya-reklama .influence__title {
+    margin-bottom: 2.1875rem;
+    font-size: 2rem;
+  }
+
+  .mediynaya-reklama .influence__list {
+    grid-template-columns: 100%;
+    gap: 1.25rem;
+  }
+
+  .mediynaya-reklama .increase__item {
+    font-size: 2rem;
   }
 }
 

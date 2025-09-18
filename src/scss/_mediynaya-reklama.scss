@@ -2,6 +2,8 @@
 @use './base';
 @use './top-awards';
 @use './media-about-us';
+@use './federal-brands';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .mediynaya-reklama {
 	[class*='__container'] {
@@ -94,6 +96,9 @@
 			font-weight: 700;
 			line-height: 110%;
 			text-transform: uppercase;
+			@media (max-width: 767.98px) {
+				font-size: rem(32);
+			}
 		}
 		.item-top-awards {
 			&__middle {
@@ -114,5 +119,263 @@
 				}
 			}
 		}
+	}
+	.influence {
+		background: var(--black-main-color);
+		padding-bottom: rem(140);
+		position: relative;
+		@media (max-width: 767.98px) {
+			padding-bottom: rem(80);
+		}
+		// .influence__container
+		&__container {
+		}
+		// .influence__title
+		&__title {
+			color: var(--white);
+			font-family: 'Ampero SemBd', sans-serif;
+			font-size: rem(90);
+			font-weight: 700;
+			line-height: 110%;
+			text-transform: uppercase;
+			margin-bottom: rem(80);
+			@media (max-width: 767.98px) {
+				margin-bottom: rem(35);
+				font-size: rem(32);
+			}
+		}
+		// .influence__list
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+
+			gap: rem(58);
+			@media (max-width: 1199.98px) {
+				gap: rem(30);
+			}
+			@media (max-width: 767.98px) {
+				grid-template-columns: 100%;
+				gap: rem(20);
+			}
+		}
+		// .influence__item
+		&__item {
+		}
+	}
+	.item-influence {
+		border-radius: rem(20);
+		border: 1px solid #fff;
+		background: rgba(255, 255, 255, 0);
+		padding: rem(35);
+		transition: border-color 0.5s ease 0s, background 0.5s ease 0s, transform 0.5s ease 0s;
+		&:hover {
+			border-color: var(--secondary-color);
+			background: var(--secondary-color);
+			transform: rotate(2deg);
+			.item-influence__title {
+				color: var(--black-main-color);
+				span {
+					color: var(--primary-color);
+				}
+			}
+		}
+		&:first-child {
+			&:hover {
+				transform: rotate(-2deg);
+			}
+		}
+		&:last-child {
+			&:hover {
+				transform: rotate(-3deg);
+			}
+		}
+		@media (max-width: 1199.98px) {
+			padding: rem(18);
+		}
+		// .item-influence__icon
+		&__icon {
+			width: rem(94);
+			height: rem(94);
+			margin-bottom: rem(30);
+			@media (max-width: 991.98px) {
+				width: rem(59);
+				height: rem(59);
+				margin-bottom: rem(18);
+			}
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		// .item-influence__title
+		&__title {
+			color: var(--white, #fff);
+			font-family: 'Ampero SemBd', sans-serif;
+			font-size: rem(35);
+			font-weight: 700;
+			line-height: 110%;
+			text-transform: uppercase;
+			transition: color 0.5s ease 0s;
+			@media (max-width: 1199.98px) {
+				font-size: rem(30);
+			}
+			@media (max-width: 991.98px) {
+				font-size: rem(22);
+			}
+			span {
+				display: block;
+				color: var(--secondary-color);
+				font-family: 'Ampero SemBd', sans-serif;
+				transition: color 0.5s ease 0s;
+			}
+		}
+	}
+	.marquee-influence {
+		background: var(--white);
+		// padding: rem(18) 0;
+		padding-bottom: rem(20);
+		transform: rotate(-2deg) translateY(rem(35));
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		&__slider {
+			background: var(--secondary-color);
+			padding: rem(18) 0;
+		}
+		.swiper-wrapper {
+			transition-timing-function: linear !important;
+		}
+		&__item {
+			position: relative;
+			width: max-content;
+			color: var(--black-main-color);
+			font-family: 'Poppins', sans-serif;
+			font-size: rem(12);
+			font-weight: 500;
+			line-height: 100%;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			display: flex;
+			gap: rem(10);
+			&::after {
+				content: '';
+				position: static;
+				top: 0;
+				left: 0;
+				width: rem(11);
+				height: rem(11);
+
+				background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 11 11' fill='none'><path d='M3.69515 0.42344C3.69738 0.211329 4.04289 0.114453 4.1533 0.295645C4.67256 1.14492 5.5487 2.38845 6.5123 2.935C7.47583 3.47962 8.99484 3.59235 9.98973 3.60001C10.2018 3.60225 10.2968 3.94782 10.1156 4.05824C9.26633 4.5775 8.02472 5.45357 7.47817 6.41716C6.93162 7.38076 6.82082 8.8997 6.81316 9.8946C6.81093 10.1067 6.46343 10.2017 6.35494 10.0205C5.83568 9.17119 4.95961 7.92959 3.99408 7.38311C3.03049 6.83656 1.51155 6.72576 0.518577 6.71802C0.306466 6.71579 0.209519 6.36836 0.390777 6.25987C1.24005 5.74061 2.48358 4.86447 3.03007 3.89895C3.57469 2.93542 3.68742 1.41641 3.69515 0.42344Z' fill='%23292B32'/></svg>") no-repeat center / contain;
+			}
+		}
+	}
+	.increase {
+		position: relative;
+		overflow: hidden;
+		min-height: rem(650);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media (max-width: 991.98px) {
+			min-height: rem(380);
+		}
+	}
+
+	.increase__list {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		height: 100%;
+	}
+
+	.increase__item {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		transform: translateY(0);
+		transition: opacity 0.6s ease;
+		text-align: center;
+		color: var(--black-main-color, #292b32);
+		text-align: center;
+		font-family: 'Ampero SemBd', sans-serif;
+		font-size: rem(90);
+		font-weight: 700;
+		line-height: 110%;
+		text-transform: uppercase;
+		@media (max-width: 991.98px) {
+			font-size: rem(60);
+		}
+		@media (max-width: 767.98px) {
+			font-size: rem(32);
+		}
+		&:first-child {
+			color: var(--primary-color);
+		}
+	}
+
+	.increase__item.active {
+		opacity: 1;
+	}
+
+	/* спец-анимации */
+	.increase__item.slide-up-out {
+		animation: slideUpOut 0.8s forwards;
+	}
+	.increase__item.slide-up-in {
+		animation: slideUpIn 0.8s forwards;
+	}
+	.increase__item.slide-down-out {
+		animation: slideDownOut 0.8s forwards;
+	}
+	.increase__item.slide-down-in {
+		animation: slideDownIn 0.8s forwards;
+	}
+
+	@keyframes slideUpOut {
+		from {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		to {
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+	}
+	@keyframes slideUpIn {
+		from {
+			opacity: 0;
+			transform: translateY(100%);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	@keyframes slideDownOut {
+		from {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		to {
+			opacity: 0;
+			transform: translateY(100%);
+		}
+	}
+	@keyframes slideDownIn {
+		from {
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	.federal-brands {
+		background: var(--Color-10, #f3f4f5);
 	}
 }
