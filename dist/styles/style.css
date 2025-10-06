@@ -9525,6 +9525,156 @@ figure {
 
 .mediynaya-reklama .federal-brands {
   background: var(--Color-10, #f3f4f5);
+  margin-bottom: 2.9375rem;
+}
+
+.mediynaya-reklama .conduction {
+  margin-bottom: 8.75rem;
+}
+
+.mediynaya-reklama .banner-conduction {
+  border-radius: 1.25rem;
+  border: 1px solid var(--secondary-color, #caff3d);
+  background: var(--secondary-color, #caff3d);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 1.875rem;
+  padding: 5.3125rem;
+}
+
+.mediynaya-reklama .banner-conduction::after {
+  content: "";
+  position: static;
+}
+
+.mediynaya-reklama .banner-conduction__title {
+  color: #1b1c1e;
+  line-height: 120%;
+  font-family: "Ampero SemBd", sans-serif;
+  font-size: 5.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 3.625rem;
+}
+
+.mediynaya-reklama .banner-conduction__slogan {
+  color: var(--white);
+  font-family: "Ampero SemBd", sans-serif;
+  font-size: 6.25rem;
+  font-weight: 600;
+  line-height: 100%;
+  max-width: 37.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.mediynaya-reklama .banner-conduction__button {
+  max-width: 32.8125rem;
+  width: 100%;
+  padding: 1.25rem;
+  border-radius: 6.25rem;
+  background: var(--white);
+  color: var(--primary-color);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.mediynaya-reklama .item-banner-conduction {
+  color: #1b1c1e;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1.875rem;
+  max-width: 41.875rem;
+}
+
+.mediynaya-reklama .item-banner-conduction__title {
+  font-weight: 700;
+}
+
+.mediynaya-reklama .steps__title {
+  color: var(--black-main-color, #292b32);
+  font-family: "Ampero SemBd", sans-serif;
+  font-size: 5.625rem;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-bottom: 4.6875rem;
+}
+
+.mediynaya-reklama .steps__slider .swiper {
+  width: 100%;
+  max-width: 1854px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.mediynaya-reklama .item-steps {
+  width: 32.1875rem;
+  padding: 1.875rem 1.5625rem;
+  border-radius: 1.25rem;
+  background: var(--Color-4, #def5ff);
+  height: 100%;
+}
+
+.mediynaya-reklama .item-steps__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+}
+
+.mediynaya-reklama .item-steps__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.mediynaya-reklama .item-steps__title span {
+  display: block;
+  color: #000;
+  font-family: "Ampero SemBd", sans-serif;
+  font-size: 2.1875rem;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.mediynaya-reklama .item-steps__title span.item-steps__title_num {
+  font-size: 1.875rem;
+}
+
+.mediynaya-reklama .item-steps__title_text {
+  max-width: 13.75rem;
+}
+
+.mediynaya-reklama .item-steps__img {
+  width: 9.125rem;
+  height: 9.125rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.mediynaya-reklama .item-steps__img img,
+.mediynaya-reklama .item-steps__img video {
+  width: 100%;
+  height: 100%;
+}
+
+.mediynaya-reklama .item-steps__text {
+  color: var(--black-main-color, #292b32);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 130%;
 }
 
 @media (max-width: 1850px) {
@@ -9752,6 +9902,10 @@ figure {
 
   .mediynaya-reklama .item-influence__title {
     font-size: 1.875rem;
+  }
+
+  .mediynaya-reklama .banner-conduction::after {
+    display: none;
   }
 }
 
@@ -12029,6 +12183,46 @@ figure {
   .mediynaya-reklama .increase__item {
     font-size: 2rem;
   }
+
+  .mediynaya-reklama .federal-brands {
+    margin-bottom: 1.25rem;
+  }
+
+  .mediynaya-reklama .conduction {
+    margin-bottom: 4.0625rem;
+  }
+
+  .mediynaya-reklama .banner-conduction__title {
+    font-size: 2rem;
+    margin-bottom: 1.875rem;
+  }
+
+  .mediynaya-reklama .steps__title {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .mediynaya-reklama .item-steps {
+    padding: 1.125rem 0.9375rem;
+    width: 20.1875rem;
+  }
+
+  .mediynaya-reklama .item-steps__title span {
+    font-size: 1.5rem;
+  }
+
+  .mediynaya-reklama .item-steps__title span.item-steps__title_num {
+    font-size: 1.25rem;
+  }
+
+  .mediynaya-reklama .item-steps__img {
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+
+  .mediynaya-reklama .item-steps__text {
+    font-size: 0.875rem;
+  }
 }
 
 @media (max-width: 479.98px) {
@@ -12061,5 +12255,10 @@ figure {
   .mediynaya-reklama .hero__button:hover {
     background: var(--secondary-color);
     color: var(--black-main-color);
+  }
+
+  .mediynaya-reklama .banner-conduction__button:hover {
+    background: var(--primary-color);
+    color: var(--white);
   }
 }

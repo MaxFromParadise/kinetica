@@ -105,3 +105,25 @@ if (document.querySelector('.federal-brands__slider .swiper')) {
 		},
 	});
 }
+if (document.querySelector('.steps__slider .swiper')) {
+	const stepsSwiper = new Swiper('.steps__slider .swiper', {
+		// Optional parameters
+		loop: false,
+		freeMode: true,
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		speed: 1000,
+		// autoplay: {
+		// 	delay: 0,
+		// 	disableOnInteraction: false,
+		// 	pauseOnMouseEnter: true,
+		// },
+
+		breakpoints: {
+			// when window width is >= 992px
+			768: {
+				spaceBetween: 30,
+			},
+		},
+	});
+}
