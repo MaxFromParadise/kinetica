@@ -44,6 +44,48 @@ if (document.querySelector('.marquee-influence__slider .swiper')) {
 		},
 	});
 }
+if (document.querySelector('.cdek-top-marq__slider .swiper')) {
+	const cdekTopMarq = new Swiper('.cdek-top-marq__slider .swiper', {
+		// Optional parameters
+		loop: true,
+		freeMode: true,
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		speed: 4000,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
+		breakpoints: {
+			// when window width is >= 992px
+			768: {
+				spaceBetween: 80,
+			},
+		},
+	});
+}
+if (document.querySelector('.cdek-bottom-marq__slider .swiper')) {
+	const cdekBottomMarq = new Swiper('.cdek-bottom-marq__slider .swiper', {
+		// Optional parameters
+		loop: true,
+		freeMode: true,
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		speed: 4000,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
+		breakpoints: {
+			// when window width is >= 992px
+			768: {
+				spaceBetween: 80,
+			},
+		},
+	});
+}
 
 if (document.querySelector('.increase')) {
 	(function () {
@@ -125,5 +167,52 @@ if (document.querySelector('.steps__slider .swiper')) {
 				spaceBetween: 30,
 			},
 		},
+	});
+}
+
+if (document.querySelector('.faq')) {
+	const questions = document.querySelectorAll('[data-faq-question]');
+	const answers = document.querySelectorAll('[data-faq-answer]');
+
+	questions.forEach((question) => {
+		question.addEventListener('click', () => {
+			const target = question.getAttribute('data-faq-question');
+
+			questions.forEach((q) => q.classList.remove('active'));
+			answers.forEach((a) => a.classList.remove('active'));
+
+			question.classList.add('active');
+			const answer = document.querySelector(`[data-faq-answer="${target}"]`);
+			if (answer) answer.classList.add('active');
+		});
+	});
+	if (questions.length > 0 && answers.length > 0) {
+		questions[0].classList.add('active');
+		const firstAnswer = document.querySelector(`[data-faq-answer="${questions[0].getAttribute('data-faq-question')}"]`);
+		if (firstAnswer) firstAnswer.classList.add('active');
+	}
+}
+
+if (document.querySelector('.cases__slider .swiper')) {
+	const casesSlider = new Swiper('.cases__slider .swiper', {
+		// Optional parameters
+		loop: false,
+		freeMode: true,
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+
+		navigation: {
+			nextEl: '.cases__next',
+			prevEl: '.cases__prev',
+		},
+		// breakpoints: {
+		// 	// when window width is >= 992px
+		// 	1850: {
+		// 		spaceBetween: 280,
+		// 	},
+		// 	992: {
+		// 		spaceBetween: 140,
+		// 	},
+		// },
 	});
 }
