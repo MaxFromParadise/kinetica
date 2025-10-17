@@ -4322,6 +4322,12 @@ figure {
 }
 
 .target .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow: hidden;
   min-height: 100vh;
   padding: 5rem 0;
@@ -6054,7 +6060,7 @@ figure {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 7.5rem 0 7.5rem 0;
+  padding: 7.5rem 0 3.75rem 0;
 }
 
 .cpa .hero__container {
@@ -9120,6 +9126,18 @@ figure {
   -moz-box-shadow: 0 -20px 35px 0 #292b32 inset;
 }
 
+.mediynaya-reklama .hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#292b32), to(rgba(41, 43, 50, 0)));
+  background: linear-gradient(to top, #292b32 0%, rgba(41, 43, 50, 0) 100%);
+  z-index: 0;
+}
+
 .mediynaya-reklama .hero__bg {
   position: absolute;
   left: 0;
@@ -9163,6 +9181,7 @@ figure {
 }
 
 .mediynaya-reklama .hero__button {
+  position: relative;
   padding: 2.0625rem;
   max-width: 28.125rem;
   width: 100%;
@@ -9171,6 +9190,12 @@ figure {
   font-weight: 800;
   line-height: 100%;
   text-transform: uppercase;
+  z-index: 1;
+  opacity: 0;
+  -webkit-animation: fadeUp 0.8s ease forwards;
+  animation: fadeUp 0.8s ease forwards;
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
 }
 
 .mediynaya-reklama .title-hero {
@@ -9216,8 +9241,8 @@ figure {
   display: -ms-flexbox;
   display: flex;
   gap: 1.25rem;
-  -webkit-animation-delay: 1.6s;
-  animation-delay: 1.6s;
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
 }
 
 .mediynaya-reklama .title-hero__second-small {
@@ -9231,7 +9256,7 @@ figure {
 .mediynaya-reklama .title-hero__second-small_mobile {
   font-family: "Ampero SemBd", sans-serif !important;
   color: #b8b8b8;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 147%;
   display: none;
@@ -9239,8 +9264,8 @@ figure {
 }
 
 .mediynaya-reklama .title-hero__third {
-  -webkit-animation-delay: 2.2s;
-  animation-delay: 2.2s;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
 }
 
 @-webkit-keyframes fadeUp {
@@ -9407,6 +9432,10 @@ figure {
 .mediynaya-reklama .marquee-influence .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
+}
+
+.mediynaya-reklama .marquee-influence .swiper-wrapper .swiper-slide {
+  font-family: "Poppins", sans-serif;
 }
 
 .mediynaya-reklama .marquee-influence__item {
@@ -9626,6 +9655,22 @@ figure {
   margin-bottom: 2.9375rem;
 }
 
+.mediynaya-reklama .federal-brands__title {
+  font-family: "Ampero SemBd", sans-serif;
+}
+
+.mediynaya-reklama .federal-brands__title span {
+  font-family: "Ampero SemBd", sans-serif;
+}
+
+.mediynaya-reklama .federal-brands__slider {
+  width: 100vw;
+  -webkit-transform: translateX(-1.75rem);
+  -ms-transform: translateX(-1.75rem);
+  transform: translateX(-1.75rem);
+  max-width: 125rem;
+}
+
 .mediynaya-reklama .conduction {
   margin-bottom: 8.75rem;
 }
@@ -9661,6 +9706,12 @@ figure {
   z-index: 0;
   -webkit-filter: blur(0.75rem);
   filter: blur(0.75rem);
+  width: 68.75rem;
+  height: 68.75rem;
+}
+
+.mediynaya-reklama .banner-conduction__decor img {
+  width: 100%;
 }
 
 .mediynaya-reklama .banner-conduction__decor_sm {
@@ -9923,6 +9974,10 @@ figure {
   transition-timing-function: linear !important;
 }
 
+.mediynaya-reklama .cdek .cdek-top-marq .swiper-wrapper .swiper-slide {
+  font-family: "Poppins", sans-serif;
+}
+
 .mediynaya-reklama .cdek .cdek-top-marq__item {
   position: relative;
   width: -webkit-max-content;
@@ -9973,6 +10028,10 @@ figure {
   transition-timing-function: linear !important;
 }
 
+.mediynaya-reklama .cdek .cdek-bottom-marq .swiper-wrapper .swiper-slide {
+  font-family: "Poppins", sans-serif;
+}
+
 .mediynaya-reklama .cdek .cdek-bottom-marq__item {
   position: relative;
   width: -webkit-max-content;
@@ -10007,6 +10066,16 @@ figure {
 
 .mediynaya-reklama .dialog-cdek__line-img {
   max-width: 39.4375rem;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out 0s;
+  transition: -webkit-transform 0.5s ease-in-out 0s;
+  transition: transform 0.5s ease-in-out 0s;
+  transition: transform 0.5s ease-in-out 0s, -webkit-transform 0.5s ease-in-out 0s;
+}
+
+.mediynaya-reklama .dialog-cdek__line-img:hover {
+  -webkit-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
 
 .mediynaya-reklama .dialog-cdek__line-img:not(:last-child) {
@@ -10015,6 +10084,12 @@ figure {
 
 .mediynaya-reklama .dialog-cdek__line-img:nth-child(even) {
   margin-left: auto;
+}
+
+.mediynaya-reklama .dialog-cdek__line-img:nth-child(even):hover {
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
 }
 
 .mediynaya-reklama .dialog-cdek__line-img img {
@@ -10035,11 +10110,6 @@ figure {
   -webkit-transform: translateY(-10%);
   -ms-transform: translateY(-10%);
   transform: translateY(-10%);
-}
-
-.mediynaya-reklama .audience-cdek__decor-brain img {
-  width: 31.25rem;
-  height: 31.25rem;
 }
 
 .mediynaya-reklama .audience-cdek__blur {
@@ -10659,6 +10729,12 @@ figure {
   }
 }
 
+@media (max-width: 1499.99px) {
+  .target .audit-banner__banner {
+    padding: 3.75rem 3.75rem 3.75rem 0rem;
+  }
+}
+
 @media (max-width: 1199.98px) {
   .prodvizhenie-saita .seo-form__estimate-label {
     font-size: 1.75rem;
@@ -10712,7 +10788,7 @@ figure {
   }
 
   .target .audit-banner__banner {
-    padding: 3.75rem 3.75rem 3.75rem 0rem;
+    padding: 3.75rem 1.25rem 3.75rem 0rem;
   }
 
   .target .work-steps__grid {
@@ -13141,6 +13217,11 @@ figure {
     margin-bottom: 3.75rem;
   }
 
+  .mediynaya-reklama .hero {
+    min-height: 70vh;
+    padding-top: 12.5rem;
+  }
+
   .mediynaya-reklama .hero__button {
     font-size: 1rem;
     padding: 1.125rem;
@@ -13216,11 +13297,6 @@ figure {
     -webkit-transform: translateY(50%);
     -ms-transform: translateY(50%);
     transform: translateY(50%);
-  }
-
-  .mediynaya-reklama .banner-conduction__decor img {
-    width: 100%;
-    height: 100%;
   }
 
   .mediynaya-reklama .banner-conduction__decor_sm {
@@ -13330,6 +13406,11 @@ figure {
     -webkit-transform: translate(0, -5%);
     -ms-transform: translate(0, -5%);
     transform: translate(0, -5%);
+  }
+
+  .mediynaya-reklama .audience-cdek__decor-brain img {
+    width: 31.25rem;
+    height: 31.25rem;
   }
 
   .mediynaya-reklama .audience-cdek__blur {

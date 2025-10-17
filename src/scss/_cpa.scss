@@ -15,7 +15,7 @@
 		display: flex;
 		align-items: center;
 
-		padding: rem(120) 0 rem(120) 0;
+		padding: rem(120) 0 rem(60) 0;
 
 		// .hero__container
 		&__container {
@@ -1153,7 +1153,8 @@
 				transition: background-color 0.3s;
 
 				background-color: currentcolor;
-				mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E") no-repeat center / contain;
+				mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E")
+					no-repeat center / contain;
 			}
 		}
 

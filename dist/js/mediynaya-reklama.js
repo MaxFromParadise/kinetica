@@ -117,7 +117,7 @@ if (document.querySelector('.increase')) {
 		}
 
 		items[0].classList.add('active'); // старт
-		setInterval(showNext, 2000);
+		setInterval(showNext, 1000);
 	})();
 }
 

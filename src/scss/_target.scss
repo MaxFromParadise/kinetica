@@ -9,6 +9,8 @@
 	font-family: Montserrat, sans-serif;
 
 	.hero {
+		display: flex;
+		align-items: center;
 		overflow: hidden;
 
 		min-height: 100vh;
@@ -372,9 +374,11 @@
 					display: none;
 				}
 			}
-
-			@media (max-width: 1199.98px) {
+			@media (max-width: 1499.99px) {
 				padding: rem(60) rem(60) rem(60) rem(0);
+			}
+			@media (max-width: 1199.98px) {
+				padding: rem(60) rem(20) rem(60) rem(0);
 			}
 
 			@media (max-width: 991.98px) {
