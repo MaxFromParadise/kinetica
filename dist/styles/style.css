@@ -11618,6 +11618,51 @@ figure {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
+  .mediynaya-reklama {
+    /* ответы внутри мобильного потока — должны отображаться прямо под вопросом */
+    /* когда ответ активен — показываем */
+    /* пометка для ответов, вставленных в мобильный поток */
+    /* если нужно, чтобы вопрос и ответ визуально были связаны */
+  }
+
+  .mediynaya-reklama .item-answers-faq {
+    display: none !important;
+    opacity: 1;
+    /* opacity лучше держать 1 на мобильных, чтобы animation не мешал */
+    position: static !important;
+    width: 100%;
+    margin-top: 0;
+    padding: 1.25rem !important;
+    border-radius: 0.75rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .mediynaya-reklama .item-answers-faq.active {
+    display: block !important;
+    margin-bottom: 0 !important;
+  }
+
+  .mediynaya-reklama .item-answers-faq.in-mobile {
+    /* .in-mobile — чисто семантический флаг, можно добавить тени/отступы */
+    margin-top: 0;
+  }
+
+  .mediynaya-reklama .questions-faq__item.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+  }
+
+  .mediynaya-reklama .answers-faq__item.item-answers-faq.in-mobile.active {
+    margin-bottom: 1.25rem !important;
+  }
+
+  .mediynaya-reklama .item-answers-faq.in-mobile {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -13508,6 +13553,10 @@ figure {
 
   .mediynaya-reklama .questions-faq__item:not(:last-child) {
     margin-bottom: 0.9375rem;
+  }
+
+  .mediynaya-reklama .questions-faq__item.active:not(:last-child) {
+    margin-bottom: 0;
   }
 
   .mediynaya-reklama .questions-faq__item::after {

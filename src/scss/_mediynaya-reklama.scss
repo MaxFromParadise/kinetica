@@ -1370,6 +1370,13 @@
 					margin-bottom: rem(15);
 				}
 			}
+			&.active {
+				&:not(:last-child) {
+					@media (max-width: 767.98px) {
+						margin-bottom: 0;
+					}
+				}
+			}
 			&::after {
 				content: '+';
 				position: static;
@@ -1456,6 +1463,50 @@
 		}
 	}
 
+	@media (max-width: 991.98px) {
+		.questions-faq__item {
+			// оставляем визуал для вопроса; когда активен — можно менять бордер/цвет
+		}
+
+		/* ответы внутри мобильного потока — должны отображаться прямо под вопросом */
+		.item-answers-faq {
+			// по умолчанию скрываем (в мобильном режиме мы управляем показом display через класс .active)
+			display: none !important;
+			opacity: 1; /* opacity лучше держать 1 на мобильных, чтобы animation не мешал */
+			position: static !important;
+			width: 100%;
+			margin-top: 0;
+			padding: rem(20) !important;
+			border-radius: rem(12);
+			box-sizing: border-box;
+		}
+
+		/* когда ответ активен — показываем */
+		.item-answers-faq.active {
+			display: block !important;
+			margin-bottom: 0 !important;
+		}
+
+		/* пометка для ответов, вставленных в мобильный поток */
+		.item-answers-faq.in-mobile {
+			/* .in-mobile — чисто семантический флаг, можно добавить тени/отступы */
+			margin-top: 0;
+		}
+
+		/* если нужно, чтобы вопрос и ответ визуально были связаны */
+		.questions-faq__item.active {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			margin-bottom: 0;
+		}
+		.answers-faq__item.item-answers-faq.in-mobile.active {
+			margin-bottom: rem(20) !important;
+		}
+		.item-answers-faq.in-mobile {
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+		}
+	}
 	.cases {
 		margin-bottom: rem(120);
 		@media (max-width: 767.98px) {
