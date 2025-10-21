@@ -9116,14 +9116,15 @@ figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-height: 100vh;
-  padding-top: 15.625rem;
+  padding-top: 11.25rem;
   box-shadow: 0 -20px 35px 0 #292b32 inset;
   -webkit-box-shadow: 0 -20px 35px 0 #292b32 inset;
   -moz-box-shadow: 0 -20px 35px 0 #292b32 inset;
+  padding-bottom: 7.5rem;
 }
 
 .mediynaya-reklama .hero::after {
@@ -9194,8 +9195,8 @@ figure {
   opacity: 0;
   -webkit-animation: fadeUp 0.8s ease forwards;
   animation: fadeUp 0.8s ease forwards;
-  -webkit-animation-delay: 2.4s;
-  animation-delay: 2.4s;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s;
 }
 
 .mediynaya-reklama .title-hero {
@@ -9251,6 +9252,11 @@ figure {
   font-weight: 600;
   line-height: 147%;
   max-width: 15rem;
+  -webkit-animation: fadeUp 0.8s ease forwards;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
 }
 
 .mediynaya-reklama .title-hero__second-small_mobile {
@@ -9261,6 +9267,7 @@ figure {
   line-height: 147%;
   display: none;
   margin-bottom: 1.25rem;
+  text-transform: uppercase;
 }
 
 .mediynaya-reklama .title-hero__third {
@@ -9297,6 +9304,7 @@ figure {
 }
 
 .mediynaya-reklama .top-awards {
+  padding-top: 9.375rem;
   background: var(--black-main-color);
 }
 
@@ -9380,6 +9388,22 @@ figure {
   -webkit-transform: rotate(-3deg);
   -ms-transform: rotate(-3deg);
   transform: rotate(-3deg);
+}
+
+.mediynaya-reklama .item-influence.is-hover {
+  border-color: var(--secondary-color);
+  background: var(--secondary-color);
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.mediynaya-reklama .item-influence.is-hover .item-influence__title {
+  color: var(--black-main-color);
+}
+
+.mediynaya-reklama .item-influence.is-hover .item-influence__title span {
+  color: var(--primary-color);
 }
 
 .mediynaya-reklama .item-influence__icon {
@@ -10332,6 +10356,7 @@ figure {
 
 .mediynaya-reklama .faq {
   background: #fff;
+  padding-bottom: 11.25rem;
 }
 
 .mediynaya-reklama .faq__title {
@@ -13265,11 +13290,13 @@ figure {
   .mediynaya-reklama .hero {
     min-height: 70vh;
     padding-top: 12.5rem;
+    padding-bottom: 2.8125rem;
   }
 
   .mediynaya-reklama .hero__button {
     font-size: 1rem;
     padding: 1.125rem;
+    max-width: 90%;
   }
 
   .mediynaya-reklama .title-hero {
@@ -13289,6 +13316,10 @@ figure {
     animation: fadeUp 0.8s ease forwards;
     -webkit-animation-delay: 2.8s;
     animation-delay: 2.8s;
+  }
+
+  .mediynaya-reklama .top-awards {
+    padding-top: 2.8125rem;
   }
 
   .mediynaya-reklama .top-awards__title {
@@ -13366,6 +13397,8 @@ figure {
 
   .mediynaya-reklama .banner-conduction__button {
     max-width: 100%;
+    font-size: 0.875rem;
+    padding: 0.875rem;
   }
 
   .mediynaya-reklama .item-banner-conduction {
@@ -13534,6 +13567,10 @@ figure {
 
   .mediynaya-reklama .banner-cdek__decor-heart_sm {
     z-index: 0;
+  }
+
+  .mediynaya-reklama .faq {
+    padding-bottom: 3.75rem;
   }
 
   .mediynaya-reklama .faq__title {

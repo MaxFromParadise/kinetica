@@ -200,7 +200,7 @@ if (document.querySelector('.steps__slider .swiper')) {
 	const observer = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
-				if (entry.intersectionRatio >= 0.95) {
+				if (entry.intersectionRatio >= 0.6) {
 					entry.target.style.opacity = '1';
 				} else {
 					entry.target.style.opacity = '0.5';
@@ -227,12 +227,11 @@ if (document.querySelector('.faq')) {
 	// Вспомог: вернуть все ответы в контейнер (для десктопа)
 	function restoreAnswersToContainer() {
 		answers.forEach((a) => {
-			// если уже в контейнере — ничего
 			if (a.parentElement !== answersContainer) {
 				answersContainer.appendChild(a);
-				a.classList.remove('in-mobile'); // флаг мобильного режима
-				a.classList.remove('active'); // скрыть по умолчанию, далее активируем нужный
 			}
+			a.classList.remove('in-mobile'); // флаг мобильного режима
+			a.classList.remove('active'); // скрыть по умолчанию
 		});
 	}
 
@@ -252,23 +251,15 @@ if (document.querySelector('.faq')) {
 		answers.forEach((a) => {
 			a.classList.remove('active');
 			a.classList.remove('in-mobile');
-			// если какой-то ответ не в контейнере, возвращать не будем — управление через insertAfter ниже
 		});
 
 		const question = document.querySelector(`[data-faq-question="${target}"]`);
 		const answer = document.querySelector(`[data-faq-answer="${target}"]`);
 		if (!question || !answer) return;
 
-		// Переместим ответ сразу после вопроса (если он ещё не там)
-		if (answer.parentElement !== question.parentElement) {
-			// вставляем сразу после вопроса
-			question.parentNode.insertBefore(answer, question.nextSibling);
-			answer.classList.add('in-mobile');
-		} else {
-			// если уже в том же контейнере, убедимся что он именно после вопроса
-			question.parentNode.insertBefore(answer, question.nextSibling);
-			answer.classList.add('in-mobile');
-		}
+		// Переместим ответ сразу после вопроса (в мобильный поток)
+		question.parentNode.insertBefore(answer, question.nextSibling);
+		answer.classList.add('in-mobile');
 
 		// показать
 		question.classList.add('active');
@@ -277,12 +268,11 @@ if (document.querySelector('.faq')) {
 
 	function handleClick(question) {
 		const target = question.getAttribute('data-faq-question');
-		const mobile = window.innerWidth <= 767.98;
+		const mobile = window.innerWidth <= 991.98;
 
 		if (mobile) {
 			activateMobile(target);
 		} else {
-			// гарантируем что ответы находятся в контейнере
 			restoreAnswersToContainer();
 			activateDesktop(target);
 		}
@@ -296,11 +286,20 @@ if (document.querySelector('.faq')) {
 	function init() {
 		if (questions.length === 0 || answers.length === 0) return;
 
-		if (window.innerWidth <= 767.98) {
-			// mobile: покажем первый ответ под первым вопросом
-			activateMobile(questions[0].getAttribute('data-faq-question'));
+		if (window.innerWidth <= 991.98) {
+			// MOBILE: ничего не активируем по умолчанию — все ответы скрыты
+			// Убедимся, что все ответы скрыты и (если они были перемещены) вернём их в мобильный поток пустыми:
+			questions.forEach((q) => q.classList.remove('active'));
+			answers.forEach((a) => {
+				a.classList.remove('active');
+				a.classList.remove('in-mobile');
+				// убедимся, что ответы не показываются (их размещаем в контейнер, но в мобильной вёрстке они будут вставляться при клике)
+				if (a.parentElement !== answersContainer) {
+					// оставляем их там — не принуждаем возвращаться; это безопасно
+				}
+			});
 		} else {
-			// desktop: стандартное поведение — ответы в контейнере
+			// DESKTOP: стандартное поведение — ответы в контейнере, первый активен
 			restoreAnswersToContainer();
 			activateDesktop(questions[0].getAttribute('data-faq-question'));
 		}
@@ -312,16 +311,17 @@ if (document.querySelector('.faq')) {
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(() => {
 			if (window.innerWidth > 991.98) {
+				// при переходе на десктоп — вернуть в контейнер и восстановить активный (если был)
 				restoreAnswersToContainer();
-				// включим активный вопрос + ответ (если был)
 				const activeQ = document.querySelector('.questions-faq__item.active') || questions[0];
 				if (activeQ) activateDesktop(activeQ.getAttribute('data-faq-question'));
 			} else {
-				// при переходе на мобильный — если ничего активно, активируем первый
-				const anyMobileActive = document.querySelector('.answers-faq .in-mobile.active') || document.querySelector('.item-answers-faq.in-mobile.active');
-				if (!anyMobileActive) {
-					activateMobile(questions[0].getAttribute('data-faq-question'));
-				}
+				// при переходе на мобильный — не активируем автоматически (оставляем все закрытыми)
+				questions.forEach((q) => q.classList.remove('active'));
+				answers.forEach((a) => {
+					a.classList.remove('active');
+					a.classList.remove('in-mobile');
+				});
 			}
 		}, 120);
 	});
@@ -351,4 +351,47 @@ if (document.querySelector('.cases__slider .swiper')) {
 		// 	},
 		// },
 	});
+}
+
+if (document.querySelector('.item-influence')) {
+	const items = document.querySelectorAll('.item-influence');
+	let observer = null;
+
+	function initObserver() {
+		// Удаляем старый observer, если он есть
+		if (observer) observer.disconnect();
+
+		// Если ширина экрана >= 767.98 — удаляем все hover и не наблюдаем
+		if (window.innerWidth >= 767.98) {
+			items.forEach((item) => item.classList.remove('is-hover'));
+			return;
+		}
+
+		// Определяем центр экрана через rootMargin
+		const offset = window.innerHeight / 2 - 50; // 50px зона допуска
+		observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-hover');
+					} else {
+						entry.target.classList.remove('is-hover');
+					}
+				});
+			},
+			{
+				root: null,
+				rootMargin: `-${offset}px 0px -${offset}px 0px`,
+				threshold: 0.5, // элемент считается видимым, когда хотя бы половина в зоне
+			}
+		);
+
+		items.forEach((item) => observer.observe(item));
+	}
+
+	// Инициализация
+	initObserver();
+
+	// Обновляем при ресайзе
+	window.addEventListener('resize', initObserver);
 }
