@@ -10727,6 +10727,79 @@ figure {
   text-align: center;
 }
 
+.mediynaya-reklama .bottom-fix {
+  display: none;
+  position: fixed;
+  bottom: 0.625rem;
+  left: 0;
+  background: #fff;
+  -webkit-box-shadow: 0 -3px 8.6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -3px 8.6px 0 rgba(0, 0, 0, 0.1);
+  gap: 1.5625rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  z-index: 50;
+  width: 80%;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-animation: transformFromScreen 0.7s ease forwards;
+  animation: transformFromScreen 0.7s ease forwards;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+
+.mediynaya-reklama .bottom-fix__tg {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--Color-4, #def5ff);
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.mediynaya-reklama .bottom-fix__button {
+  width: 100%;
+  padding: 0.875rem;
+  border-radius: 2.5rem;
+  font-size: 0.75rem;
+}
+
+@-webkit-keyframes transformFromScreen {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes transformFromScreen {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
 .mediynaya-reklama section.feedback-service .section-container .container {
   background: var(--black-main-color);
 }
@@ -13667,6 +13740,12 @@ figure {
 
   .mediynaya-reklama .stats-slide-cases__descr {
     font-size: 0.75rem;
+  }
+
+  .mediynaya-reklama .bottom-fix {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

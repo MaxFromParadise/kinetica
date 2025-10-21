@@ -1776,7 +1776,53 @@
 			}
 		}
 	}
-
+	.bottom-fix {
+		display: none;
+		position: fixed;
+		bottom: rem(10);
+		left: 0;
+		background: #fff;
+		box-shadow: 0 -3px 8.6px 0 rgba(0, 0, 0, 0.1);
+		gap: rem(25);
+		align-items: center;
+		padding: rem(16) rem(20);
+		z-index: 50;
+		width: 80%;
+		transform: translateX(-100%);
+		animation: transformFromScreen 0.7s ease forwards;
+		animation-delay: 3.5s;
+		@media (max-width: 767.98px) {
+			display: flex;
+		}
+		// .bottom-fix__tg
+		&__tg {
+			width: rem(40);
+			height: rem(40);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background: var(--Color-4, #def5ff);
+			flex-shrink: 0;
+		}
+		// .bottom-fix__button
+		&__button {
+			width: 100%;
+			padding: rem(14);
+			border-radius: rem(40);
+			font-size: rem(12);
+		}
+	}
+	.button {
+	}
+	@keyframes transformFromScreen {
+		0% {
+			transform: translateX(-100%);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
 	section.feedback-service .section-container .container {
 		background: var(--black-main-color);
 	}
