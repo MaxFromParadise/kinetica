@@ -28,6 +28,7 @@ const changeVideo = () => {
 		secondVideo.muted = false;
 		headerMuteButton.classList.remove('is-muted');
 		secondVideo.play();
+		firstVideo.pause();
 		transitionOverlay.classList.remove('active');
 	}, 1800);
 	// VIDEO
@@ -45,7 +46,7 @@ const remainTimer = () => {
 		if (remainSeconds === 0) {
 			clearInterval(interval);
 		}
-	}, 1000);
+	}, 1500);
 };
 
 const toggleMuted = () => {
@@ -82,7 +83,7 @@ main.addEventListener(
 );
 
 const getLinkOnMainPage = () => {
-	const buttons = document.querySelectorAll('.second-main__button');
+	const buttons = document.querySelectorAll('.second-main__button_copy');
 	buttons.forEach((button) => {
 		button.addEventListener('click', async () => {
 			await navigator.clipboard.writeText('https://kinetica.su/');
@@ -91,3 +92,23 @@ const getLinkOnMainPage = () => {
 	});
 };
 getLinkOnMainPage();
+
+if (document.getElementById('sharePopup')) {
+	const shareButton = document.querySelector('.second-main__button_share');
+	const sharePopup = document.getElementById('sharePopup');
+	const closeBtn = document.querySelector('.share-popup__close');
+
+	shareButton.addEventListener('click', () => {
+		sharePopup.style.display = 'flex';
+	});
+
+	closeBtn.addEventListener('click', () => {
+		sharePopup.style.display = 'none';
+	});
+
+	window.addEventListener('click', (e) => {
+		if (e.target === sharePopup) {
+			sharePopup.style.display = 'none';
+		}
+	});
+}

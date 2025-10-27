@@ -11114,6 +11114,80 @@ figure {
   opacity: 1;
 }
 
+.halloween-body .share-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.halloween-body .share-popup__content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  font-family: "Ampero SemBd";
+}
+
+.halloween-body .share-popup__content p {
+  font-family: "Ampero SemBd";
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.halloween-body .share-popup__close {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  border: none;
+  background: none;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.halloween-body .share-popup__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.halloween-body .share-popup__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.9375rem;
+  padding: 5px 10px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.halloween-body .share-popup__btn img {
+  width: 20px;
+  height: 20px;
+}
+
 @media (max-width: 1850px) {
   .mediynaya-reklama .top-awards .item-top-awards:not(:last-child)::before {
     left: 125%;
