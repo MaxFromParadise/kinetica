@@ -2418,6 +2418,7 @@ figure {
   justify-content: space-between;
   gap: 4.25rem;
   padding-bottom: 10rem;
+  overflow: hidden;
 }
 
 .contextnaya-reklama .steps .main-steps__arrow {
@@ -3359,6 +3360,11 @@ figure {
 .contextnaya-reklama .top-awards__container {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+.contextnaya-reklama .media {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .email-marketing {
@@ -4312,8 +4318,8 @@ figure {
 }
 
 .email-marketing .top-awards__container {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .target {
@@ -11077,6 +11083,10 @@ figure {
   text-wrap: nowrap;
 }
 
+.halloween-body .second-main__button_share {
+  display: none;
+}
+
 .halloween-body .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11157,9 +11167,8 @@ figure {
 }
 
 .halloween-body .share-popup__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -11183,9 +11192,9 @@ figure {
   font-weight: 500;
 }
 
-.halloween-body .share-popup__btn img {
-  width: 20px;
-  height: 20px;
+.halloween-body .share-popup__btn svg {
+  width: 30px;
+  height: 30px;
 }
 
 @media (max-width: 1850px) {
@@ -12510,7 +12519,7 @@ figure {
   }
 
   .contextnaya-reklama .advantages {
-    padding-top: 3.75rem;
+    padding-top: 1.25rem;
     padding-bottom: 3.75rem;
   }
 

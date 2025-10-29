@@ -251,6 +251,7 @@
 				padding: rem(16) rem(23);
 			}
 			&_share {
+				display: none;
 			}
 		}
 	}
@@ -318,7 +319,8 @@
 	}
 
 	.share-popup__buttons {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 		gap: 10px;
 		justify-content: center;
 		margin-top: 10px;
@@ -336,8 +338,8 @@
 		font-weight: 500;
 	}
 
-	.share-popup__btn img {
-		width: 20px;
-		height: 20px;
+	.share-popup__btn svg {
+		width: 30px;
+		height: 30px;
 	}
 }

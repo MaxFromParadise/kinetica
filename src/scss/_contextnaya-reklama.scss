@@ -153,7 +153,7 @@
 		}
 
 		@media (max-width: 767.98px) {
-			padding-top: rem(60);
+			padding-top: rem(20);
 			padding-bottom: rem(60);
 		}
 	}
@@ -300,7 +300,7 @@
 				gap: rem(68);
 
 				padding-bottom: rem(160);
-
+				overflow: hidden;
 				@media (max-width: 767.98px) {
 					gap: rem(30);
 				}
@@ -1537,5 +1537,9 @@
 			padding-top: 0 !important;
 			padding-bottom: 0 !important;
 		}
+	}
+	.media {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 }
