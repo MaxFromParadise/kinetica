@@ -553,6 +553,7 @@
 		background: var(--secondary-color, #caff3d);
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		gap: rem(30);
 		padding: rem(85);
 		overflow: hidden;
@@ -660,8 +661,8 @@
 			width: 100%;
 			padding: rem(20);
 			border-radius: rem(100);
-			background: var(--white);
-			color: var(--primary-color);
+			background: var(--secondary-color);
+			color: var(--black-main-color);
 			text-align: center;
 			font-family: 'Poppins', sans-serif;
 			font-size: rem(20);
@@ -1601,7 +1602,7 @@
 		// .cases__slider
 		&__slider .swiper {
 			width: 100%;
-			max-width: 1920px;
+			max-width: 1854px;
 			margin: 0 auto;
 			padding: 0 15px;
 		}
@@ -1616,7 +1617,7 @@
 	.swiper-slide {
 	}
 	.slide-cases {
-		width: rem(564);
+		width: rem(434);
 		cursor: pointer;
 		@media (max-width: 767.98px) {
 			width: 100%;
@@ -1652,8 +1653,8 @@
 			padding: rem(30) rem(25);
 			position: relative;
 			width: 100%;
-			height: rem(529);
-			margin-bottom: rem(27);
+			height: rem(408);
+			margin-bottom: rem(20);
 			display: flex;
 			flex-direction: column;
 			@media (max-width: 767.98px) {
@@ -1711,7 +1712,7 @@
 		// .slide-cases__descr
 		&__descr {
 			color: var(--black-main-color, #292b32);
-			font-size: rem(35);
+			font-size: rem(24);
 			font-weight: 500;
 			line-height: 110%;
 			@media (max-width: 767.98px) {

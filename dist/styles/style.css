@@ -9716,6 +9716,9 @@ figure {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 1.875rem;
   padding: 5.3125rem;
   overflow: hidden;
@@ -9798,8 +9801,8 @@ figure {
   width: 100%;
   padding: 1.25rem;
   border-radius: 6.25rem;
-  background: var(--white);
-  color: var(--primary-color);
+  background: var(--secondary-color);
+  color: var(--black-main-color);
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
@@ -10556,13 +10559,13 @@ figure {
 
 .mediynaya-reklama .cases__slider .swiper {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1854px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .mediynaya-reklama .slide-cases {
-  width: 35.25rem;
+  width: 27.125rem;
   cursor: pointer;
 }
 
@@ -10597,8 +10600,8 @@ figure {
   padding: 1.875rem 1.5625rem;
   position: relative;
   width: 100%;
-  height: 33.0625rem;
-  margin-bottom: 1.6875rem;
+  height: 25.5rem;
+  margin-bottom: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10667,7 +10670,7 @@ figure {
 
 .mediynaya-reklama .slide-cases__descr {
   color: var(--black-main-color, #292b32);
-  font-size: 2.1875rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 110%;
 }
