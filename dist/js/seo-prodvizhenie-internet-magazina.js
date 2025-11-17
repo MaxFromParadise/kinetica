@@ -89,16 +89,15 @@ document.querySelectorAll('.item-main-steps__text').forEach((toggle) => {
 	});
 });
 (function () {
-	// center width
 	const CENTER_BAND = 120;
 
-	const texts = Array.from(document.querySelectorAll('.item-main-steps'));
-
-	if (!texts.length) return;
-
-	let ticking = false;
+	// Всегда берем актуальные элементы, на случай динамики
+	const getTexts = () => Array.from(document.querySelectorAll('.item-main-steps'));
 
 	function updateStyles() {
+		const texts = getTexts();
+		if (!texts.length) return;
+
 		const viewportCenter = window.innerHeight / 2;
 
 		texts.forEach((el) => {
@@ -108,35 +107,77 @@ document.querySelectorAll('.item-main-steps__text').forEach((toggle) => {
 			const elCenter = rect.top + rect.height / 2;
 			const delta = elCenter - viewportCenter;
 
-			// el.style.color = 'rgb(173, 176, 188)';
-			// el.style.transition = '0.8s ease 0s';
-
 			if (Math.abs(delta) <= CENTER_BAND) {
+				// В центре
 				el.style.opacity = '1';
-				title.style.color = '#00B2FF';
+				if (title) title.style.color = '#00B2FF';
 			} else if (delta > 0) {
-				// Lower
+				// Элемент ниже центра
 				el.style.opacity = '0.5';
-				el.style.color = '#ADB0BC';
+				if (title) title.style.color = '#ADB0BC'; // <-- исправлено: цвет заголовка
 			} else {
-				// Upper
+				// Элемент выше центра
 				el.style.opacity = '1';
-				title.style.color = '#292B32';
+				if (title) title.style.color = '#292B32';
 			}
 		});
-
-		ticking = false;
 	}
 
-	function onScrollOrResize() {
+	let ticking = false;
+	function requestUpdate() {
 		if (!ticking) {
 			ticking = true;
-			requestAnimationFrame(updateStyles);
+			requestAnimationFrame(() => {
+				updateStyles();
+				ticking = false;
+			});
 		}
 	}
 
-	window.addEventListener('scroll', onScrollOrResize, { passive: true });
-	window.addEventListener('resize', onScrollOrResize);
+	function getAllScrollables() {
+		const all = Array.from(document.querySelectorAll('*'));
+		const scrollables = all.filter((el) => {
+			const style = getComputedStyle(el);
+			if (el.clientHeight === 0 && el.clientWidth === 0) return false;
+			return /(auto|scroll)/.test(style.overflow + style.overflowY + style.overflowX);
+		});
+		const se = document.scrollingElement || document.documentElement;
+		const set = new Set([window, se, ...scrollables]);
+		return Array.from(set);
+	}
+
+	function attachListeners() {
+		const targets = getAllScrollables();
+
+		targets.forEach((t) => {
+			try {
+				if (t === window) {
+					window.addEventListener('scroll', requestUpdate, { passive: true });
+				} else {
+					t.addEventListener('scroll', requestUpdate, { passive: true });
+				}
+			} catch (e) {}
+		});
+
+		// fallback — ловим события колеса и touch
+		document.addEventListener('wheel', requestUpdate, { passive: true });
+		document.addEventListener('touchmove', requestUpdate, { passive: true });
+	}
+
+	// Если DOM меняется — пересобираем слушатели и триггерим обновление
+	if ('MutationObserver' in window) {
+		const mo = new MutationObserver(() => {
+			attachListeners();
+			requestUpdate();
+		});
+		mo.observe(document.documentElement || document.body, { childList: true, subtree: true });
+	}
+
+	// Init
+	window.addEventListener('resize', requestUpdate);
 	window.addEventListener('load', updateStyles);
 	document.addEventListener('DOMContentLoaded', updateStyles);
+
+	attachListeners();
+	requestAnimationFrame(updateStyles);
 })();

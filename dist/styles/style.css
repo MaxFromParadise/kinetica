@@ -11424,6 +11424,8 @@ figure {
   gap: 4.25rem;
   margin-bottom: 0rem;
   color: #636878;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .seo-prodvizhenie-internet-magazina .steps .item-main-steps__border {
@@ -11438,6 +11440,8 @@ figure {
 
 .seo-prodvizhenie-internet-magazina .steps .item-main-steps__title {
   max-width: 16.875rem;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .seo-prodvizhenie-internet-magazina .steps .item-main-steps__block {
@@ -15218,11 +15222,11 @@ figure {
   }
 
   .seo-prodvizhenie-internet-magazina .hero__img-decor {
-    width: 170%;
-    height: 170%;
-    -webkit-transform: translate(-49%, -37%);
-    -ms-transform: translate(-49%, -37%);
-    transform: translate(-49%, -37%);
+    width: 120%;
+    height: 120%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 
   .seo-prodvizhenie-internet-magazina .warranty {
