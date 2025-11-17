@@ -332,6 +332,7 @@
 
 			margin-bottom: rem(00);
 			color: #636878;
+			transition: all 0.3s ease 0s;
 			@media (max-width: 767.98px) {
 				grid-template-columns: 65% 1fr;
 			}
@@ -349,6 +350,7 @@
 			// .item-main-steps__title
 			&__title {
 				max-width: rem(270);
+				transition: all 0.3s ease 0s;
 			}
 			// .item-main-steps__block
 			&__block {
