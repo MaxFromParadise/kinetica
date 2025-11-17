@@ -11217,6 +11217,918 @@ figure {
   height: 30px;
 }
 
+.seo-prodvizhenie-internet-magazina {
+  font-family: Montserrat, sans-serif;
+}
+
+.seo-prodvizhenie-internet-magazina .hero {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 7.5rem 0 7.5rem 0;
+}
+
+.seo-prodvizhenie-internet-magazina .hero:hover .hero__img-decor {
+  right: 0;
+}
+
+.seo-prodvizhenie-internet-magazina .hero:hover .hero__img-decor svg {
+  rotate: 30deg;
+  fill: var(--primary-color);
+  scale: 80%;
+}
+
+.seo-prodvizhenie-internet-magazina .hero__container {
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+}
+
+.seo-prodvizhenie-internet-magazina .hero__content {
+  min-width: 25rem;
+}
+
+.seo-prodvizhenie-internet-magazina .hero__title {
+  margin-bottom: 2.1875rem;
+  font-size: clamp(1.625rem, 1rem + 2.5vw, 4rem);
+}
+
+.seo-prodvizhenie-internet-magazina .hero__text {
+  max-width: 36.625rem;
+  margin-bottom: 3.75rem;
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.seo-prodvizhenie-internet-magazina .hero__button {
+  width: 100%;
+  max-width: 23.125rem;
+  padding: 1.1875rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.seo-prodvizhenie-internet-magazina .hero__img {
+  position: relative;
+}
+
+.seo-prodvizhenie-internet-magazina .hero__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.seo-prodvizhenie-internet-magazina .hero__img-decor {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 170%;
+  height: 170%;
+  -webkit-transition: left 0.3s ease 0s;
+  transition: left 0.3s ease 0s;
+  -webkit-transform: translate(-30%, -60%);
+  -ms-transform: translate(-30%, -60%);
+  transform: translate(-30%, -60%);
+}
+
+.seo-prodvizhenie-internet-magazina .hero__img-decor svg {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: rotate 0.3s ease 0s, fill 0.3s ease 0s, scale 0.3s ease 0s;
+  transition: rotate 0.3s ease 0s, fill 0.3s ease 0s, scale 0.3s ease 0s;
+  fill: var(--secondary-color);
+  rotate: 50deg;
+}
+
+.seo-prodvizhenie-internet-magazina .warranty {
+  padding: 5rem 0 11.25rem 0;
+}
+
+.seo-prodvizhenie-internet-magazina .warranty__banner {
+  background: #c9ff3d;
+  border-radius: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4.6875rem;
+  padding: 4.1875rem 6.25rem;
+}
+
+.seo-prodvizhenie-internet-magazina .warranty__img {
+  position: relative;
+  width: 23.75rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.seo-prodvizhenie-internet-magazina .warranty__img img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 23.75rem;
+  height: 31.125rem;
+  border-radius: 2.5rem;
+}
+
+.seo-prodvizhenie-internet-magazina .warranty__title {
+  font-size: 4.1875rem;
+  margin-bottom: 3.3125rem;
+}
+
+.seo-prodvizhenie-internet-magazina .warranty__text {
+  max-width: 52.5rem;
+  font-size: 1.125rem;
+}
+
+.seo-prodvizhenie-internet-magazina .steps {
+  padding-bottom: 7.5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(var(--secondary-color)));
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, var(--secondary-color) 100%);
+}
+
+.seo-prodvizhenie-internet-magazina .steps .main-steps {
+  position: relative;
+  max-width: 66.8125rem;
+  margin: 0 auto;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .main-steps::before {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  content: "";
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border: 2px dashed #d1d3d9;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .main-steps__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10rem;
+  overflow: hidden;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .main-steps__arrow {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  width: 4.25rem;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.seo-prodvizhenie-internet-magazina .steps .main-steps__arrow svg {
+  position: sticky;
+  z-index: 10;
+  top: 40%;
+  left: 0;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 4.25rem;
+  margin-bottom: 0rem;
+  color: #636878;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__border {
+  border: 1px solid #f3f4f5;
+  padding: 1.25rem;
+  background: #fff;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__title {
+  margin-bottom: 1.25rem;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__title {
+  max-width: 16.875rem;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__block {
+  margin-bottom: 1.25rem;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__title-list {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #636878;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__list {
+  font-weight: 400;
+  padding-left: 1em;
+  font-size: 0.875rem;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__item {
+  position: relative;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__item::before {
+  content: "";
+  position: absolute;
+  left: -0.625rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: #636878;
+  border-radius: 50%;
+  width: 0.125rem;
+  height: 0.125rem;
+  opacity: 0.8;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps::after {
+  position: static;
+  content: "";
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps:nth-child(even) {
+  grid-auto-flow: column;
+  direction: rtl;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps:nth-child(even) > * {
+  width: 100%;
+  margin-left: auto;
+  direction: ltr;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps:nth-child(even) > * span {
+  justify-self: flex-end;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps:nth-child(even) .item-main-steps__tip {
+  right: 0;
+  left: unset;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps:nth-child(even) .item-main-steps__tip--item {
+  text-align: left;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__text {
+  position: relative;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  font-size: 1.75rem;
+  line-height: 128.571%;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__text:hover {
+  cursor: pointer;
+  color: #636878;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__text:hover .item-main-steps__toggle span::after {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background: #def5ff;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__toggle {
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__toggle span {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__toggle span::after {
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  content: "?";
+  -webkit-transition: background 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
+  transition: background 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
+  color: #636878;
+  border: 1px solid var(--Color-7, #636878);
+  border-radius: 50%;
+  background: var(--Color-10, #f3f4f5);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__tip {
+  position: absolute;
+  top: 200%;
+  left: 0;
+  width: 100%;
+  max-width: 23.1875rem;
+  max-height: 28.125rem;
+  padding: 0.9375rem 1.25rem;
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transform: translateY(1.25rem);
+  -ms-transform: translateY(1.25rem);
+  transform: translateY(1.25rem);
+  pointer-events: none;
+  opacity: 0;
+  color: var(--Color-6, #292b32);
+  border: 1px solid var(--Color-11, #caff3d);
+  border-radius: 0.5rem;
+  background: var(--Color-11, #caff3d);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__tip::before {
+  position: absolute;
+  bottom: 100%;
+  left: 69%;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  content: "";
+  -webkit-transform: translateY(50%) rotate(45deg);
+  -ms-transform: translateY(50%) rotate(45deg);
+  transform: translateY(50%) rotate(45deg);
+  background: var(--secondary-color);
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__tip--item {
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  color: var(--black-main-color, #292b32);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__tip--item::before {
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  width: 0.1875rem;
+  height: 0.1875rem;
+  content: "";
+  border-radius: 50%;
+  background-color: currentcolor;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__checkbox:checked ~ .item-main-steps__tip {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__checkbox:checked ~ .item-main-steps__toggle {
+  color: var(--primary-color);
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__checkbox:checked ~ .item-main-steps__toggle span::after {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background: var(--secondary-color);
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3.125rem 3.125rem;
+  border-radius: 1.25rem;
+  background: var(--white);
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 0;
+  width: 43.75rem;
+  height: 100%;
+  background: var(--secondary-color);
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__target {
+  margin-top: -8.8125rem;
+  margin-bottom: 3.125rem;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__text {
+  margin-bottom: 3.125rem;
+  text-align: center;
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__text span {
+  display: block;
+  font-weight: 700;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__button {
+  width: 100%;
+  max-width: 20.5rem;
+  padding: 1.125rem;
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
+  border-radius: 0.75rem;
+  background: var(--black-main-color, #292b32);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__button:hover {
+  color: var(--white);
+  background: #636878;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__main {
+  display: grid;
+  grid-template-columns: 43% 1fr;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__img {
+  position: relative;
+  z-index: 1;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__img img {
+  width: 100%;
+  height: auto;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__content {
+  position: relative;
+  z-index: 1;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__title {
+  font-size: 4rem;
+  margin-bottom: 2.1875rem;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__text {
+  text-align: left;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__list-title {
+  margin-bottom: 1rem;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__list {
+  margin-bottom: 3.4375rem;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__list-item {
+  position: relative;
+  padding-left: 1em;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__list-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0em;
+}
+
+.seo-prodvizhenie-internet-magazina .steps__title {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  color: var(--black-main-color);
+  max-width: 48.75rem;
+}
+
+.seo-prodvizhenie-internet-magazina .steps__title--main {
+  min-width: 27.5rem;
+  color: var(--primary-color);
+}
+
+.seo-prodvizhenie-internet-magazina .steps__title--divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: #beebff;
+}
+
+.seo-prodvizhenie-internet-magazina .steps__title--base {
+  color: #beebff;
+}
+
+.seo-prodvizhenie-internet-magazina .special-projects {
+  padding-bottom: 8.125rem;
+}
+
+.seo-prodvizhenie-internet-magazina .special-projects__container {
+  max-width: 1920px;
+  padding: 0;
+}
+
+.seo-prodvizhenie-internet-magazina .special-projects__title {
+  max-width: 62.5rem;
+  margin: 0 auto;
+  margin-bottom: 4.1875rem;
+  padding: 0rem 0.9375rem;
+  text-align: center;
+}
+
+.seo-prodvizhenie-internet-magazina .special-projects__line {
+  color: #beebff;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 128.571%;
+}
+
+.seo-prodvizhenie-internet-magazina .special-projects__line:not(:last-child) {
+  margin-bottom: 3.375rem;
+}
+
+.seo-prodvizhenie-internet-magazina .special-projects__line span {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+.seo-prodvizhenie-internet-magazina .special-projects__line .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
+.seo-prodvizhenie-internet-magazina .special-projects__line .swiper-slide {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.seo-prodvizhenie-internet-magazina .price {
+  position: relative;
+  overflow: hidden;
+  min-height: 43.125rem;
+  margin-bottom: 8.125rem;
+  padding: 8.75rem 0;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+  background: none;
+  background-color: var(--primary-color);
+  background-image: none !important;
+}
+
+.seo-prodvizhenie-internet-magazina .price:hover {
+  background: none;
+  background-color: var(--secondary-color);
+  background-image: none;
+}
+
+.seo-prodvizhenie-internet-magazina .price:hover .price__title {
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  color: var(--black-main-color);
+}
+
+.seo-prodvizhenie-internet-magazina .price:hover .price__title span {
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  color: var(--primary-color);
+}
+
+.seo-prodvizhenie-internet-magazina .price:hover .price__subtitle {
+  color: var(--black-main-color);
+}
+
+.seo-prodvizhenie-internet-magazina .price:hover .price__decor {
+  -webkit-transform: translateY(10%) translateX(0%) scale(1.2) rotate(10deg);
+  -ms-transform: translateY(10%) translateX(0%) scale(1.2) rotate(10deg);
+  transform: translateY(10%) translateX(0%) scale(1.2) rotate(10deg);
+}
+
+.seo-prodvizhenie-internet-magazina .price:hover .price__decor--star {
+  opacity: 0;
+}
+
+.seo-prodvizhenie-internet-magazina .price:hover .price__decor--line_main {
+  opacity: 0;
+}
+
+.seo-prodvizhenie-internet-magazina .price:hover .price__decor--line_hover {
+  opacity: 1;
+}
+
+.seo-prodvizhenie-internet-magazina .price__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.seo-prodvizhenie-internet-magazina .price__button {
+  position: relative;
+  z-index: 10;
+  max-width: 17.5rem;
+  padding: 1.125rem;
+  color: var(--Color-5, #fff);
+  background: var(--black-main-color, #292b32);
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.seo-prodvizhenie-internet-magazina .price__button:hover {
+  color: var(--white);
+  background: #636878;
+}
+
+.seo-prodvizhenie-internet-magazina .price__title {
+  position: relative;
+  max-width: 62.5625rem;
+  z-index: 3;
+  margin-bottom: 5rem;
+  color: var(--white, #fff);
+}
+
+.seo-prodvizhenie-internet-magazina .price__title span {
+  color: var(--secondary-color);
+}
+
+.seo-prodvizhenie-internet-magazina .price__subtitle {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 4.9375rem;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  color: var(--Color-5, #fff);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 128.571%;
+}
+
+.seo-prodvizhenie-internet-magazina .price__banner {
+  position: relative;
+  z-index: 3;
+}
+
+.seo-prodvizhenie-internet-magazina .price__decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out 0s;
+  transition: -webkit-transform 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s, -webkit-transform 0.4s ease-in-out 0s;
+}
+
+.seo-prodvizhenie-internet-magazina .price__decor--line {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 52.9501875rem;
+  height: 54.0609375rem;
+  -webkit-transform: translateY(90%) rotate(-10deg) scale(2) translateX(40%);
+  -ms-transform: translateY(90%) rotate(-10deg) scale(2) translateX(40%);
+  transform: translateY(90%) rotate(-10deg) scale(2) translateX(40%);
+}
+
+.seo-prodvizhenie-internet-magazina .price__decor--line_main {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.seo-prodvizhenie-internet-magazina .price__decor--line_hover {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  opacity: 0;
+}
+
+.seo-prodvizhenie-internet-magazina .price__decor--rocket {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  -webkit-transform: rotate(-10deg) translateX(-50%);
+  -ms-transform: rotate(-10deg) translateX(-50%);
+  transform: rotate(-10deg) translateX(-50%);
+}
+
+.seo-prodvizhenie-internet-magazina .price__decor--rocket img {
+  position: relative;
+  z-index: 2;
+}
+
+.seo-prodvizhenie-internet-magazina .price__decor--star {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 49.1875rem;
+  padding: 3.75rem;
+  border-radius: 1.25rem;
+  background: var(--white);
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price__top {
+  text-align: center;
+  color: var(--black-main-color, #292b32);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price__title {
+  margin-bottom: 1.5625rem;
+  color: var(--primary-color, #00b2ff);
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price__descr {
+  color: var(--Color-7, #636878);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price__right {
+  width: 100%;
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price__list--title {
+  margin-bottom: 1.5625rem;
+  color: var(--Color-7, #636878);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price__list {
+  margin-bottom: 1.875rem;
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price__list-item {
+  position: relative;
+  margin-bottom: 0.9375rem;
+  padding-left: 1.0625rem;
+  color: #636878;
+  font-size: 0.875rem;
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price__list-item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "✓";
+  font-weight: 700;
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price__button {
+  width: 100%;
+  max-width: 14.4375rem;
+  margin-bottom: 0.625rem;
+  padding: 0.9375rem 0;
+  text-align: center;
+  color: var(--white, #fff);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price__button:hover {
+  color: var(--black-main-color);
+}
+
+.seo-prodvizhenie-internet-magazina .banner-price__link {
+  display: block;
+  cursor: pointer;
+  color: var(--Color-2, #71d5ff);
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.seo-prodvizhenie-internet-magazina .media {
+  margin-top: 6.25rem;
+  margin-bottom: 6.25rem;
+}
+
+.seo-prodvizhenie-internet-magazina .top-awards {
+  padding-top: 0;
+}
+
 @media (max-width: 1850px) {
   .mediynaya-reklama .top-awards .item-top-awards:not(:last-child)::before {
     left: 125%;
@@ -11456,6 +12368,24 @@ figure {
 
   .mediynaya-reklama .faq__flex {
     gap: 1.25rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .warranty__banner {
+    padding: 2rem 1.125rem;
+    gap: 2.8125rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .warranty__title {
+    font-size: 1.875rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .warranty__text {
+    font-size: 1rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .banner-steps__title {
+    font-size: 2.25rem;
   }
 }
 
@@ -12205,6 +13135,35 @@ figure {
   .halloween-body .second-main__button {
     font-size: 0.5rem;
     padding: 1rem 1.4375rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .banner-steps::after {
+    display: none;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .banner-steps__main {
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .banner-steps__title {
+    font-size: 1.75rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .banner-steps__text {
+    text-align: center;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .banner-steps__list {
+    text-align: left;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps__title--main {
+    min-width: unset;
+  }
+
+  .seo-prodvizhenie-internet-magazina .price__container {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -14200,6 +15159,252 @@ figure {
   .halloween-body .main__title {
     font-size: 3rem;
   }
+
+  .seo-prodvizhenie-internet-magazina .hero {
+    padding-bottom: 4.0625rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .hero:hover .hero__img-decor svg {
+    rotate: -10deg;
+  }
+
+  .seo-prodvizhenie-internet-magazina .hero__container {
+    grid-template-columns: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .seo-prodvizhenie-internet-magazina .hero__content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .seo-prodvizhenie-internet-magazina .hero__title {
+    margin-bottom: 0.9375rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .hero__text {
+    margin-bottom: 1.875rem;
+    color: #000;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  .seo-prodvizhenie-internet-magazina .hero__img img {
+    width: 120%;
+  }
+
+  .seo-prodvizhenie-internet-magazina .hero__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 80%;
+    margin-bottom: 1.25rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .hero__img-decor svg {
+    rotate: 10deg;
+  }
+
+  .seo-prodvizhenie-internet-magazina .hero__img-decor {
+    width: 170%;
+    height: 170%;
+    -webkit-transform: translate(-49%, -37%);
+    -ms-transform: translate(-49%, -37%);
+    transform: translate(-49%, -37%);
+  }
+
+  .seo-prodvizhenie-internet-magazina .warranty {
+    padding-bottom: 5rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .warranty__banner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .seo-prodvizhenie-internet-magazina .warranty__img {
+    width: 16.9375rem;
+    height: 16.25rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .warranty__img img {
+    height: 22.125rem;
+    width: 16.9375rem;
+    left: 50%;
+    top: unset;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .main-steps::before {
+    left: unset;
+    -webkit-transform: translateX(-1.125rem);
+    -ms-transform: translateX(-1.125rem);
+    transform: translateX(-1.125rem);
+    right: 13%;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .main-steps__flex {
+    gap: 1.875rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .main-steps__arrow {
+    -webkit-transform: translateX(0rem);
+    -ms-transform: translateX(0rem);
+    transform: translateX(0rem);
+    left: unset;
+    right: 13%;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .main-steps__arrow {
+    width: 2.5rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .main-steps__arrow svg {
+    width: 100%;
+    height: 6.25rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .item-main-steps {
+    grid-template-columns: 65% 1fr;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .item-main-steps__block {
+    display: none;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .item-main-steps:nth-child(even) {
+    direction: ltr;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .item-main-steps__text {
+    font-size: 1rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .item-main-steps__toggle span::after {
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.625rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .item-main-steps__toggle span {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.3125rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .item-main-steps__tip--item {
+    padding-left: 0.625rem;
+    font-size: 0.75rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .item-main-steps__tip {
+    padding: 0.625rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .banner-steps__target {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-top: -5rem;
+    -webkit-transform: translateX(1.25rem);
+    -ms-transform: translateX(1.25rem);
+    transform: translateX(1.25rem);
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .banner-steps__target svg {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .banner-steps {
+    padding: 0 0.9375rem 0.9375rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps__title {
+    margin-bottom: 1.25rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps {
+    padding-bottom: 3.75rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .special-projects__title {
+    margin-bottom: 2.5rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .special-projects__line {
+    font-size: 1.25rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .special-projects__line:not(:last-child) {
+    margin-bottom: 1.5625rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .special-projects {
+    padding-bottom: 4.0625rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .price__button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .seo-prodvizhenie-internet-magazina .price__subtitle {
+    margin-bottom: 2.5rem;
+    font-size: 1.25rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .price__decor--line {
+    -webkit-transform: translateY(70%) rotate(-10deg) scale(1) translateX(0%);
+    -ms-transform: translateY(70%) rotate(-10deg) scale(1) translateX(0%);
+    transform: translateY(70%) rotate(-10deg) scale(1) translateX(0%);
+  }
+
+  .seo-prodvizhenie-internet-magazina .price {
+    min-height: 0;
+    margin-bottom: 3.75rem;
+    padding: 4.0625rem 0;
+  }
+
+  .seo-prodvizhenie-internet-magazina .banner-price__title {
+    font-size: 2.25rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .banner-price__button {
+    max-width: 100%;
+  }
+
+  .seo-prodvizhenie-internet-magazina .banner-price__link {
+    text-align: center;
+  }
+
+  .seo-prodvizhenie-internet-magazina .banner-price {
+    padding: 2.25rem;
+  }
 }
 
 @media (max-width: 479.98px) {
@@ -14213,6 +15418,10 @@ figure {
 
   .optimizacia-conversiy .ratio-banner__text {
     max-width: 15.625rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps .item-main-steps__text {
+    font-size: 0.875rem;
   }
 }
 
