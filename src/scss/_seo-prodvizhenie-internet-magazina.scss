@@ -2,7 +2,6 @@
 @use './base';
 @use './top-awards';
 @use './media-about-us';
-@use './faq';
 
 .seo-prodvizhenie-internet-magazina {
 	font-family: Montserrat, sans-serif;
@@ -19,6 +18,7 @@
 		padding: rem(120) 0 rem(120) 0;
 		@media (max-width: 767.98px) {
 			padding-bottom: rem(65);
+			min-height: 80vh;
 		}
 		&:hover {
 			.hero__img-decor {
@@ -81,6 +81,7 @@
 			font-size: rem(18);
 
 			font-weight: 400;
+			line-height: 140%;
 
 			@media (max-width: 767.98px) {
 				margin-bottom: rem(30);
@@ -235,9 +236,26 @@
 		}
 	}
 	.steps {
+		position: relative;
 		padding-bottom: rem(120);
 		background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, var(--secondary-color) 100%);
-
+		@media (max-width: 767.98px) {
+			padding-bottom: rem(80);
+		}
+		&__decor-bg {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100vw;
+			min-width: rem(1920);
+			max-width: rem(2560);
+			z-index: 0;
+			img {
+				position: relative;
+				width: 100%;
+			}
+		}
 		// .steps__container
 		&__container {
 		}
@@ -255,19 +273,23 @@
 
 			max-width: rem(1069);
 			margin: 0 auto;
-
+			z-index: 1;
 			&::before {
 				position: absolute;
-				top: 3%;
+				top: 0%;
 				left: 50%;
 
-				width: 0;
+				width: 2px;
 				height: 100%;
 
 				content: '';
 				transform: translateX(-50%);
 
-				border: 2px dashed #d1d3d9;
+				// border: 1px dashed var(--primary-color);
+				background-image: linear-gradient(var(--primary-color) 33%, rgba(255, 255, 255, 0) 0%);
+				background-position: right;
+				background-size: 2px 15px;
+				background-repeat: repeat-y;
 				@media (max-width: 767.98px) {
 					left: unset;
 					transform: translateX(rem(-18));
@@ -374,6 +396,9 @@
 			// .item-main-steps__item
 			&__item {
 				position: relative;
+				&:not(:last-child) {
+					margin-bottom: rem(8);
+				}
 				&::before {
 					content: '';
 					position: absolute;
@@ -762,6 +787,9 @@
 			&__list-item {
 				position: relative;
 				padding-left: 1em;
+				&:not(:last-child) {
+					margin-bottom: rem(10);
+				}
 				&::before {
 					content: '•';
 					position: absolute;
@@ -1036,6 +1064,7 @@
 
 			width: 100%;
 			height: 100%;
+			transform: scale(0.7) translateY(150px);
 
 			transition: transform 0.4s ease-in-out 0s;
 		}
@@ -1261,6 +1290,243 @@
 		@media (max-width: 767.98px) {
 			padding: rem(36);
 		}
+	}
+
+	.faq {
+		padding-top: rem(120);
+		padding-bottom: rem(120);
+
+		background: var(--Color-10, #f3f4f5);
+
+		&__title {
+			margin-bottom: rem(80);
+
+			@media (max-width: 767.98px) {
+				margin-bottom: rem(45);
+			}
+		}
+
+		// .faq__bottom
+		&__bottom {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: rem(15);
+
+			@media (max-width: 767.98px) {
+				flex-direction: column;
+			}
+		}
+
+		// .faq__banner
+		&__banner {
+			width: 100%;
+			max-width: rem(1064);
+			padding: rem(34) rem(40);
+
+			color: var(--black);
+			border-radius: rem(20);
+			background: var(--secondary-color);
+
+			font-size: rem(18);
+			font-weight: 400;
+			line-height: 155.556%;
+		}
+
+		// .faq__button
+		&__button {
+			width: 100%;
+			max-width: rem(426);
+			padding: rem(23) 0;
+
+			cursor: pointer;
+			transition: background 0.3s ease 0s;
+
+			color: var(--Color-5, #fff);
+			border-radius: rem(12);
+			background: var(--black-main-color);
+
+			font-size: rem(16);
+			font-weight: 700;
+
+			&:hover {
+				background: #636878;
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			padding-top: rem(60);
+			padding-bottom: rem(60);
+		}
+	}
+
+	.faq__list {
+		margin-bottom: rem(75);
+		padding: rem(50) rem(60);
+
+		border-radius: rem(20);
+		background: var(--white);
+
+		@media (max-width: 767.98px) {
+			margin-bottom: rem(25);
+			padding: 0;
+
+			background: white;
+		}
+	}
+
+	.item-faq {
+		display: flex;
+		gap: rem(20);
+
+		// .item-faq__question
+		&__question {
+			position: relative;
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			color: var(--black, #000);
+
+			font-size: rem(28);
+			font-weight: 700;
+			gap: rem(10);
+
+			@media (max-width: 767.98px) {
+				font-size: rem(18);
+			}
+		}
+
+		// .item-faq__number
+		&__number {
+			flex-shrink: 0;
+
+			width: rem(64);
+
+			letter-spacing: 0.25px;
+
+			color: var(--Color-9, #d1d3d9);
+
+			font-family: Inter;
+			font-size: rem(48);
+			font-weight: 700;
+			color: transparent;
+
+			font-family: Inter, sans-serif;
+			font-size: rem(48);
+			font-weight: 700;
+			-webkit-text-stroke: 1px #000;
+			text-stroke: 1px #000;
+
+			@media (max-width: 767.98px) {
+				width: rem(40);
+
+				font-size: rem(48);
+			}
+		}
+
+		// .item-faq__question--text
+		&__question--text {
+		}
+
+		// .item-faq__indicator
+		&__indicator {
+			display: flex;
+			align-items: center;
+			flex-shrink: 0;
+			justify-content: center;
+
+			width: rem(48);
+			height: rem(48);
+
+			transition: background 0.3s ease 0s, transform 0.3s ease 0s;
+
+			border-radius: 50%;
+			background: var(--primary-color);
+
+			@media (max-width: 767.98px) {
+				right: rem(-33);
+
+				width: rem(33);
+				height: rem(33);
+
+				font-size: rem(16);
+			}
+		}
+
+		&__answer {
+			padding-right: rem(80);
+
+			color: var(--Color-7, #636878);
+
+			font-size: rem(18);
+			font-weight: 400;
+			line-height: 155.556%;
+			span {
+				font-weight: 700;
+			}
+
+			@media (max-width: 767.98px) {
+				font-size: rem(14);
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			padding: rem(13) rem(10);
+
+			border-radius: rem(20);
+			background: var(--white, #fff);
+			flex-direction: column;
+			gap: rem(10);
+		}
+	}
+
+	.item-faq__block {
+		position: relative;
+
+		width: 100%;
+	}
+
+	.item-faq__toggle {
+		position: absolute;
+		z-index: 2;
+
+		width: 100%;
+		height: 100%;
+
+		cursor: pointer;
+
+		opacity: 0;
+		appearance: none;
+	}
+
+	.item-faq__question {
+		position: relative;
+		z-index: 1;
+
+		cursor: pointer;
+	}
+
+	.item-faq__answer {
+		overflow: hidden;
+
+		max-height: 0;
+		padding: 0 rem(80) 0 0;
+
+		transition: max-height 0.3s ease, padding 0.3s ease;
+	}
+
+	/* Когда input:checked, показываем блок с ответом */
+	.item-faq__toggle:checked ~ .item-faq__answer {
+		max-height: 1000px;
+		padding: 2rem rem(80) 0 0;
+	}
+
+	.item-faq__toggle:checked ~ .item-faq__question .item-faq__indicator {
+		transform: rotate(45deg);
+
+		background: var(--secondary-color);
 	}
 
 	.media {

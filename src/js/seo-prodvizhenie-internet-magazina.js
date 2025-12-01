@@ -100,25 +100,44 @@ document.querySelectorAll('.item-main-steps__text').forEach((toggle) => {
 
 		const viewportCenter = window.innerHeight / 2;
 
-		texts.forEach((el) => {
+		texts.forEach((el, index) => {
 			const rect = el.getBoundingClientRect();
 			const title = el.querySelector('.item-main-steps__title');
 
 			const elCenter = rect.top + rect.height / 2;
 			const delta = elCenter - viewportCenter;
 
+			// дефолтные значения (оставляем логику, как было)
+			let opacity = '1';
+			let color = '#292B32'; // по умолчанию для "выше центра" / общий дефолт
+
 			if (Math.abs(delta) <= CENTER_BAND) {
 				// В центре
-				el.style.opacity = '1';
-				if (title) title.style.color = '#00B2FF';
+				opacity = '1';
+				color = '#00B2FF';
 			} else if (delta > 0) {
 				// Элемент ниже центра
-				el.style.opacity = '0.5';
-				if (title) title.style.color = '#ADB0BC'; // <-- исправлено: цвет заголовка
+				opacity = '0.5';
+				color = '#ADB0BC';
 			} else {
 				// Элемент выше центра
-				el.style.opacity = '1';
-				if (title) title.style.color = '#292B32';
+				opacity = '1';
+				color = '#292B32';
+			}
+
+			// Если это первый элемент — его opacity всегда 1 (но цвет оставляем по той же логике)
+			if (index === 0) {
+				opacity = '1';
+				color = '#00B2FF';
+				if (delta > 0) {
+					color = '#292B32';
+				}
+			}
+
+			// Применяем стили безопасно
+			el.style.opacity = opacity;
+			if (title) {
+				title.style.color = color;
 			}
 		});
 	}

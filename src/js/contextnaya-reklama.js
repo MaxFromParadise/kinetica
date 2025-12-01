@@ -148,6 +148,12 @@ if (document.querySelector('.digital-expertise__slider .swiper')) {
 		freeMode: true,
 		slidesPerView: 'auto',
 		spaceBetween: 50,
+		speed: 3000,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
 	});
 }
 // steps

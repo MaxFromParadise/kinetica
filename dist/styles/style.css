@@ -1734,6 +1734,10 @@ figure {
   max-width: 90%;
   max-height: 90%;
   border-radius: 0.5rem;
+  width: 70%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .prodvizhenie-saita .report-data-lens .report-data-lens__modal-close {
@@ -3136,6 +3140,11 @@ figure {
   overflow: visible;
 }
 
+.contextnaya-reklama .digital-expertise__slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
 .contextnaya-reklama .slide-digital-expertise {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3606,7 +3615,7 @@ figure {
 
 .email-marketing .item-about-features__img {
   max-width: 6.5625rem;
-  max-height: 11.5rem;
+  height: 6.25rem;
   margin-bottom: 2rem;
 }
 
@@ -4579,7 +4588,7 @@ figure {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 3.75rem 12.5rem 1.25rem 0rem;
+  padding: 3.75rem 12.5rem 3.75rem 0rem;
   border-radius: 1.25rem;
   background: var(--secondary-color);
   gap: 3.75rem;
@@ -11219,6 +11228,7 @@ figure {
 
 .seo-prodvizhenie-internet-magazina {
   font-family: Montserrat, sans-serif;
+  /* Когда input:checked, показываем блок с ответом */
 }
 
 .seo-prodvizhenie-internet-magazina .hero {
@@ -11268,6 +11278,7 @@ figure {
   color: #000;
   font-size: 1.125rem;
   font-weight: 400;
+  line-height: 140%;
 }
 
 .seo-prodvizhenie-internet-magazina .hero__button {
@@ -11357,28 +11368,52 @@ figure {
 }
 
 .seo-prodvizhenie-internet-magazina .steps {
+  position: relative;
   padding-bottom: 7.5rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(var(--secondary-color)));
   background: linear-gradient(180deg, rgb(255, 255, 255) 0%, var(--secondary-color) 100%);
+}
+
+.seo-prodvizhenie-internet-magazina .steps__decor-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100vw;
+  min-width: 120rem;
+  max-width: 160rem;
+  z-index: 0;
+}
+
+.seo-prodvizhenie-internet-magazina .steps__decor-bg img {
+  position: relative;
+  width: 100%;
 }
 
 .seo-prodvizhenie-internet-magazina .steps .main-steps {
   position: relative;
   max-width: 66.8125rem;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .seo-prodvizhenie-internet-magazina .steps .main-steps::before {
   position: absolute;
-  top: 3%;
+  top: 0%;
   left: 50%;
-  width: 0;
+  width: 2px;
   height: 100%;
   content: "";
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  border: 2px dashed #d1d3d9;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(33%, var(--primary-color)), color-stop(0%, rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(var(--primary-color) 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: right;
+  background-size: 2px 15px;
+  background-repeat: repeat-y;
 }
 
 .seo-prodvizhenie-internet-magazina .steps .main-steps__flex {
@@ -11462,6 +11497,10 @@ figure {
 
 .seo-prodvizhenie-internet-magazina .steps .item-main-steps__item {
   position: relative;
+}
+
+.seo-prodvizhenie-internet-magazina .steps .item-main-steps__item:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
 .seo-prodvizhenie-internet-magazina .steps .item-main-steps__item::before {
@@ -11763,6 +11802,10 @@ figure {
   padding-left: 1em;
 }
 
+.seo-prodvizhenie-internet-magazina .steps .banner-steps__list-item:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
 .seo-prodvizhenie-internet-magazina .steps .banner-steps__list-item::before {
   content: "•";
   position: absolute;
@@ -11953,6 +11996,9 @@ figure {
   left: 0;
   width: 100%;
   height: 100%;
+  -webkit-transform: scale(0.7) translateY(150px);
+  -ms-transform: scale(0.7) translateY(150px);
+  transform: scale(0.7) translateY(150px);
   -webkit-transition: -webkit-transform 0.4s ease-in-out 0s;
   transition: -webkit-transform 0.4s ease-in-out 0s;
   transition: transform 0.4s ease-in-out 0s;
@@ -12122,6 +12168,184 @@ figure {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+}
+
+.seo-prodvizhenie-internet-magazina .faq {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  background: var(--Color-10, #f3f4f5);
+}
+
+.seo-prodvizhenie-internet-magazina .faq__title {
+  margin-bottom: 5rem;
+}
+
+.seo-prodvizhenie-internet-magazina .faq__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.9375rem;
+}
+
+.seo-prodvizhenie-internet-magazina .faq__banner {
+  width: 100%;
+  max-width: 66.5rem;
+  padding: 2.125rem 2.5rem;
+  color: var(--black);
+  border-radius: 1.25rem;
+  background: var(--secondary-color);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+}
+
+.seo-prodvizhenie-internet-magazina .faq__button {
+  width: 100%;
+  max-width: 26.625rem;
+  padding: 1.4375rem 0;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
+  color: var(--Color-5, #fff);
+  border-radius: 0.75rem;
+  background: var(--black-main-color);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.seo-prodvizhenie-internet-magazina .faq__button:hover {
+  background: #636878;
+}
+
+.seo-prodvizhenie-internet-magazina .faq__list {
+  margin-bottom: 4.6875rem;
+  padding: 3.125rem 3.75rem;
+  border-radius: 1.25rem;
+  background: var(--white);
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq__question {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: var(--black, #000);
+  font-size: 1.75rem;
+  font-weight: 700;
+  gap: 0.625rem;
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq__number {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 4rem;
+  letter-spacing: 0.25px;
+  color: var(--Color-9, #d1d3d9);
+  font-family: Inter;
+  font-size: 3rem;
+  font-weight: 700;
+  color: transparent;
+  font-family: Inter, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  -webkit-text-stroke: 1px #000;
+  text-stroke: 1px #000;
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq__indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  -webkit-transition: background 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: background 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: background 0.3s ease 0s, transform 0.3s ease 0s;
+  transition: background 0.3s ease 0s, transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq__answer {
+  padding-right: 5rem;
+  color: var(--Color-7, #636878);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 155.556%;
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq__answer span {
+  font-weight: 700;
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq__block {
+  position: relative;
+  width: 100%;
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq__toggle {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq__question {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq__answer {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 5rem 0 0;
+  -webkit-transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq__toggle:checked ~ .item-faq__answer {
+  max-height: 1000px;
+  padding: 2rem 5rem 0 0;
+}
+
+.seo-prodvizhenie-internet-magazina .item-faq__toggle:checked ~ .item-faq__question .item-faq__indicator {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: var(--secondary-color);
 }
 
 .seo-prodvizhenie-internet-magazina .media {
@@ -13906,6 +14130,10 @@ figure {
     padding: 1rem 1rem 1.5625rem;
   }
 
+  .target .audit-banner__title {
+    max-width: 16.5625rem;
+  }
+
   .target .audit-banner__button {
     max-width: 100%;
   }
@@ -15166,6 +15394,7 @@ figure {
 
   .seo-prodvizhenie-internet-magazina .hero {
     padding-bottom: 4.0625rem;
+    min-height: 80vh;
   }
 
   .seo-prodvizhenie-internet-magazina .hero:hover .hero__img-decor svg {
@@ -15254,6 +15483,10 @@ figure {
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+  }
+
+  .seo-prodvizhenie-internet-magazina .steps {
+    padding-bottom: 5rem;
   }
 
   .seo-prodvizhenie-internet-magazina .steps .main-steps::before {
@@ -15408,6 +15641,59 @@ figure {
 
   .seo-prodvizhenie-internet-magazina .banner-price {
     padding: 2.25rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .faq__title {
+    margin-bottom: 2.8125rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .faq__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .seo-prodvizhenie-internet-magazina .faq {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .faq__list {
+    margin-bottom: 1.5625rem;
+    padding: 0;
+    background: white;
+  }
+
+  .seo-prodvizhenie-internet-magazina .item-faq__question {
+    font-size: 1.125rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .item-faq__number {
+    width: 2.5rem;
+    font-size: 3rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .item-faq__indicator {
+    right: -2.0625rem;
+    width: 2.0625rem;
+    height: 2.0625rem;
+    font-size: 1rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .item-faq__answer {
+    font-size: 0.875rem;
+  }
+
+  .seo-prodvizhenie-internet-magazina .item-faq {
+    padding: 0.8125rem 0.625rem;
+    border-radius: 1.25rem;
+    background: var(--white, #fff);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.625rem;
   }
 }
 
