@@ -12357,6 +12357,959 @@ figure {
   padding-top: 0;
 }
 
+.warranty-ticket * {
+  font-family: "Ampero SemBd", sans-serif;
+}
+
+.warranty-ticket [class*=__container] {
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@font-face {
+  font-family: "Ampero SemBd";
+  src: url("../fonts/Ampero-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-display: swap;
+}
+
+.warranty-ticket .main .swiper {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.warranty-ticket .main .swiper-wrapper {
+  height: 100%;
+}
+
+.warranty-ticket .main .swiper-slide {
+  height: 100vh;
+}
+
+.warranty-ticket .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: none;
+  padding-top: 0.9375rem;
+  background: transparent;
+}
+
+.warranty-ticket .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.warranty-ticket .header__logo {
+  max-width: 11.375rem;
+  width: 100%;
+}
+
+.warranty-ticket .header__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.warranty-ticket .header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.3125rem;
+}
+
+.warranty-ticket .header__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #000;
+  border-radius: 0.75rem;
+  height: 3.5625rem;
+  padding: 0.75rem 0.8125rem 0.3125rem 0.8125rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 100%;
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.warranty-ticket .header__link:hover {
+  background: var(--secondary-color);
+}
+
+.warranty-ticket .header__link_fix {
+  width: 3.5625rem;
+  padding: 0;
+}
+
+.warranty-ticket .ticket {
+  background: white;
+  overflow-y: hidden;
+  padding-bottom: 7.5rem;
+  position: relative;
+}
+
+.warranty-ticket .ticket__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 49.4375rem;
+  height: 70vh;
+  z-index: 5;
+}
+
+.warranty-ticket .ticket__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.warranty-ticket .ticket__img_mobile {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+  -ms-transform: translate(-50%, -40%);
+  transform: translate(-50%, -40%);
+  width: 100%;
+  max-width: 23.125rem;
+  z-index: 5;
+}
+
+.warranty-ticket .ticket__img_mobile img {
+  width: 100%;
+  height: auto;
+}
+
+.warranty-ticket .ticket .ticket__container {
+  margin-top: auto;
+}
+
+.warranty-ticket .ticket .button {
+  -webkit-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  transform: translateY(-30%);
+}
+
+.warranty-ticket .ticket-bg {
+  position: relative;
+  padding-top: 3.125rem;
+  text-wrap: nowrap;
+  height: 90vh;
+}
+
+.warranty-ticket .ticket-bg .swiper {
+  color: #f2f3f4;
+  font-size: 15.625rem;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  height: 30vh;
+  min-height: 11.25rem;
+  pointer-events: none;
+}
+
+.warranty-ticket .ticket-bg .swiper.is-center {
+  color: #999999;
+}
+
+.warranty-ticket .ticket-bg .swiper-wrapper {
+  height: 100%;
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
+.warranty-ticket .ticket-bg .swiper-slide {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.warranty-ticket .button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1.0625rem;
+  background: #c8ff00;
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 400;
+  max-width: 37.375rem;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid var(--black);
+  box-shadow: 0px -4px 0px 0px rgb(0, 0, 0) inset;
+  -webkit-box-shadow: 0px -4px 0px 0px rgb(0, 0, 0) inset;
+  -moz-box-shadow: 0px -4px 0px 0px rgb(0, 0, 0) inset;
+  -webkit-transition: background 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: background 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, background 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, background 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  z-index: 5;
+}
+
+.warranty-ticket .button:hover {
+  -webkit-transform: translateY(-0.25rem);
+  -ms-transform: translateY(-0.25rem);
+  transform: translateY(-0.25rem);
+  background: var(--white);
+}
+
+.warranty-ticket .button:focus {
+  -webkit-transform: translateY(0rem);
+  -ms-transform: translateY(0rem);
+  transform: translateY(0rem);
+  background: #f2f3f4;
+}
+
+.warranty-ticket .faq {
+  background: #fff;
+  padding-bottom: 5rem;
+}
+
+.warranty-ticket .faq__title {
+  color: var(--Color-10, #f3f4f5);
+  text-align: center;
+  font-size: 5.625rem;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6.5rem;
+}
+
+.warranty-ticket .faq__title span {
+  font-family: "Ampero SemBd";
+}
+
+.warranty-ticket .faq__title span:first-child {
+  color: var(--black-main-color);
+}
+
+.warranty-ticket .faq__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.warranty-ticket .questions-faq {
+  max-width: 27.5rem;
+  width: 100%;
+}
+
+.warranty-ticket .questions-faq__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 1.25rem;
+  background: #f2f3f4;
+  padding: 1.875rem 1.25rem;
+  color: #000;
+  font-family: "Ampero SemBd";
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 100%;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease 0s, background 0.3s ease 0s;
+  transition: color 0.3s ease 0s, background 0.3s ease 0s;
+}
+
+.warranty-ticket .questions-faq__item:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.warranty-ticket .questions-faq__item::after {
+  display: none;
+  content: "+";
+  position: static;
+  font-size: 4.375rem;
+  font-weight: 400;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+
+.warranty-ticket .questions-faq__item.active {
+  color: var(--black);
+  background: var(--secondary-color);
+}
+
+.warranty-ticket .questions-faq__item.active::after {
+  opacity: 0;
+}
+
+.warranty-ticket .answers-faq {
+  position: relative;
+}
+
+.warranty-ticket .item-answers-faq {
+  padding: 2.5rem 2.1875rem;
+  opacity: 0;
+  border-radius: 1.25rem;
+  background: var(--secondary-color);
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  min-height: 21.25rem;
+}
+
+.warranty-ticket .item-answers-faq:not(:first-child) {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.warranty-ticket .item-answers-faq.active {
+  opacity: 1;
+}
+
+.warranty-ticket .item-answers-faq__title {
+  color: #000;
+  font-family: "Ampero SemBd";
+  font-size: 3.75rem;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-bottom: 1.5625rem;
+}
+
+.warranty-ticket .item-answers-faq__text p {
+  color: var(--black);
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.warranty-ticket .item-answers-faq__text p:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.warranty-ticket .printer__container {
+  border-top: 1px solid black;
+  height: 100%;
+}
+
+.warranty-ticket .printer__title {
+  padding-top: 0.9375rem;
+  margin-bottom: 4.5rem;
+  font-size: 4.375rem;
+  font-weight: 400;
+}
+
+.warranty-ticket .printer__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9375rem;
+  height: 100%;
+  min-height: 700px;
+}
+
+.warranty-ticket .printer__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.warranty-ticket .printer__col:nth-child(2) {
+  position: relative;
+  width: 25.625rem;
+}
+
+.warranty-ticket .printer__col:last-child {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.warranty-ticket .printer__text {
+  background-color: #f2f3f4;
+  padding: 1.875rem 1.25rem;
+  font-size: 1.25rem;
+  margin-bottom: 1.5625rem;
+  border-radius: 1.5rem;
+}
+
+.warranty-ticket .printer__ticket {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  z-index: 5;
+}
+
+.warranty-ticket .printer__ticket img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.warranty-ticket .printer .print {
+  position: relative;
+  max-width: 28.5rem;
+  width: 100%;
+  height: 56px;
+}
+
+.warranty-ticket .printer .print__top {
+  position: relative;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-radius: 0.625rem 0.625rem 0 0;
+  background: #f2f3f4;
+  height: 50%;
+  z-index: 10;
+}
+
+.warranty-ticket .printer .print__center {
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #000;
+  border-radius: 70px;
+  height: 0.625rem;
+  z-index: 11;
+}
+
+.warranty-ticket .printer .print__bottom {
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-radius: 0 0 0.625rem 0.625rem;
+  background: #f2f3f4;
+  height: 50%;
+}
+
+.new-year-wishlist .main {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.new-year-wishlist .main__bg {
+  background: url("../img/pages/new-year-wishlist/bg.jpg") center center/cover no-repeat;
+  min-width: 100vw;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.new-year-wishlist .main__video-bg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  mix-blend-mode: lighten;
+}
+
+.new-year-wishlist .main__logo-decor {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  max-width: 20vw;
+  min-width: 200px;
+}
+
+.new-year-wishlist .main__logo-decor img {
+  width: 100%;
+  height: auto;
+}
+
+.new-year-wishlist .main__container {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.new-year-wishlist .main__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2.1875rem;
+}
+
+.new-year-wishlist .main__kinetica {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 2.1875rem;
+}
+
+.new-year-wishlist .main__title {
+  position: relative;
+  max-width: 36.5625rem;
+  width: 100%;
+  margin-bottom: 1.875rem;
+}
+
+.new-year-wishlist .main__title::before {
+  display: none;
+  content: "";
+  position: absolute;
+  inset: -8px;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 0.75rem;
+}
+
+.new-year-wishlist .main__title img {
+  width: 100%;
+  height: auto;
+}
+
+.new-year-wishlist .main__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2.1875rem;
+  width: 100%;
+}
+
+.new-year-wishlist .red-button {
+  padding: 2.1875rem 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border-radius: 6.25rem;
+  cursor: pointer;
+  background: radial-gradient(circle, rgb(234, 42, 51) 0%, rgb(160, 18, 23) 100%);
+  color: #fff;
+  font-size: 1.375rem;
+  -webkit-box-shadow: 0px -2px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px -4px 2px 0px rgba(0, 0, 0, 0.25) inset, 0px 0px 1px 4px rgba(255, 255, 255, 0.1) inset, 0px 0px 60px 0px rgb(121, 4, 8) inset;
+  box-shadow: 0px -2px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px -4px 2px 0px rgba(0, 0, 0, 0.25) inset, 0px 0px 1px 4px rgba(255, 255, 255, 0.1) inset, 0px 0px 60px 0px rgb(121, 4, 8) inset;
+}
+
+.new-year-wishlist .green-button {
+  padding: 2.1875rem 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border-radius: 6.25rem;
+  cursor: pointer;
+  background: radial-gradient(circle, #009640 0%, #026b2f 100%);
+  color: #fff;
+  font-size: 1.375rem;
+  -webkit-box-shadow: 0px -2px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px -4px 2px 0px rgba(0, 0, 0, 0.25) inset, 0px 0px 1px 4px rgba(255, 255, 255, 0.1) inset, 0px 0px 60px 0px rgb(45, 27, 0) inset;
+  box-shadow: 0px -2px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px -4px 2px 0px rgba(0, 0, 0, 0.25) inset, 0px 0px 1px 4px rgba(255, 255, 255, 0.1) inset, 0px 0px 60px 0px rgb(45, 27, 0) inset;
+}
+
+.new-year-wishlist .overlay {
+  position: fixed;
+  left: -200%;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0;
+  z-index: 15;
+  -webkit-transition: left 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: left 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+.new-year-wishlist .overlay.show {
+  left: 0;
+  opacity: 0.4;
+}
+
+.new-year-wishlist .wish {
+  position: fixed;
+  padding: 0 0.9375rem;
+  padding-top: 3.125rem;
+  left: -200%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 20;
+  opacity: 0;
+  -webkit-transition: left 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: left 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+.new-year-wishlist .wish.show {
+  left: 0;
+  opacity: 1;
+}
+
+.new-year-wishlist .wish__letter {
+  position: relative;
+  max-width: 32.8125rem;
+  width: 100%;
+}
+
+.new-year-wishlist .wish__paper {
+  position: relative;
+  max-width: 32.8125rem;
+  width: 100%;
+  height: 37.5rem;
+  background: url("../img/pages/new-year-wishlist/paper.png") center center/100% 100% no-repeat;
+  padding: 2.8125rem 2.1875rem;
+  font-size: 1.375rem;
+  color: #026b2f;
+  line-height: 125%;
+  font-weight: 500;
+  z-index: 22;
+}
+
+.new-year-wishlist .wish__text {
+  margin-bottom: 1.25rem;
+}
+
+.new-year-wishlist .wish__info {
+  text-align: center;
+}
+
+.new-year-wishlist .wish__city {
+  opacity: 0.6;
+}
+
+.new-year-wishlist .wish__button {
+  position: absolute;
+  bottom: -3.75rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 24;
+  width: 100%;
+  font-size: 0.875rem;
+  padding: 1.5rem 0.9375rem;
+}
+
+.new-year-wishlist .wish__close {
+  position: absolute;
+  top: -4.6875rem;
+  right: -5rem;
+  padding: 1.5625rem;
+}
+
+.new-year-wishlist .wish__letter-front {
+  position: absolute;
+  left: 50%;
+  bottom: -6.25rem;
+  width: 120%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 23;
+}
+
+.new-year-wishlist .wish__letter-front img {
+  width: 100%;
+}
+
+.new-year-wishlist .wish__letter-back {
+  position: absolute;
+  left: 50%;
+  bottom: -6.25rem;
+  width: 120%;
+  height: 45rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 21;
+}
+
+.new-year-wishlist .wish__letter-back img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.new-year-wishlist .post-wish {
+  position: fixed;
+  padding: 0 0.9375rem;
+  padding-top: 3.125rem;
+  left: -200%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 20;
+  opacity: 0;
+  -webkit-transition: left 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: left 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+.new-year-wishlist .post-wish.show {
+  left: 0;
+  opacity: 1;
+}
+
+.new-year-wishlist .post-wish__letter {
+  position: relative;
+  max-width: 32.8125rem;
+  width: 100%;
+}
+
+.new-year-wishlist .post-wish__paper {
+  position: relative;
+  max-width: 32.8125rem;
+  width: 100%;
+  height: 37.5rem;
+  background: url("../img/pages/new-year-wishlist/paper.png") center center/100% 100% no-repeat;
+  padding: 2.8125rem 2.1875rem;
+  font-size: 1.375rem;
+  color: #026b2f;
+  line-height: 125%;
+  font-weight: 500;
+  z-index: 22;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-height: 80vh;
+}
+
+.new-year-wishlist .post-wish__close {
+  position: absolute;
+  top: -4.6875rem;
+  right: -5rem;
+  padding: 1.5625rem;
+}
+
+.new-year-wishlist .post-wish__input {
+  display: block;
+  background: transparent;
+  color: #026b2f;
+  padding: 0.625rem 0;
+  border-bottom: 1px solid #026b2f;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.new-year-wishlist .post-wish__input::-webkit-input-placeholder {
+  color: #026b2f;
+}
+
+.new-year-wishlist .post-wish__input::-moz-placeholder {
+  color: #026b2f;
+}
+
+.new-year-wishlist .post-wish__input:-ms-input-placeholder {
+  color: #026b2f;
+}
+
+.new-year-wishlist .post-wish__input::-ms-input-placeholder {
+  color: #026b2f;
+}
+
+.new-year-wishlist .post-wish__input::placeholder {
+  color: #026b2f;
+}
+
+.new-year-wishlist .post-wish__label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+
+.new-year-wishlist .post-wish__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.new-year-wishlist .post-wish__button {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 1rem 0.9375rem;
+}
+
+.new-year-wishlist .success-wish {
+  position: fixed;
+  padding: 0 0.9375rem;
+  padding-top: 3.125rem;
+  left: -200%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 20;
+  opacity: 0;
+  -webkit-transition: left 0.3s ease 0s, opacity 0.3s ease 0s;
+  transition: left 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+.new-year-wishlist .success-wish.show {
+  left: 0;
+  opacity: 1;
+}
+
+.new-year-wishlist .success-wish__letter {
+  position: relative;
+  max-width: 32.8125rem;
+  width: 100%;
+}
+
+.new-year-wishlist .success-wish__paper {
+  position: relative;
+  max-width: 32.8125rem;
+  width: 100%;
+  height: 15.625rem;
+  background: url("../img/pages/new-year-wishlist/paper.png") center center/100% 100% no-repeat;
+  padding: 2.8125rem 2.1875rem;
+  font-size: 1.375rem;
+  color: #026b2f;
+  line-height: 125%;
+  font-weight: 500;
+  z-index: 22;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.new-year-wishlist .success-wish__close {
+  position: absolute;
+  top: -4.6875rem;
+  right: -5rem;
+  padding: 1.5625rem;
+}
+
+.new-year-wishlist .success-wish__paper {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
 @media (max-width: 1850px) {
   .mediynaya-reklama .top-awards .item-top-awards:not(:last-child)::before {
     left: 125%;
@@ -12614,6 +13567,10 @@ figure {
 
   .seo-prodvizhenie-internet-magazina .steps .banner-steps__title {
     font-size: 2.25rem;
+  }
+
+  .warranty-ticket .faq__flex {
+    gap: 1.25rem;
   }
 }
 
@@ -13392,6 +14349,62 @@ figure {
 
   .seo-prodvizhenie-internet-magazina .price__container {
     grid-template-columns: 1fr;
+  }
+
+  .warranty-ticket .faq__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .warranty-ticket .questions-faq {
+    max-width: 100%;
+  }
+
+  .warranty-ticket {
+    /* ответы внутри мобильного потока — должны отображаться прямо под вопросом */
+    /* когда ответ активен — показываем */
+    /* пометка для ответов, вставленных в мобильный поток */
+    /* если нужно, чтобы вопрос и ответ визуально были связаны */
+  }
+
+  .warranty-ticket .item-answers-faq {
+    display: none !important;
+    opacity: 1;
+    /* opacity лучше держать 1 на мобильных, чтобы animation не мешал */
+    position: static !important;
+    width: 100%;
+    margin-top: 0;
+    padding: 1.25rem !important;
+    border-radius: 0.75rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .warranty-ticket .item-answers-faq.active {
+    display: block !important;
+    margin-bottom: 0 !important;
+  }
+
+  .warranty-ticket .item-answers-faq.in-mobile {
+    /* .in-mobile — чисто семантический флаг, можно добавить тени/отступы */
+    margin-top: 0;
+  }
+
+  .warranty-ticket .questions-faq__item.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+  }
+
+  .warranty-ticket .answers-faq__item.item-answers-faq.in-mobile.active {
+    margin-bottom: 1.25rem !important;
+  }
+
+  .warranty-ticket .item-answers-faq.in-mobile {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 
@@ -15694,6 +16707,121 @@ figure {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 0.625rem;
+  }
+
+  .warranty-ticket .header__logo {
+    display: none;
+  }
+
+  .warranty-ticket .ticket__img {
+    display: none;
+  }
+
+  .warranty-ticket .ticket__img_mobile {
+    display: block;
+  }
+
+  .warranty-ticket .ticket-bg {
+    padding-top: 11.25rem;
+    margin: auto 0;
+  }
+
+  .warranty-ticket .ticket-bg .swiper {
+    font-size: 8rem;
+  }
+
+  .warranty-ticket .faq {
+    padding-bottom: 3.75rem;
+  }
+
+  .warranty-ticket .faq__title {
+    font-size: 2rem;
+    gap: 3.125rem;
+    margin-bottom: 1.875rem;
+  }
+
+  .warranty-ticket .questions-faq {
+    min-width: 0;
+  }
+
+  .warranty-ticket .questions-faq__item {
+    font-size: 1.5rem;
+    padding: 1.25rem 0.8125rem;
+  }
+
+  .warranty-ticket .questions-faq__item:not(:last-child) {
+    margin-bottom: 0.9375rem;
+  }
+
+  .warranty-ticket .questions-faq__item.active:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .warranty-ticket .questions-faq__item::after {
+    font-size: 2.5rem;
+  }
+
+  .warranty-ticket .item-answers-faq {
+    padding: 1.25rem;
+    display: none;
+    min-height: 0;
+  }
+
+  .warranty-ticket .item-answers-faq:not(:first-child) {
+    position: static;
+  }
+
+  .warranty-ticket .item-answers-faq.active {
+    display: block;
+  }
+
+  .warranty-ticket .item-answers-faq__title {
+    font-size: 1.875rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .warranty-ticket .item-answers-faq__text p:not(:last-child) {
+    margin-bottom: 0.4em;
+  }
+
+  .warranty-ticket .item-answers-faq__text p {
+    font-size: 1.125rem;
+  }
+
+  .new-year-wishlist .main__content {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .new-year-wishlist .main__title::before {
+    display: block;
+  }
+
+  .new-year-wishlist .red-button {
+    font-size: 1rem;
+    padding: 1.5625rem 0.9375rem;
+  }
+
+  .new-year-wishlist .green-button {
+    font-size: 1rem;
+    padding: 1.5625rem 0.9375rem;
+  }
+
+  .new-year-wishlist .wish__close {
+    right: 0;
+  }
+
+  .new-year-wishlist .post-wish__close {
+    right: 0;
+  }
+
+  .new-year-wishlist .post-wish__mark {
+    display: none;
+  }
+
+  .new-year-wishlist .success-wish__close {
+    right: 0;
   }
 }
 
