@@ -323,12 +323,11 @@ figure {
 }
 
 .mediynaya-reklama .hero__container {
-  padding-bottom: 3.75rem;
   position: relative;
   z-index: 2;
   margin-top: auto;
   display: grid;
-  grid-template-columns: minmax(0, 61.9375rem) 1fr;
+  grid-template-columns: 61.9375rem 1fr;
 }
 
 .mediynaya-reklama .hero__content {
@@ -349,6 +348,7 @@ figure {
   background: var(--black-main-color);
   width: 56.25rem;
   width: 100%;
+  width: 56.25rem;
   height: auto;
   height: 68.75rem;
 }
@@ -361,8 +361,8 @@ figure {
   background: #1b1c1e;
   height: 100%;
   width: 22.875rem;
-  -webkit-filter: blur(165.7px);
-  filter: blur(165.7px);
+  -webkit-filter: blur(130px);
+  filter: blur(130px);
   z-index: 2;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -378,6 +378,7 @@ figure {
   object-fit: cover;
   z-index: 1;
   width: 100%;
+  width: 56.25rem;
   height: 100%;
 }
 
@@ -544,6 +545,8 @@ figure {
   animation: fadeUp 0.8s ease forwards;
   -webkit-animation-delay: 2.1s;
   animation-delay: 2.1s;
+  position: relative;
+  z-index: 10;
 }
 
 @-webkit-keyframes fadeUp {
@@ -910,9 +913,9 @@ figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -921,14 +924,15 @@ figure {
 }
 
 .mediynaya-reklama .top-awards__top-link {
+  margin-top: 0.625rem;
   font-size: 1.25rem;
   color: #caff3d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 1rem;
 }
 
@@ -1106,7 +1110,7 @@ figure {
 }
 
 .mediynaya-reklama .marquee-influence .swiper-wrapper .swiper-slide {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .mediynaya-reklama .marquee-influence__item {
@@ -1334,6 +1338,15 @@ figure {
   font-size: 1.5rem;
   line-height: 2.4375rem;
   font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .mediynaya-reklama .conduction {
@@ -1575,7 +1588,7 @@ figure {
 }
 
 .mediynaya-reklama .cdek .cdek-top-marq .swiper-wrapper .swiper-slide {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .mediynaya-reklama .cdek .cdek-top-marq__item {
@@ -1694,6 +1707,8 @@ figure {
   margin-bottom: 2.5rem;
   margin-right: -0.9375rem;
   margin-left: -0.9375rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 
 .mediynaya-reklama .geo-lab__steps::-webkit-scrollbar {
@@ -2581,28 +2596,17 @@ figure {
 
 @media (max-width: 1600px) {
   .mediynaya-reklama .hero__container {
-    grid-template-columns: 100%;
+    grid-template-columns: 53.125rem 1fr;
   }
 
   .mediynaya-reklama .hero__video {
-    -webkit-transform: translateY(0rem) translateX(0rem);
-    -ms-transform: translateY(0rem) translateX(0rem);
-    transform: translateY(0rem) translateX(0rem);
-    height: auto;
-    z-index: -1;
-  }
-
-  .mediynaya-reklama .hero__video video {
-    -o-object-fit: contain;
-    object-fit: contain;
+    -webkit-transform: translateY(-7.5rem) translateX(-11.25rem);
+    -ms-transform: translateY(-7.5rem) translateX(-11.25rem);
+    transform: translateY(-7.5rem) translateX(-11.25rem);
   }
 
   .mediynaya-reklama .hero__video-decor {
     display: none;
-  }
-
-  .mediynaya-reklama .hero__sign {
-    position: relative;
   }
 
   .mediynaya-reklama .search__banner {
@@ -2668,6 +2672,17 @@ figure {
 }
 
 @media (max-width: 1199.98px) {
+  .mediynaya-reklama .hero__video {
+    height: 65rem;
+    -webkit-transform: translateY(-7.5rem) translateX(-15.625rem);
+    -ms-transform: translateY(-7.5rem) translateX(-15.625rem);
+    transform: translateY(-7.5rem) translateX(-15.625rem);
+  }
+
+  .mediynaya-reklama .title-hero {
+    font-size: 4rem;
+  }
+
   .mediynaya-reklama .top-awards .swiper {
     margin-right: -0.9375rem;
     margin-left: -0.9375rem;
@@ -2729,8 +2744,27 @@ figure {
     min-width: 1rem;
   }
 
+  .mediynaya-reklama .hero__container {
+    grid-template-columns: 100%;
+  }
+
   .mediynaya-reklama .hero__content {
     padding-top: 0;
+  }
+
+  .mediynaya-reklama .hero__video {
+    height: auto;
+    -webkit-transform: translateY(0) translateX(0);
+    -ms-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+
+  .mediynaya-reklama .hero__video video {
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%;
   }
 
   .mediynaya-reklama .hero__decor {
@@ -2745,6 +2779,7 @@ figure {
 
   .mediynaya-reklama .hero__sign {
     padding: 2.1875rem 0.9375rem;
+    bottom: 0;
   }
 
   .mediynaya-reklama .hero__sign-text {
@@ -3082,10 +3117,6 @@ figure {
     display: none;
   }
 
-  .mediynaya-reklama .hero__sign {
-    bottom: 4.5rem;
-  }
-
   .mediynaya-reklama .hero__sign-text {
     font-size: 1rem;
   }
@@ -3150,10 +3181,6 @@ figure {
   .mediynaya-reklama .top-awards {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
-  }
-
-  .mediynaya-reklama .top-awards {
-    padding-top: 0;
   }
 
   .mediynaya-reklama .top-awards__top {

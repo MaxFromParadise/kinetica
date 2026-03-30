@@ -81,14 +81,18 @@
 		}
 		// .hero__container
 		&__container {
-			padding-bottom: rem(60);
+			// padding-bottom: rem(60);
 			position: relative;
 			z-index: 2;
 			margin-top: auto;
 			display: grid;
-			grid-template-columns: minmax(0, rem(991)) 1fr;
+			grid-template-columns: rem(991) 1fr;
 			// align-items: center;
 			@media (max-width: 1600px) {
+				// grid-template-columns: 100%;
+				grid-template-columns: rem(850) 1fr;
+			}
+			@media (max-width: 991.98px) {
 				grid-template-columns: 100%;
 			}
 		}
@@ -113,13 +117,26 @@
 			background: var(--black-main-color);
 			width: rem(900);
 			width: 100%;
+			width: rem(900);
 			height: auto;
 			height: rem(1100);
 			@media (max-width: 1600px) {
-				transform: translateY(rem(0)) translateX(rem(0));
-				height: auto;
-				z-index: -1;
+				transform: translateY(rem(-120)) translateX(rem(-180));
+				// height: auto;
+				// z-index: -1;
 			}
+			@media (max-width: 1199.98px) {
+				height: 65rem;
+				transform: translateY(rem(-120)) translateX(rem(-250));
+			}
+			@media (max-width: 991.98px) {
+				height: auto;
+
+				transform: translateY(0) translateX(0);
+				max-width: rem(800);
+				margin: 0 auto;
+			}
+
 			@media (max-width: 767.98px) {
 				height: rem(520);
 				width: auto;
@@ -132,7 +149,7 @@
 				background: #1b1c1e;
 				height: 100%;
 				width: rem(366);
-				filter: blur(165.7px);
+				filter: blur(130px);
 				z-index: 2;
 				transform: translateX(-50%);
 				@media (max-width: 767.98px) {
@@ -148,9 +165,11 @@
 				object-fit: cover;
 				z-index: 1;
 				width: 100%;
+				width: rem(900);
 				height: 100%;
-				@media (max-width: 1600px) {
+				@media (max-width: 991.98px) {
 					object-fit: contain;
+					width: 100%;
 				}
 			}
 		}
@@ -209,15 +228,14 @@
 			z-index: 5;
 			padding: rem(40) rem(15);
 			backdrop-filter: blur(rem(79));
-			@media (max-width: 1600px) {
-				position: relative;
-			}
+			// @media (max-width: 1600px) {
+			// 	position: relative;
+			// }
 			@media (max-width: 991.98px) {
 				padding: rem(35) rem(15);
+				bottom: 0;
 			}
-			@media (max-width: 767.98px) {
-				bottom: rem(72);
-			}
+
 			&-text {
 				display: block;
 				text-align: center;
@@ -275,6 +293,9 @@
 		z-index: 3;
 		width: 100%;
 		max-width: rem(991);
+		@media (max-width: 1199.98px) {
+			font-size: rem(64);
+		}
 		@media (max-width: 991.98px) {
 			font-size: rem(64);
 			gap: rem(10);
@@ -351,6 +372,8 @@
 		transform: translateY(20px);
 		animation: fadeUp 0.8s ease forwards;
 		animation-delay: 2.1s;
+		position: relative;
+		z-index: 10;
 		@media (max-width: 767.98px) {
 			font-size: rem(16);
 			margin-bottom: rem(40);
@@ -715,9 +738,6 @@
 
 	.top-awards {
 		padding-top: rem(80);
-		@media (max-width: 767.98px) {
-			padding-top: 0;
-		}
 		&__next,
 		&__prev {
 			transform: translateY(-20%);
@@ -727,7 +747,7 @@
 		}
 		&__top {
 			display: flex;
-			align-items: center;
+			align-items: start;
 			justify-content: space-between;
 			gap: rem(10);
 			margin-bottom: rem(90);
@@ -735,10 +755,11 @@
 				margin-bottom: rem(40);
 			}
 			&-link {
+				margin-top: rem(10);
 				font-size: rem(20);
 				color: #caff3d;
 				display: flex;
-				align-items: center;
+				align-items: start;
 				gap: rem(16);
 				@media (max-width: 991.98px) {
 					display: none;
@@ -937,7 +958,7 @@
 		.swiper-wrapper {
 			transition-timing-function: linear !important;
 			.swiper-slide {
-				font-family: 'Poppins', sans-serif;
+				font-family: 'Montserrat', sans-serif;
 			}
 		}
 		&__item {
@@ -1257,6 +1278,9 @@
 			font-size: rem(24);
 			line-height: rem(39);
 			font-weight: 700;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			@media (max-width: 991.98px) {
 				display: flex;
 				align-items: center;
@@ -1561,7 +1585,7 @@
 				transition-timing-function: linear !important;
 
 				.swiper-slide {
-					font-family: 'Poppins', sans-serif;
+					font-family: 'Montserrat', sans-serif;
 				}
 			}
 			&__item {
@@ -1683,6 +1707,8 @@
 			margin-bottom: rem(40);
 			margin-right: rem(-15);
 			margin-left: rem(-15);
+			padding-left: rem(15);
+			padding-right: rem(15);
 
 			&::-webkit-scrollbar {
 				display: none;
