@@ -619,9 +619,7 @@ figure {
 }
 
 .mediynaya-reklama .ai-marquee .swiper-wrapper .swiper-slide {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 180px;
 }
 
 .mediynaya-reklama .ai-marquee .swiper-wrapper .swiper-slide img {
@@ -2778,7 +2776,7 @@ figure {
   }
 
   .mediynaya-reklama .hero__sign {
-    padding: 2.1875rem 0.9375rem;
+    padding: 2.1875rem 2.1875rem;
     bottom: 0;
   }
 

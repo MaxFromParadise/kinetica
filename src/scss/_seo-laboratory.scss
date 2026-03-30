@@ -232,7 +232,7 @@
 			// 	position: relative;
 			// }
 			@media (max-width: 991.98px) {
-				padding: rem(35) rem(15);
+				padding: rem(35) rem(35);
 				bottom: 0;
 			}
 
@@ -423,7 +423,7 @@
 		.swiper-wrapper {
 			transition-timing-function: linear !important;
 			.swiper-slide {
-				width: max-content;
+				width: 180px;
 				img {
 					transition: all 0.3s ease 0s;
 					&:hover {
