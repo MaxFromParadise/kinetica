@@ -393,6 +393,10 @@
 		&::after {
 			bottom: 0;
 		}
+		.swiper {
+			margin-right: rem(-20);
+			margin-left: rem(-20);
+		}
 		.swiper-wrapper {
 			transition-timing-function: linear !important;
 			.swiper-slide {
@@ -530,7 +534,14 @@
 			align-items: center;
 			gap: rem(44);
 		}
-
+		.swiper {
+			@media (max-width: 1199.98px) {
+				margin-right: rem(-15);
+				margin-left: rem(-15);
+				padding-left: rem(15);
+				padding-right: rem(15);
+			}
+		}
 		// .top-awards__item
 		&__item {
 		}
@@ -1670,6 +1681,8 @@
 			scrollbar-width: none;
 			-ms-overflow-style: none;
 			margin-bottom: rem(40);
+			margin-right: rem(-15);
+			margin-left: rem(-15);
 
 			&::-webkit-scrollbar {
 				display: none;

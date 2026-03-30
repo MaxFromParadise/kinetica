@@ -605,6 +605,11 @@ figure {
   bottom: 0;
 }
 
+.mediynaya-reklama .ai-marquee .swiper {
+  margin-right: -1.25rem;
+  margin-left: -1.25rem;
+}
+
 .mediynaya-reklama .ai-marquee .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
@@ -1687,6 +1692,8 @@ figure {
   scrollbar-width: none;
   -ms-overflow-style: none;
   margin-bottom: 2.5rem;
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
 }
 
 .mediynaya-reklama .geo-lab__steps::-webkit-scrollbar {
@@ -2661,6 +2668,13 @@ figure {
 }
 
 @media (max-width: 1199.98px) {
+  .mediynaya-reklama .top-awards .swiper {
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+
   .mediynaya-reklama .influence__list {
     gap: 1.875rem;
   }
