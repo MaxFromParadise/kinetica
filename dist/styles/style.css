@@ -3109,6 +3109,7 @@ figure {
   .mediynaya-reklama .hero__video {
     height: 32.5rem;
     width: auto;
+    margin-top: -3.75rem;
   }
 
   .mediynaya-reklama .hero__video::before {
