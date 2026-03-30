@@ -520,9 +520,8 @@
 			filter: grayscale(100%);
 			gap: rem(10);
 
+			font-weight: 700;
 			&:hover {
-				font-weight: 700;
-
 				filter: grayscale(0);
 
 				.socials-links__slide--icon {
@@ -1364,6 +1363,20 @@
 		padding: rem(120) 0 0;
 		@media (max-width: 767.98px) {
 			padding: rem(65) 0 0;
+		}
+	}
+	.top-awards__next:hover {
+		transition: all 0.3s ease 0s;
+		background: var(--secondary-color);
+		img {
+			filter: brightness(0);
+		}
+	}
+	.top-awards__prev:hover {
+		transition: all 0.3s ease 0s;
+		background: var(--secondary-color);
+		img {
+			filter: brightness(0);
 		}
 	}
 }

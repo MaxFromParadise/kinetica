@@ -1322,6 +1322,7 @@
 	}
 	.faq {
 		background: #fff;
+		padding-top: rem(180);
 		padding-bottom: rem(180);
 		@media (max-width: 767.98px) {
 			padding-bottom: rem(60);
@@ -1339,6 +1340,7 @@
 			text-transform: uppercase;
 			display: flex;
 			gap: rem(104);
+			margin-bottom: rem(80);
 			@media (max-width: 767.98px) {
 				font-size: rem(32);
 				gap: rem(50);

@@ -58,7 +58,7 @@
 		&__content {
 			width: 70%;
 			min-width: rem(400);
-
+			z-index: 1;
 			@media (max-width: 767.98px) {
 				width: 100%;
 				min-width: 0;
@@ -1355,7 +1355,8 @@
 				transition: background-color 0.3s;
 
 				background-color: currentcolor;
-				mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E") no-repeat center / contain;
+				mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E")
+					no-repeat center / contain;
 			}
 		}
 
@@ -1369,6 +1370,71 @@
 
 		@media (max-width: 767.98px) {
 			padding-bottom: rem(40);
+		}
+	}
+	.top-awards__next:hover {
+		transition: all 0.3s ease 0s;
+		background: var(--secondary-color);
+		img {
+			filter: brightness(0);
+		}
+	}
+	.top-awards__prev:hover {
+		transition: all 0.3s ease 0s;
+		background: var(--secondary-color);
+		img {
+			filter: brightness(0);
+		}
+	}
+	.top-awards__container {
+		padding: 0 15px !important;
+	}
+	.top-awards__slider {
+		@media (max-width: 991.98px) {
+			margin-top: rem(40) !important;
+		}
+	}
+	.blog {
+		margin-top: 0 !important;
+	}
+	.slider-btn-passive {
+		display: none !important;
+	}
+	section.cases .section-container {
+		padding: 0 21px !important;
+	}
+	.cases {
+		margin-bottom: rem(90) !important;
+		@media (max-width: 991.98px) {
+			margin-bottom: rem(50) !important;
+		}
+	}
+	.federal-brands {
+		margin-bottom: 8.125rem !important;
+		@media (max-width: 991.98px) {
+			margin-bottom: rem(60) !important;
+		}
+	}
+	.reviews {
+		.section-container {
+			padding: 0 !important;
+			padding-bottom: 120px !important;
+		}
+	}
+	.blog {
+		.section-container {
+			@media (max-width: 1000px) {
+				padding: 0 20px !important;
+				padding-bottom: 80px;
+			}
+		}
+	}
+	.media {
+		.media-about-us__slide {
+			width: auto;
+			max-width: 15.625rem;
+			height: 2.8125rem;
+			padding: 0.3125rem;
 		}
 	}
 }

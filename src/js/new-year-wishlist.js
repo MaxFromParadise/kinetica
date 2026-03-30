@@ -25,6 +25,7 @@ const symbolsCounter = postWishForm.querySelector('.post-wish__symbols');
 // SUCCESS
 const successWish = document.querySelector('.success-wish');
 const successWishClose = document.querySelector('.success-wish__close');
+const successWishPaper = document.querySelector('.success-wish__paper');
 
 // ====== HELPERS ======
 function openModal(modal) {
@@ -119,8 +120,11 @@ postWishForm.addEventListener('submit', (e) => {
 		.then((res) => res.json())
 		.then((data) => {
 			if (data.error) {
+				successWishPaper.textContent = data.error;
 				console.error(data.error);
 				return;
+			} else {
+				successWishPaper.textContent = 'Ваше пожелание успешно отправлено!';
 			}
 
 			closeModal(postWish);
