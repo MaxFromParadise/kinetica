@@ -227,7 +227,7 @@
 			left: rem(-24);
 			width: calc(100% + rem(48));
 			z-index: 5;
-			padding: rem(40) rem(15);
+			padding: rem(40) rem(35);
 			backdrop-filter: blur(rem(79));
 			// @media (max-width: 1600px) {
 			// 	position: relative;
@@ -240,15 +240,21 @@
 			&-text {
 				display: block;
 				text-align: center;
-				color: #caff3d;
-				font-size: rem(35);
-				font-weight: 700;
-				font-family: 'Ampero SemBd', sans-serif !important;
-				@media (max-width: 991.98px) {
-					font-size: rem(24);
-				}
-				@media (max-width: 767.98px) {
-					font-size: rem(16);
+				span {
+					display: block;
+					text-align: center;
+					color: #caff3d;
+					font-size: rem(35);
+					font-weight: 700;
+					font-family: 'Ampero SemBd', sans-serif !important;
+					@media (max-width: 991.98px) {
+						font-size: rem(24);
+					}
+					@media (max-width: 767.98px) {
+						display: inline;
+						font-size: rem(16);
+						text-align: center;
+					}
 				}
 			}
 		}
