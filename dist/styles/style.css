@@ -347,7 +347,6 @@ figure {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  min-height: 100vh;
   padding: 7.5rem 0 0rem 0;
 }
 
@@ -1424,6 +1423,10 @@ figure {
   line-height: 155.556%;
 }
 
+.crm-ai .approach {
+  margin-bottom: 8.75rem;
+}
+
 .crm-ai .approach__title {
   margin-bottom: 2.8125rem;
   color: #292b32;
@@ -1850,6 +1853,10 @@ figure {
 
   .crm-ai .item-advantages__text {
     font-size: 1.125rem;
+  }
+
+  .crm-ai .approach {
+    margin-bottom: 5rem;
   }
 
   .crm-ai .approach__title {
