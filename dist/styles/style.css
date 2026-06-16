@@ -1455,16 +1455,6 @@ figure {
   max-width: 33.75rem;
 }
 
-.crm-ai .approach__banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
 .crm-ai .item-approach {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1477,15 +1467,25 @@ figure {
   font-size: 1.125rem;
   font-weight: 700;
   height: 56px;
+  cursor: pointer;
+  -webkit-transition: color 0.25s ease, font-size 0.25s ease;
+  transition: color 0.25s ease, font-size 0.25s ease;
 }
 
-.crm-ai .item-approach:first-child {
+.crm-ai .item-approach--active {
   font-size: 1.5rem;
   color: #292b32;
 }
 
 .crm-ai .item-approach:not(:last-child) {
   margin-bottom: 1.5625rem;
+}
+
+.crm-ai .item-approach__icon img {
+  -webkit-transition: -webkit-filter 0.25s ease;
+  transition: -webkit-filter 0.25s ease;
+  transition: filter 0.25s ease;
+  transition: filter 0.25s ease, -webkit-filter 0.25s ease;
 }
 
 .crm-ai .banner-approach {
@@ -1500,14 +1500,19 @@ figure {
   max-height: 49.1875rem;
   max-width: 58.25rem;
   padding: 4.0625rem 3.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  flex: 1;
+}
+
+.crm-ai .banner-approach--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: approachBannerIn 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation: approachBannerIn 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
 .crm-ai .banner-approach__title {
@@ -1524,6 +1529,34 @@ figure {
   line-height: 2.5rem;
   color: #fff;
   max-width: 32.5rem;
+}
+
+@-webkit-keyframes approachBannerIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes approachBannerIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 1400px) {
@@ -1568,12 +1601,6 @@ figure {
     -ms-flex-pack: center;
     justify-content: center;
     gap: 2.1875rem;
-  }
-}
-
-@media (max-width: 1100px) {
-  .crm-ai .banner-approach {
-    display: none;
   }
 }
 
@@ -1678,7 +1705,7 @@ figure {
     margin-bottom: 1.875rem;
   }
 
-  .crm-ai .item-approach:first-child {
+  .crm-ai .item-approach--active {
     font-size: 1.125rem;
   }
 
