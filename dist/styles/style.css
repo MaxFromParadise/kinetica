@@ -1844,8 +1844,12 @@ figure {
     display: none;
   }
 
+  .crm-ai .item-advantages__title {
+    font-size: 1.125rem;
+  }
+
   .crm-ai .item-advantages__text {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 
   .crm-ai .approach__title {

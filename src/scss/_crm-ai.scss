@@ -1207,7 +1207,9 @@
 
 			font-size: rem(24);
 			font-weight: 700;
-
+			@media (max-width: 767.98px) {
+				font-size: rem(18);
+			}
 			span {
 				color: var(--primary-color);
 			}
@@ -1248,7 +1250,7 @@
 			line-height: 155.556%;
 
 			@media (max-width: 767.98px) {
-				font-size: rem(16);
+				font-size: rem(18);
 			}
 		}
 	}
