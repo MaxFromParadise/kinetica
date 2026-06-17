@@ -1293,10 +1293,20 @@
 			@media (max-width: 1400px) {
 				gap: rem(30);
 			}
+			@media (max-width: 991.98px) {
+				flex-direction: column;
+				gap: rem(40);
+			}
 		}
 		// .approach__list
 		&__list {
 			max-width: rem(540);
+			@media (max-width: 1150px) {
+				max-width: rem(400);
+			}
+			@media (max-width: 991.98px) {
+				max-width: 100%;
+			}
 		}
 		// .approach__item
 		&__item {
@@ -1331,24 +1341,41 @@
 		}
 		// .item-approach__icon
 		&__icon {
-			img {
-				transition: filter 0.25s ease;
+			svg .ap-bg {
+				fill: #f3f4f5;
+				transition: fill 0.25s ease;
+			}
+			svg .ap-ico-stroke {
+				stroke: #636878;
+				transition: stroke 0.25s ease;
+			}
+			svg .ap-ico-fill {
+				fill: #636878;
+				transition: fill 0.25s ease;
 			}
 		}
 		// .item-approach__text
 		&__text {
 		}
 
-		&--active .item-approach__icon img {
-			// filter: brightness(0) saturate(100%) invert(50%) sepia(97%) saturate(851%) hue-rotate(170deg) brightness(105%) contrast(104%);
-			// filter: sepia(90%) invert(90%) hue-rotate(170deg);
+		&--active .item-approach__icon {
+			svg .ap-bg {
+				fill: #00b2ff;
+			}
+			svg .ap-ico-stroke {
+				stroke: #ffffff;
+			}
+			svg .ap-ico-fill {
+				fill: #ffffff;
+			}
 		}
 	}
 	.banner-approach {
+		position: relative;
 		border-radius: rem(60);
 		overflow: hidden;
-		background: url('../img/pages/crm-ai/approach/banner__bg.png') top right/cover no-repeat;
-		background-color: #00b2ff;
+		background: url('../img/pages/crm-ai/approach/bg.svg') top right/cover no-repeat;
+		background-color: #00abff;
 		flex: 1;
 		width: 100%;
 		max-height: rem(787);
@@ -1359,12 +1386,48 @@
 		@media (max-width: 1400px) {
 			background-position: top left;
 		}
+		@media (max-width: 991.98px) {
+			max-height: unset;
+			padding: rem(25);
+		}
+		@media (max-width: 650px) {
+			background-position-x: 80px;
+		}
 
 		&--active {
 			display: flex;
 			animation: approachBannerIn 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 		}
-
+		&__img {
+			position: absolute;
+			right: 0;
+			top: 0;
+			max-width: rem(550);
+			max-height: rem(510);
+			margin-left: auto;
+			transform: translateX(rem(40)) translateY(rem(-40));
+			@media (max-width: 991.98px) {
+				position: static;
+				// margin: rem(-80) rem(-80) 0 rem(-80);
+				transform: translateX(rem(120));
+			}
+			@media (max-width: 650px) {
+				transform: unset;
+				margin-top: rem(-30);
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				@media (max-width: 991.98px) {
+					width: 80%;
+					height: auto;
+				}
+				@media (max-width: 650px) {
+					width: 100%;
+				}
+			}
+		}
 		// .banner-approach__title
 		&__title {
 			font-size: rem(32);
@@ -1386,7 +1449,7 @@
 	@keyframes approachBannerIn {
 		from {
 			opacity: 0;
-			transform: translateY(10px);
+			transform: translateY(20px);
 		}
 		to {
 			opacity: 1;
