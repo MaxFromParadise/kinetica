@@ -14,15 +14,34 @@ document.querySelectorAll('.newteam__arrow').forEach((arrow) => {
 const newteamTabs = document.querySelectorAll('.newteam__tab');
 const newteamPanels = document.querySelectorAll('.newteam__panel');
 
-newteamTabs.forEach((tab) => {
-	tab.addEventListener('click', () => {
-		const target = tab.dataset.tab;
+if (newteamTabs.length && newteamPanels.length) {
+	let newteamIndex = 0;
+
+	function activateNewteam(index) {
 		newteamTabs.forEach((t) => t.classList.remove('newteam__tab--active'));
 		newteamPanels.forEach((p) => p.classList.remove('newteam__panel--active'));
-		tab.classList.add('newteam__tab--active');
+		newteamTabs[index].classList.add('newteam__tab--active');
+		const target = newteamTabs[index].dataset.tab;
 		document.querySelector(`.newteam__panel[data-panel="${target}"]`).classList.add('newteam__panel--active');
+	}
+
+	let newteamTimer = setInterval(() => {
+		newteamIndex = (newteamIndex + 1) % newteamTabs.length;
+		activateNewteam(newteamIndex);
+	}, 5000);
+
+	newteamTabs.forEach((tab, i) => {
+		tab.addEventListener('click', () => {
+			newteamIndex = i;
+			activateNewteam(i);
+			clearInterval(newteamTimer);
+			newteamTimer = setInterval(() => {
+				newteamIndex = (newteamIndex + 1) % newteamTabs.length;
+				activateNewteam(newteamIndex);
+			}, 5000);
+		});
 	});
-});
+}
 
 // implemented slider
 if (document.querySelector('.implemented__slider .swiper')) {
