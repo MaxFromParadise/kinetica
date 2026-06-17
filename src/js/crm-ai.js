@@ -38,13 +38,30 @@ const approachItems = document.querySelectorAll('.approach__item');
 const approachPanels = document.querySelectorAll('.approach__banner');
 
 if (approachItems.length && approachPanels.length) {
-	approachItems.forEach((item) => {
+	let approachIndex = 0;
+
+	function activateApproach(index) {
+		approachItems.forEach((i) => i.classList.remove('item-approach--active'));
+		approachPanels.forEach((p) => p.classList.remove('banner-approach--active'));
+		approachItems[index].classList.add('item-approach--active');
+		const target = approachItems[index].dataset.approach;
+		document.querySelector(`.approach__banner[data-approach-panel="${target}"]`).classList.add('banner-approach--active');
+	}
+
+	let approachTimer = setInterval(() => {
+		approachIndex = (approachIndex + 1) % approachItems.length;
+		activateApproach(approachIndex);
+	}, 5000);
+
+	approachItems.forEach((item, i) => {
 		item.addEventListener('click', () => {
-			const target = item.dataset.approach;
-			approachItems.forEach((i) => i.classList.remove('item-approach--active'));
-			approachPanels.forEach((p) => p.classList.remove('banner-approach--active'));
-			item.classList.add('item-approach--active');
-			document.querySelector(`.approach__banner[data-approach-panel="${target}"]`).classList.add('banner-approach--active');
+			approachIndex = i;
+			activateApproach(i);
+			clearInterval(approachTimer);
+			approachTimer = setInterval(() => {
+				approachIndex = (approachIndex + 1) % approachItems.length;
+				activateApproach(approachIndex);
+			}, 5000);
 		});
 	});
 }
