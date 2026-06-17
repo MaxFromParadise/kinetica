@@ -639,6 +639,9 @@
 
 			.price__decor {
 				transform: scale(0.9) rotate(-5deg) translateY(-10px) translateX(550px);
+				@media (max-width: 1199.98px) {
+					transform: scale(0.5) scaleX(-1) translateY(350px) translateX(-40%) rotate(20deg);
+				}
 				@media (max-width: 991.98px) {
 					transform: scale(0.5) scaleX(-1) translateY(150px) translateX(-70%) rotate(20deg);
 				}

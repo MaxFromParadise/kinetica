@@ -1621,6 +1621,12 @@ figure {
     right: 1.875rem;
   }
 
+  .crm-ai .price:hover .price__decor {
+    -webkit-transform: scale(0.5) scaleX(-1) translateY(350px) translateX(-40%) rotate(20deg);
+    -ms-transform: scale(0.5) scaleX(-1) translateY(350px) translateX(-40%) rotate(20deg);
+    transform: scale(0.5) scaleX(-1) translateY(350px) translateX(-40%) rotate(20deg);
+  }
+
   .crm-ai .price__decor {
     -webkit-transform: scale(0.5) scaleX(-1) translateY(350px) translateX(-40%) rotate(20deg);
     -ms-transform: scale(0.5) scaleX(-1) translateY(350px) translateX(-40%) rotate(20deg);
