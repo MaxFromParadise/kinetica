@@ -370,6 +370,7 @@ figure {
   margin-bottom: 2.8125rem;
   font-size: clamp(1.625rem, 1rem + 2.5vw, 4rem);
   letter-spacing: -1.8px;
+  text-transform: uppercase;
 }
 
 .crm-ai .hero__title span {
