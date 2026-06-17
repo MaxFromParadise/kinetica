@@ -1645,6 +1645,10 @@ figure {
     justify-content: center;
     gap: 2.1875rem;
   }
+
+  .crm-ai .advantages__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 1150px) {

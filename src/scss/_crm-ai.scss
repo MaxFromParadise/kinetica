@@ -1127,6 +1127,9 @@
 
 			justify-content: center;
 
+			@media (max-width: 1199.98px) {
+				grid-template-columns: repeat(3, 1fr);
+			}
 			@media (max-width: 991.98px) {
 				grid-template-columns: repeat(2, 1fr);
 				gap: rem(40);
