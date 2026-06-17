@@ -1,3 +1,15 @@
+// newteam arrow bounce
+document.querySelectorAll('.newteam__arrow').forEach((arrow) => {
+	arrow.addEventListener('mouseenter', () => {
+		arrow.classList.remove('is-leaving');
+		arrow.classList.add('is-hovered');
+	});
+	arrow.addEventListener('mouseleave', () => {
+		arrow.classList.remove('is-hovered');
+		arrow.classList.add('is-leaving');
+	});
+});
+
 // newteam tabs
 const newteamTabs = document.querySelectorAll('.newteam__tab');
 const newteamPanels = document.querySelectorAll('.newteam__panel');

@@ -774,6 +774,15 @@ figure {
   border-radius: 1.5rem;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.crm-ai .newteam__card:hover {
+  -webkit-box-shadow: 0 8px 40px rgba(0, 178, 255, 0.18);
+  box-shadow: 0 8px 40px rgba(0, 178, 255, 0.18);
 }
 
 .crm-ai .newteam__card--before {
@@ -840,11 +849,214 @@ figure {
   margin: 0 auto;
   border-radius: 50%;
   background: #caff3d;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.crm-ai .newteam__arrow.is-hovered {
+  -webkit-box-shadow: 0 8px 32px rgba(202, 255, 61, 0.5);
+  box-shadow: 0 8px 32px rgba(202, 255, 61, 0.5);
+  -webkit-animation: arrowScaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: arrowScaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.crm-ai .newteam__arrow.is-hovered svg {
+  -webkit-animation: arrowRotateIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: arrowRotateIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.crm-ai .newteam__arrow.is-leaving {
+  -webkit-animation: arrowScaleOut 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: arrowScaleOut 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.crm-ai .newteam__arrow.is-leaving svg {
+  -webkit-animation: arrowRotateOut 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: arrowRotateOut 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .crm-ai .newteam__arrow svg {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+@-webkit-keyframes arrowScaleIn {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(1.16);
+    transform: scale(1.16);
+  }
+
+  80% {
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes arrowScaleIn {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(1.16);
+    transform: scale(1.16);
+  }
+
+  80% {
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@-webkit-keyframes arrowScaleOut {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.94);
+    transform: scale(0.94);
+  }
+
+  75% {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes arrowScaleOut {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.94);
+    transform: scale(0.94);
+  }
+
+  75% {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes arrowRotateIn {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(200deg);
+    transform: rotate(200deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(170deg);
+    transform: rotate(170deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes arrowRotateIn {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(200deg);
+    transform: rotate(200deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(170deg);
+    transform: rotate(170deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes arrowRotateOut {
+  0% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes arrowRotateOut {
+  0% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 }
 
 @-webkit-keyframes newteamFadeIn {
