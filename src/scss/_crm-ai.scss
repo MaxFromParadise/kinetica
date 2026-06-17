@@ -70,6 +70,7 @@
 			@media (max-width: 991.98px) {
 				margin-bottom: rem(0);
 				font-size: rem(18);
+				line-height: rem(22);
 			}
 		}
 
@@ -151,7 +152,7 @@
 				transform: scale(1.2) rotate(40deg);
 				fill: var(--secondary-color);
 				@media (max-width: 991.98px) {
-					transform: scale(1.1) rotate(100deg);
+					transform: scale(1.2) rotate(100deg);
 				}
 			}
 		}
@@ -638,7 +639,9 @@
 
 			.price__decor {
 				transform: scale(0.9) rotate(-5deg) translateY(-10px) translateX(550px);
-
+				@media (max-width: 991.98px) {
+					transform: scale(0.5) scaleX(-1) translateY(150px) translateX(-70%) rotate(20deg);
+				}
 				&--star {
 					opacity: 0;
 				}

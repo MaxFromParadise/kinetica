@@ -1689,6 +1689,7 @@ figure {
   .crm-ai .hero__text {
     margin-bottom: 0rem;
     font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 
   .crm-ai .hero__img {
@@ -1697,9 +1698,9 @@ figure {
   }
 
   .crm-ai .hero__img-decor svg {
-    -webkit-transform: scale(1.1) rotate(100deg);
-    -ms-transform: scale(1.1) rotate(100deg);
-    transform: scale(1.1) rotate(100deg);
+    -webkit-transform: scale(1.2) rotate(100deg);
+    -ms-transform: scale(1.2) rotate(100deg);
+    transform: scale(1.2) rotate(100deg);
   }
 
   .crm-ai .hero__img-info {
@@ -1720,6 +1721,12 @@ figure {
 
   .crm-ai .newteam__card {
     padding: 2.8125rem 1.5625rem;
+  }
+
+  .crm-ai .price:hover .price__decor {
+    -webkit-transform: scale(0.5) scaleX(-1) translateY(150px) translateX(-70%) rotate(20deg);
+    -ms-transform: scale(0.5) scaleX(-1) translateY(150px) translateX(-70%) rotate(20deg);
+    transform: scale(0.5) scaleX(-1) translateY(150px) translateX(-70%) rotate(20deg);
   }
 
   .crm-ai .price__container {

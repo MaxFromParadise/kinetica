@@ -19,6 +19,10 @@ if (document.querySelector('.implemented__slider .swiper')) {
 		slidesPerView: 1,
 		spaceBetween: 50,
 		speed: 2000,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
 		pagination: {
 			el: '.implemented__bullets',
 			clickable: true,
@@ -53,6 +57,10 @@ if (document.querySelector('.top-awards__slider .swiper')) {
 		freeMode: true,
 		slidesPerView: 'auto',
 		spaceBetween: 60,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
 
 		navigation: {
 			nextEl: '.top-awards__next',
