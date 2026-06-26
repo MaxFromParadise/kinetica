@@ -110,6 +110,10 @@
 			position: relative;
 
 			width: 100%;
+			background: #00b2ff;
+			border-radius: rem(60);
+			overflow: hidden;
+			transition: all 0.3s ease 0s;
 
 			// max-width: rem(615);
 			// transform: translateY(15px);
@@ -121,24 +125,40 @@
 			}
 
 			&:hover {
-				.hero__img-decor {
-					transform: translate(-50%, -50%);
-				}
-
-				.hero__img-decor svg {
-					transform: rotate(50deg) scale(1);
-					fill: #beebff;
+				background: #caff3d;
+				svg {
+					transform: translate(-45%, -32%) rotate(-5deg);
+					path {
+						fill: #00b2ff;
+					}
 				}
 			}
 
 			img {
+				position: relative;
 				width: 100%;
 				height: 100%;
+				z-index: 1;
 			}
 
 			@media (max-width: 991.98px) {
 				max-width: 100%;
 				z-index: -1;
+			}
+			svg {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-45%, -32%);
+				z-index: 0;
+				transition: all 0.3s ease 0s;
+				@media (max-width: 991.98px) {
+					transform: translate(-40%, -40%);
+					width: rem(1000);
+				}
+				path {
+					transition: all 0.3s ease 0s;
+				}
 			}
 		}
 

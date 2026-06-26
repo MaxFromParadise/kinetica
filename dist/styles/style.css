@@ -401,24 +401,49 @@ figure {
 .crm-ai .hero__img {
   position: relative;
   width: 100%;
+  background: #00b2ff;
+  border-radius: 3.75rem;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-.crm-ai .hero__img:hover .hero__img-decor {
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+.crm-ai .hero__img:hover {
+  background: #caff3d;
 }
 
-.crm-ai .hero__img:hover .hero__img-decor svg {
-  -webkit-transform: rotate(50deg) scale(1);
-  -ms-transform: rotate(50deg) scale(1);
-  transform: rotate(50deg) scale(1);
-  fill: #beebff;
+.crm-ai .hero__img:hover svg {
+  -webkit-transform: translate(-45%, -32%) rotate(-5deg);
+  -ms-transform: translate(-45%, -32%) rotate(-5deg);
+  transform: translate(-45%, -32%) rotate(-5deg);
+}
+
+.crm-ai .hero__img:hover svg path {
+  fill: #00b2ff;
 }
 
 .crm-ai .hero__img img {
+  position: relative;
   width: 100%;
   height: 100%;
+  z-index: 1;
+}
+
+.crm-ai .hero__img svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-45%, -32%);
+  -ms-transform: translate(-45%, -32%);
+  transform: translate(-45%, -32%);
+  z-index: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.crm-ai .hero__img svg path {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .crm-ai .hero__img-decor {
@@ -1179,6 +1204,13 @@ figure {
   .crm-ai .hero__img {
     max-width: 100%;
     z-index: -1;
+  }
+
+  .crm-ai .hero__img svg {
+    -webkit-transform: translate(-40%, -40%);
+    -ms-transform: translate(-40%, -40%);
+    transform: translate(-40%, -40%);
+    width: 62.5rem;
   }
 
   .crm-ai .hero__img-decor svg {
