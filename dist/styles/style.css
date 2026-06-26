@@ -709,6 +709,15 @@ figure {
   padding: 2.1875rem;
   border-radius: 1.875rem;
   overflow: hidden;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.crm-ai .item-services:hover {
+  -webkit-box-shadow: 0 8px 40px rgba(0, 178, 255, 0.28);
+  box-shadow: 0 8px 40px rgba(0, 178, 255, 0.28);
 }
 
 .crm-ai .item-services:nth-child(odd) {
@@ -848,6 +857,14 @@ figure {
   height: auto;
 }
 
+.crm-ai .how__img:hover .how__img-decor svg {
+  rotate: 20deg;
+}
+
+.crm-ai .how__img:hover .how__img-decor svg path {
+  fill: #c9ff3d;
+}
+
 .crm-ai .how__img-decor {
   position: absolute;
   right: 0;
@@ -856,6 +873,16 @@ figure {
   -ms-transform: translateY(-40%);
   transform: translateY(-40%);
   z-index: -1;
+}
+
+.crm-ai .how__img-decor svg {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.crm-ai .how__img-decor svg path {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .crm-ai .how__list {
@@ -978,6 +1005,10 @@ figure {
 }
 
 @media (max-width: 1599.98px) {
+  .crm-ai .fast__banner-decor {
+    right: -12.5rem;
+  }
+
   .crm-ai .case__grid {
     gap: 1.25rem;
   }

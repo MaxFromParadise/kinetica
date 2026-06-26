@@ -344,6 +344,9 @@
 				position: absolute;
 				top: 0;
 				right: 0;
+				@media (max-width: 1599.98px) {
+					right: rem(-200);
+				}
 				@media (max-width: 1400px) {
 					top: rem(200);
 					right: rem(-100);
@@ -627,6 +630,11 @@
 		@media (max-width: 1400px) {
 			padding: rem(20);
 		}
+		transition: box-shadow 0.3s ease;
+
+		&:hover {
+			box-shadow: 0 8px 40px rgba(0, 178, 255, 0.28);
+		}
 
 		&:nth-child(odd) {
 			background: #00b2ff;
@@ -801,6 +809,14 @@
 				width: 100%;
 				height: auto;
 			}
+			&:hover {
+				.how__img-decor svg {
+					rotate: 20deg;
+					path {
+						fill: #c9ff3d;
+					}
+				}
+			}
 		}
 		// .how__img-decor
 		&__img-decor {
@@ -815,6 +831,10 @@
 				transform: translateX(50%) translateY(-40%);
 			}
 			svg {
+				transition: all 0.3s ease 0s;
+				path {
+					transition: all 0.3s ease 0s;
+				}
 				@media (max-width: 991.98px) {
 					width: 100%;
 					height: auto;
