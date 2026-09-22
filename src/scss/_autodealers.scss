@@ -10,6 +10,17 @@
 		margin: 0 auto;
 		padding: 0 30px;
 	}
+	br {
+		@media (max-width: 991.98px) {
+			display: none;
+		}
+	}
+	br.mob {
+		display: none;
+		@media (max-width: 991.98px) {
+			display: unset;
+		}
+	}
 	.hero {
 		// .hero__container
 		&__container {
@@ -24,6 +35,12 @@
 			@media (max-width: 991.98px) {
 				grid-template-columns: 100%;
 				padding: rem(20);
+			}
+			@media (any-hover: hover) {
+				&:has(.hero__button:hover) .hero__img img,
+				&:has(.hero__button_mobile:hover) .hero__img img {
+					rotate: 3deg;
+				}
 			}
 		}
 		// .hero__main
@@ -113,12 +130,8 @@
 				margin-bottom: rem(20);
 				width: 100%;
 				height: auto;
-				aspect-ratio: 1;
-			}
-			&:hover {
-				img {
-					rotate: 3deg;
-				}
+				aspect-ratio: 1/0.8;
+				overflow: visible;
 			}
 			img {
 				height: 100%;
@@ -127,6 +140,15 @@
 				border-radius: rem(20);
 				transform-origin: top right;
 				transition: rotate 0.3s ease 0s;
+				transform: scaleY(1.052);
+				@media (max-width: 991.98px) {
+					transform: scaleX(0.95);
+					width: auto;
+					height: 100%;
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
 			}
 			&::before {
 				content: '';
@@ -365,7 +387,7 @@
 				min-height: 0;
 			}
 			@media (max-width: 991.98px) {
-				min-height: rem(119);
+				min-height: rem(125);
 			}
 		}
 		// .item-results__list-item-title
@@ -509,6 +531,7 @@
 			font-size: rem(20);
 			color: #292b32;
 			margin-bottom: rem(86);
+			max-width: rem(912);
 			@media (max-width: 991.98px) {
 				font-size: rem(16);
 				margin-bottom: rem(40);
@@ -535,12 +558,14 @@
 		display: flex;
 		flex-direction: column;
 		cursor: pointer;
-		&:hover {
-			.item-what__title {
-				color: #caff3d;
-			}
-			.item-what__arrow {
-				rotate: -45deg;
+		@media (any-hover: hover) {
+			&:hover {
+				.item-what__title {
+					color: #caff3d;
+				}
+				.item-what__arrow {
+					rotate: -45deg;
+				}
 			}
 		}
 		&:nth-child(5) {
@@ -836,7 +861,6 @@
 			border-radius: rem(10);
 			cursor: pointer;
 			transition: background 0.3s ease 0s;
-			margin-bottom: rem(20);
 			&:hover {
 				background: #9dc52f;
 			}
@@ -997,6 +1021,7 @@
 			color: #fff;
 			@media (max-width: 991.98px) {
 				padding: rem(20) rem(20) rem(8) rem(20);
+				font-size: rem(16);
 			}
 		}
 	}
@@ -1069,12 +1094,6 @@
 			position: relative;
 			overflow: hidden;
 			border-radius: rem(20);
-			&:hover {
-				img {
-					rotate: 3deg;
-					translate: 0px 10px;
-				}
-			}
 			img {
 				height: 100%;
 				position: relative;
@@ -1132,6 +1151,12 @@
 			@media (max-width: 1199.98px) {
 				grid-template-columns: 100%;
 				gap: rem(40);
+			}
+			@media (any-hover: hover) {
+				&:has(.back__button:hover) .back__img img {
+					rotate: 3deg;
+					translate: 0px 10px;
+				}
 			}
 		}
 	}

@@ -437,6 +437,10 @@ figure {
   padding: 0 30px;
 }
 
+.autodealers br.mob {
+  display: none;
+}
+
 .autodealers .hero__banner {
   background: #292b32;
   border-radius: 1.25rem;
@@ -519,10 +523,6 @@ figure {
   border-radius: 1.25rem;
 }
 
-.autodealers .hero__img:hover img {
-  rotate: 3deg;
-}
-
 .autodealers .hero__img img {
   height: 100%;
   position: relative;
@@ -533,6 +533,9 @@ figure {
   transform-origin: top right;
   -webkit-transition: rotate 0.3s ease 0s;
   transition: rotate 0.3s ease 0s;
+  -webkit-transform: scaleY(1.052);
+  -ms-transform: scaleY(1.052);
+  transform: scaleY(1.052);
 }
 
 .autodealers .hero__img::before {
@@ -858,6 +861,7 @@ figure {
   font-size: 1.25rem;
   color: #292b32;
   margin-bottom: 5.375rem;
+  max-width: 57rem;
 }
 
 .autodealers .what__grid {
@@ -879,14 +883,6 @@ figure {
   -ms-flex-direction: column;
   flex-direction: column;
   cursor: pointer;
-}
-
-.autodealers .item-what:hover .item-what__title {
-  color: #caff3d;
-}
-
-.autodealers .item-what:hover .item-what__arrow {
-  rotate: -45deg;
 }
 
 .autodealers .item-what:nth-child(5) .item-what__text {
@@ -1118,7 +1114,6 @@ figure {
   cursor: pointer;
   -webkit-transition: background 0.3s ease 0s;
   transition: background 0.3s ease 0s;
-  margin-bottom: 1.25rem;
 }
 
 .autodealers .how__button:hover {
@@ -1301,11 +1296,6 @@ figure {
   border-radius: 1.25rem;
 }
 
-.autodealers .back__img:hover img {
-  rotate: 3deg;
-  translate: 0px 10px;
-}
-
 .autodealers .back__img img {
   height: 100%;
   position: relative;
@@ -1435,6 +1425,14 @@ figure {
     left: 110%;
   }
 
+  .autodealers br {
+    display: none;
+  }
+
+  .autodealers br.mob {
+    display: unset;
+  }
+
   .autodealers .hero__banner {
     grid-template-columns: 100%;
     padding: 1.25rem;
@@ -1465,7 +1463,19 @@ figure {
     margin-bottom: 1.25rem;
     width: 100%;
     height: auto;
-    aspect-ratio: 1;
+    aspect-ratio: 1/0.8;
+    overflow: visible;
+  }
+
+  .autodealers .hero__img img {
+    -webkit-transform: scaleX(0.95);
+    -ms-transform: scaleX(0.95);
+    transform: scaleX(0.95);
+    width: auto;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   .autodealers .hero__img::before {
@@ -1526,7 +1536,7 @@ figure {
   }
 
   .autodealers .item-results__list-item {
-    min-height: 7.4375rem;
+    min-height: 7.8125rem;
   }
 
   .autodealers .item-results__user {
@@ -1717,6 +1727,7 @@ figure {
 
   .autodealers .banner-marks__text {
     padding: 1.25rem 1.25rem 0.5rem 1.25rem;
+    font-size: 1rem;
   }
 
   .autodealers .back {
@@ -1762,5 +1773,25 @@ figure {
   .top-awards {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
+  }
+}
+
+@media (any-hover: hover) {
+  .autodealers .hero__banner:has(.hero__button:hover) .hero__img img,
+  .autodealers .hero__banner:has(.hero__button_mobile:hover) .hero__img img {
+    rotate: 3deg;
+  }
+
+  .autodealers .item-what:hover .item-what__title {
+    color: #caff3d;
+  }
+
+  .autodealers .item-what:hover .item-what__arrow {
+    rotate: -45deg;
+  }
+
+  .autodealers .back__banner:has(.back__button:hover) .back__img img {
+    rotate: 3deg;
+    translate: 0px 10px;
   }
 }
