@@ -829,7 +829,6 @@ figure {
   cursor: pointer;
   -webkit-transition: background 0.3s ease 0s;
   transition: background 0.3s ease 0s;
-  margin-bottom: 1.25rem;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -1301,6 +1300,9 @@ figure {
   position: relative;
   z-index: 1;
   border-radius: 1.25rem;
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
   -webkit-transform-origin: bottom right;
   -ms-transform-origin: bottom right;
   transform-origin: bottom right;
@@ -1493,6 +1495,10 @@ figure {
 
   .autodealers .why__main {
     grid-template-columns: 100%;
+  }
+
+  .autodealers .item-why {
+    padding: 1.25rem 0;
   }
 
   .autodealers .item-why__title {
