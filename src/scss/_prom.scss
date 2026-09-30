@@ -99,8 +99,10 @@
 			cursor: pointer;
 			transition: background 0.3s ease 0s;
 			margin-bottom: rem(20);
-			&:hover {
-				background: #9dc52f;
+			@media (any-hover: hover) {
+				&:hover {
+					background: #9dc52f;
+				}
 			}
 			@media (max-width: 991.98px) {
 				display: none;
@@ -117,8 +119,10 @@
 				border-radius: rem(10);
 				cursor: pointer;
 				transition: background 0.3s ease 0s;
-				&:hover {
-					background: #9dc52f;
+				@media (any-hover: hover) {
+					&:hover {
+						background: #9dc52f;
+					}
 				}
 				@media (max-width: 991.98px) {
 					display: block;
@@ -603,8 +607,10 @@
 			transition: background 0.3s ease 0s;
 			height: max-content;
 			width: rem(375);
-			&:hover {
-				background: #9dc52f;
+			@media (any-hover: hover) {
+				&:hover {
+					background: #9dc52f;
+				}
 			}
 			@media (max-width: 1399.98px) {
 				max-width: 100%;
@@ -984,8 +990,10 @@
 			border-radius: rem(10);
 			cursor: pointer;
 			transition: background 0.3s ease 0s;
-			&:hover {
-				background: #9dc52f;
+			@media (any-hover: hover) {
+				&:hover {
+					background: #9dc52f;
+				}
 			}
 		}
 	}
@@ -1219,9 +1227,11 @@
 			width: 100%;
 			padding: rem(16);
 
-			&:hover {
-				color: var(--black-main-color);
-				background: var(--primary-hover-color);
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--black-main-color);
+					background: var(--primary-hover-color);
+				}
 			}
 		}
 		&__banner {
