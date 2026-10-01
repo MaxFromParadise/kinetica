@@ -5277,6 +5277,7 @@ figure {
   position: relative;
   overflow: hidden;
   border-radius: 1.25rem;
+  max-height: 35.25rem;
 }
 
 .prom .hero__img img {
@@ -5616,6 +5617,7 @@ figure {
 }
 
 .prom .item-results__main-img img {
+  max-width: 59.0625rem;
   width: 100%;
   height: auto;
   -o-object-fit: contain;
@@ -6036,6 +6038,17 @@ figure {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 calc((100% - 2.5rem) / 5);
   flex: 1 1 calc((100% - 2.5rem) / 5);
+  background: #def5ff;
+  border-radius: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .prom .marks__item img {
