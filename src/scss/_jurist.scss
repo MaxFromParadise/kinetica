@@ -628,6 +628,7 @@
 			border-radius: rem(10);
 			overflow: hidden;
 			img {
+				max-width: rem(945);
 				width: 100%;
 				height: auto;
 				object-fit: contain;

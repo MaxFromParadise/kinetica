@@ -1856,6 +1856,19 @@ figure {
   margin-bottom: 12.5rem;
 }
 
+.build .adv__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .build .adv__title {
   line-height: 90%;
   font-size: 3.75rem;
@@ -1873,7 +1886,7 @@ figure {
   margin-bottom: 3.75rem;
   font-size: 1.25rem;
   color: #292b32;
-  max-width: 40.625rem;
+  max-width: 27.25rem;
 }
 
 .build .adv__grid {
@@ -2089,7 +2102,7 @@ figure {
   letter-spacing: -1%;
   font-weight: 700;
   color: #292b32;
-  margin-bottom: 1.875rem;
+  margin-bottom: 3.75rem;
 }
 
 .build .who__title span {
@@ -3700,6 +3713,7 @@ figure {
 }
 
 .jurist .item-results__main-img img {
+  max-width: 59.0625rem;
   width: 100%;
   height: auto;
   -o-object-fit: contain;
@@ -8186,6 +8200,10 @@ figure {
     margin-bottom: 5.625rem;
   }
 
+  .build .adv__top {
+    display: block;
+  }
+
   .build .adv__title {
     font-size: 1.75rem;
     margin-bottom: 0.9375rem;
@@ -8281,7 +8299,7 @@ figure {
 
   .build .who__title {
     font-size: 1.75rem;
-    margin-bottom: 0.9375rem;
+    margin-bottom: 2.5rem;
   }
 
   .build .who__grid {
@@ -9658,6 +9676,7 @@ figure {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 calc((100% - 1.25rem) / 3);
     flex: 1 1 calc((100% - 1.25rem) / 3);
+    border-radius: 0.625rem;
   }
 
   .prom .back {
