@@ -2384,6 +2384,7 @@ figure {
   position: relative;
   overflow: hidden;
   border-radius: 1.25rem;
+  max-height: 35.25rem;
 }
 
 .spectech .hero__img img {
@@ -2658,6 +2659,7 @@ figure {
 }
 
 .spectech .item-results__main-img img {
+  max-width: 59.0625rem;
   width: 100%;
   height: auto;
   -o-object-fit: contain;
@@ -8590,7 +8592,7 @@ figure {
   }
 
   .spectech .marks__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 2.5rem;
   }
 
