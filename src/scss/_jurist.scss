@@ -408,6 +408,9 @@
 			}
 			img {
 				transform: translateY(4px);
+				max-height: rem(218);
+				height: 100%;
+				width: auto;
 			}
 			&_mobile {
 				display: none;

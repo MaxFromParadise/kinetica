@@ -1438,6 +1438,7 @@ figure {
   position: relative;
   overflow: hidden;
   border-radius: 1.25rem;
+  max-height: 35.25rem;
 }
 
 .build .hero__img img {
@@ -1712,6 +1713,7 @@ figure {
 }
 
 .build .item-results__main-img img {
+  max-width: 59.0625rem;
   width: 100%;
   height: auto;
   -o-object-fit: contain;
@@ -2172,6 +2174,9 @@ figure {
   -webkit-transform: translateY(4px);
   -ms-transform: translateY(4px);
   transform: translateY(4px);
+  max-height: 13.625rem;
+  height: 100%;
+  width: auto;
 }
 
 .build .banner-who__img_mobile {
@@ -3508,6 +3513,9 @@ figure {
   -webkit-transform: translateY(4px);
   -ms-transform: translateY(4px);
   transform: translateY(4px);
+  max-height: 13.625rem;
+  height: 100%;
+  width: auto;
 }
 
 .jurist .banner-who__img_mobile {
@@ -7019,6 +7027,9 @@ figure {
   -webkit-transform: translateY(4px);
   -ms-transform: translateY(4px);
   transform: translateY(4px);
+  max-height: 13.625rem;
+  height: 100%;
+  width: auto;
 }
 
 .med .banner-who__img_mobile {
