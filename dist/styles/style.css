@@ -1815,6 +1815,7 @@ figure {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 1.0625rem;
+  gap: 1.5625rem;
 }
 
 .build .item-what__title {
