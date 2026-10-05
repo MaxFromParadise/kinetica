@@ -3317,6 +3317,7 @@ figure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-height: 35.25rem;
 }
 
 .jurist .hero__img img {
@@ -3816,6 +3817,7 @@ figure {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 1.0625rem;
+  gap: 1.5625rem;
 }
 
 .jurist .item-what__title {
@@ -7805,7 +7807,7 @@ figure {
   }
 
   .jurist .item-who__icon {
-    margin-bottom: 0;
+    margin-bottom: 0.3125rem;
   }
 
   .jurist .item-who__title {
@@ -9147,6 +9149,7 @@ figure {
   .jurist .item-who__item::before {
     width: 0.9375rem;
     height: 0.9375rem;
+    top: 0.1em;
   }
 
   .jurist .banner-who {
@@ -9201,6 +9204,11 @@ figure {
 
   .jurist .item-results__list-item {
     min-height: 7.8125rem;
+    padding: 0.625rem;
+  }
+
+  .jurist .item-results__list-item-title {
+    font-size: 1.75rem;
   }
 
   .jurist .item-results__user {
