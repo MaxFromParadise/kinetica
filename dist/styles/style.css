@@ -4788,6 +4788,7 @@ figure {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 1.0625rem;
+  gap: 1.5625rem;
 }
 
 .logistic .item-what__title {
@@ -9538,6 +9539,11 @@ figure {
 
   .logistic .item-results__list-item {
     min-height: 7.8125rem;
+    padding: 0.625rem;
+  }
+
+  .logistic .item-results__list-item-title {
+    font-size: 1.75rem;
   }
 
   .logistic .item-results__user {
@@ -9711,7 +9717,7 @@ figure {
   }
 
   .logistic .marks__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 2.5rem;
   }
 

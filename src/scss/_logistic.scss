@@ -503,6 +503,7 @@
 			}
 			@media (max-width: 991.98px) {
 				min-height: rem(125);
+				padding: rem(10);
 			}
 		}
 		// .item-results__list-item-title
@@ -512,6 +513,9 @@
 			letter-spacing: -1px;
 			font-weight: 700;
 			color: #caff3d;
+			@media (max-width: 991.98px) {
+				font-size: rem(28);
+			}
 		}
 		// .item-results__list-item-text
 		&__list-item-text {
@@ -703,6 +707,7 @@
 			display: flex;
 			justify-content: space-between;
 			margin-bottom: rem(17);
+			gap: rem(25);
 			@media (max-width: 991.98px) {
 				margin-bottom: rem(15);
 				padding: 0 rem(20);
@@ -1098,7 +1103,7 @@
 			gap: rem(10);
 			margin-bottom: rem(20);
 			@media (max-width: 991.98px) {
-				grid-template-columns: repeat(3, 1fr);
+				grid-template-columns: repeat(2, 1fr);
 				margin-bottom: rem(40);
 			}
 		}
