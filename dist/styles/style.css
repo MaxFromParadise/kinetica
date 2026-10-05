@@ -6322,6 +6322,10 @@ figure {
   margin-top: auto;
 }
 
+.med .hero .item-hero__img img {
+  max-height: 8.125rem;
+}
+
 .med .hero .item-hero__title {
   margin-bottom: 0.9375rem;
   font-size: 1.875rem;
@@ -6859,6 +6863,7 @@ figure {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 1.0625rem;
+  gap: 1.5625rem;
 }
 
 .med .item-what__title {
@@ -6935,9 +6940,11 @@ figure {
 .med .free__text {
   color: #292b32;
   text-align: center;
+  margin: 0 auto;
   margin-bottom: 2.5rem;
   position: relative;
   z-index: 2;
+  max-width: 40.625rem;
 }
 
 .med .free__button {
@@ -6973,6 +6980,9 @@ figure {
 .med .free__bg img {
   width: 100%;
   height: auto;
+  -webkit-transform: translateY(9.375rem);
+  -ms-transform: translateY(9.375rem);
+  transform: translateY(9.375rem);
 }
 
 .med .adv {
@@ -7264,6 +7274,7 @@ figure {
 .med .item-who__text {
   color: #292b32;
   margin-top: auto;
+  grid-area: text;
 }
 
 .med .item-who__list {
@@ -7967,6 +7978,7 @@ figure {
     height: unset;
     position: relative;
     top: unset;
+    max-height: unset;
   }
 
   .med .item-seo__title {
@@ -7984,7 +7996,7 @@ figure {
   .med .item-who {
     display: grid;
     grid-template-columns: 3.75rem 1fr;
-    grid-template-areas: "icon title" "list list";
+    grid-template-areas: "icon title" "text text";
     gap: 0.9375rem;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -10447,6 +10459,8 @@ figure {
 
   .med .marks__grid {
     margin-bottom: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .med .marks__item {
@@ -10499,6 +10513,20 @@ figure {
   .top-awards {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
+  }
+
+  .med .free__bg img {
+    -webkit-transform: translateY(6.25rem);
+    -ms-transform: translateY(6.25rem);
+    transform: translateY(6.25rem);
+  }
+}
+
+@media (max-width: 579.98px) {
+  .med .free__bg img {
+    -webkit-transform: translateY(0.625rem);
+    -ms-transform: translateY(0.625rem);
+    transform: translateY(0.625rem);
   }
 }
 
